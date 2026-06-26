@@ -1,0 +1,6 @@
+public\images\soft-sign-pairs\ugol.png
+public\images\soft-sign-pairs\ugol-soft.png
+public\images\soft-sign-pairs\palka.png
+public\images\soft-sign-pairs\palma-soft.png
+public\images\soft-sign-pairs\bal.png
+public\images\soft-sign-pairs\bol-soft.png

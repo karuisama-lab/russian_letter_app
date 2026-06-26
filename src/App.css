@@ -1,0 +1,1726 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f5f6ff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: block;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f6ff;
+  color: #242437;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+ max-width: 1040px;
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 190px;
+  padding: 24px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #8f6cff, #ff7ca8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 18px 40px rgba(119, 89, 255, 0.28);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.05;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.heroText {
+  margin: 14px 0 0;
+  font-size: 15px;
+  max-width: 260px;
+  opacity: 0.9;
+}
+
+.heroBadge {
+  width: 86px;
+  height: 86px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  transform: rotate(8deg);
+}
+
+.lessons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.lessonCard {
+  border: 3px solid transparent;
+  border-radius: 22px;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #3c137a, #ff4b00) border-box;
+  padding: 14px;
+  text-align: center;
+  min-height: 112px;
+  box-shadow: 0 10px 22px rgba(42, 42, 90, 0.08);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lessonCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(42, 42, 90, 0.13);
+}
+
+.lessonTop {
+  display: flex;
+  justify-content: space-between;
+  color: #8a8aa0;
+  font-size: 13px;
+}
+
+.letter {
+  margin-top: 8px;
+  font-size: 42px;
+  font-weight: 900;
+  color: #3c137a;
+}
+
+.subtitle {
+  margin-top: 4px;
+  color: #4f4f66;
+  font-size: 15px;
+}
+
+.progress {
+  margin-top: 18px;
+  height: 8px;
+  border-radius: 999px;
+  background: #ececff;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8f6cff, #ff7ca8);
+}
+
+.backButton {
+  border: 0;
+  background: transparent;
+  color: #635bff;
+  font-weight: 700;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.lessonHero {
+  min-height: 190px;
+  padding: 24px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #635bff, #ff7ca8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 18px 40px rgba(119, 89, 255, 0.28);
+}
+
+.bigLetter {
+  width: 100px;
+  height: 100px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.block {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(42, 42, 90, 0.08);
+}
+
+.wordGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.wordCard {
+  border-radius: 20px;
+  padding: 18px;
+  text-align: center;
+  background: #f4f1ff;
+  color: #635bff;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.taskCard {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 22px;
+  background: #f8f8ff;
+}
+
+.taskCard p {
+  margin: 6px 0 0;
+  color: #77778d;
+  font-size: 14px;
+}
+
+.taskNumber {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8f6cff, #ff7ca8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.primaryButton {
+  width: 100%;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 22px;
+  padding: 18px;
+  background: linear-gradient(135deg, #8f6cff, #ff7ca8);
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(119, 89, 255, 0.25);
+}
+.letterIntro {
+  min-height: 520px;
+  padding: 28px 22px;
+  border-radius: 34px;
+  background: white;
+  box-shadow: 0 16px 36px rgba(42, 42, 90, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark {
+  color: #8a8aa0;
+}
+
+.redLetters {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 24px;
+  margin: 20px 0 8px;
+}
+
+.bigRedLetter {
+  font-size: 150px;
+  line-height: 1;
+  font-weight: 900;
+  color: #ff3b3b;
+}
+
+.smallRedLetter {
+  font-size: 110px;
+  line-height: 1;
+  font-weight: 900;
+  color: #ff3b3b;
+}
+
+.lessonTitle {
+  margin-top: 12px;
+  color: #242437;
+}
+
+.lessonText {
+  margin: 12px auto 0;
+  max-width: 320px;
+  color: #6f6f86;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.audioButton {
+  margin-top: 28px;
+  border: 0;
+  border-radius: 22px;
+  padding: 16px 24px;
+  background: #ff3b3b;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(255, 59, 59, 0.25);
+}
+
+.secondaryAudio {
+  width: 100%;
+  background: white;
+  color: #ff3b3b;
+  border: 2px solid #ffd1d1;
+  box-shadow: none;
+}
+
+.taskHeader {
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+}
+
+.taskTitle {
+  color: #242437;
+}
+
+.readingCard {
+  margin-top: 20px;
+  padding: 22px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+}
+
+.letterLine {
+  padding: 18px 10px;
+  border-bottom: 2px dashed #ffd1d1;
+  color: #ff3b3b;
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.letterLine:last-child {
+  border-bottom: 0;
+}
+
+.successCard {
+  min-height: 420px;
+  padding: 28px;
+  border-radius: 34px;
+  background: white;
+  box-shadow: 0 16px 36px rgba(42, 42, 90, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.successIcon {
+  width: 90px;
+  height: 90px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #8f6cff, #ff7ca8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.pictureTaskCard {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.hintButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 16px;
+  background: #f4f1ff;
+  color: #635bff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.pictureTaskImage {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 10px auto 0;
+}
+
+.pictureQuestion {
+  margin-top: 18px;
+}
+
+.pictureQuestionText {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #242437;
+}
+
+.lessonCard:nth-child(even) .letter {
+  color: #f24a00;
+}
+
+.lessonCard:nth-child(even) {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #ff4b00, #3c137a) border-box;
+}
+
+.drawingCard {
+  margin-top: 20px;
+  padding: 28px 20px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+}
+
+.drawingCanvas {
+  width: 100%;
+  height: 520px;
+  display: block;
+  border-radius: 22px;
+  background: #fffdfd;
+  touch-action: none;
+}
+
+.canvasButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.secondaryButton {
+  flex: 1;
+  border: 2px solid #d7d7ef;
+  border-radius: 22px;
+  padding: 18px;
+  background: white;
+  color: #635bff;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.smallPrimary {
+  flex: 1;
+  margin-top: 0;
+}
+
+.joinTextLine {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 22px;
+  padding: 26px 18px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 2px solid #ece8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.joinPurple {
+  color: #3c137a;
+}
+
+.joinOrange {
+  color: #ff4b00;
+}
+
+.joinArrowText {
+  color: #ff4b00;
+  margin: 0 4px;
+}
+
+.joinSpace {
+  width: 34px;
+}
+
+.joinTextLine {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 18px;
+  padding: 22px 16px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 2px solid #ece8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.joinPurple {
+  color: #3c137a;
+}
+
+.joinOrange {
+  color: #ff4b00;
+}
+
+.joinArrowText {
+  color: #ff4b00;
+  margin: 0 4px;
+}
+
+.joinSpace {
+  width: 34px;
+}
+
+.joinDash {
+  color: #ff4b00;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0 4px;
+}
+
+.readWordsCard {
+  margin-top: 20px;
+  padding: 22px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+}
+
+.readWordsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.readWordItem {
+  min-height: 190px;
+  padding: 18px;
+  border-radius: 24px;
+  background: #f8f6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.readWordText {
+  font-size: 34px;
+  font-weight: 900;
+  color: #3c137a;
+  margin-bottom: 14px;
+}
+
+.readWordImage {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.copyWordsCard {
+  margin-top: 20px;
+  padding: 22px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+}
+
+.copyLine {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.copyLine:last-child {
+  margin-bottom: 0;
+}
+
+.copyWord {
+  min-width: 76px;
+  color: #242437;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.copyBlank {
+  flex: 1;
+  height: 34px;
+  border-bottom: 3px solid #242437;
+}
+
+.readSingleWordCard {
+  margin-top: 20px;
+  padding: 28px 22px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.readSingleWord {
+  margin-bottom: 24px;
+  color: #3c137a;
+  font-size: 72px;
+  font-weight: 900;
+}
+
+.wideSampleImage {
+  max-width: 520px;
+}
+
+.genderChoiceCard {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.genderChoiceImage {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.genderQuestion {
+  margin: 0 0 18px;
+  color: #242437;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.genderButtons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.genderButton {
+  flex: 1;
+  max-width: 150px;
+  border: 2px solid #ece8ff;
+  border-radius: 22px;
+  padding: 18px;
+  background: #f8f6ff;
+  color: #3c137a;
+  font-size: 28px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.genderButtonCorrect {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+  color: #15934a;
+}
+
+.genderButtonWrong {
+  border-color: #ff9b9b;
+  background: #fff0f0;
+  color: #ff3b3b;
+}
+
+.correctFeedback {
+  margin: 18px 0 0;
+  color: #15934a;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.wrongFeedback {
+  margin: 18px 0 0;
+  color: #ff3b3b;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.readSingleWordCard {
+  margin-top: 20px;
+  padding: 28px 22px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.readSingleWord {
+  margin-bottom: 24px;
+  color: #3c137a;
+  font-size: 72px;
+  font-weight: 900;
+}
+
+.wideSampleImage {
+  max-width: 520px;
+}
+
+.genderChoiceCard .secondaryAudio {
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.wordReadImage {
+  width: 100%;
+  max-width: 280px;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.wordReadHint {
+  margin-top: 10px;
+  color: #6c6b85;
+  font-size: 18px;
+}
+
+.sentenceReadText {
+  margin-bottom: 24px;
+  color: #3c137a;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .sentenceReadText {
+    font-size: 40px;
+  }
+}
+
+.actionExplainCard,
+.actionChoiceCard {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.actionExplainGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.actionExplainItem {
+  padding: 16px;
+  border-radius: 24px;
+  background: #f8f6ff;
+}
+
+.actionExplainItem img {
+  width: 100%;
+  max-width: 210px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.actionExplainWord {
+  color: #3c137a;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.actionMainImage {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.actionChoiceButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.actionChoiceButton {
+  border: 3px solid #ece8ff;
+  border-radius: 24px;
+  background: #f8f6ff;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.actionChoiceButton img {
+  width: 100%;
+  max-width: 180px;
+  display: block;
+  margin: 0 auto;
+}
+
+.actionChoiceCorrect {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+}
+
+.actionChoiceWrong {
+  border-color: #ff9b9b;
+  background: #fff0f0;
+}
+
+.storyCard,
+.matchCard {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.storyImage,
+.sceneImage {
+  width: 100%;
+  max-width: 860px;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 24px;
+}
+
+.sentenceBank {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sentenceOption {
+  border: 3px solid #ece8ff;
+  background: #f8f6ff;
+  color: #34156f;
+  border-radius: 20px;
+  padding: 14px 18px;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sentenceSelected {
+  border-color: #ff7a3d;
+  background: #fff2ea;
+}
+
+.sentenceMatched {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+  color: #1c7f46;
+}
+
+.sceneWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.storyHotspot {
+  position: absolute;
+  border: 3px dashed rgba(94, 73, 170, 0.7);
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  color: #2b1c60;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.hotspotMatched {
+  background: rgba(232, 255, 238, 0.95);
+  border-style: solid;
+  border-color: #2fbd6b;
+}
+
+.hotspotBridge {
+  left: 38%;
+  top: 36%;
+  width: 28%;
+  height: 18%;
+}
+
+.hotspotDuck {
+  left: 24%;
+  top: 58%;
+  width: 18%;
+  height: 18%;
+}
+
+.hotspotCat {
+  left: 47%;
+  top: 20%;
+  width: 16%;
+  height: 18%;
+}
+
+.matchFeedback {
+  margin-top: 16px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #5c3bb1;
+}
+
+.multiLineJoinText {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 18px;
+  line-height: 1.5;
+}
+
+.joinBreak {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.gHotspotGeese {
+  left: 73%;
+  top: 54%;
+  width: 20%;
+  height: 24%;
+}
+
+.gHotspotPoppies {
+  left: 42%;
+  top: 56%;
+  width: 22%;
+  height: 24%;
+}
+
+.gHotspotBush {
+  left: 6%;
+  top: 54%;
+  width: 20%;
+  height: 24%;
+}
+
+.readingChoiceCard {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.readingChoiceSentence {
+  margin-bottom: 22px;
+  color: #3c137a;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.readingChoiceButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.readingChoiceButton {
+  border: 3px solid #ece8ff;
+  border-radius: 24px;
+  background: #f8f6ff;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.readingChoiceButton img {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.readingChoiceCorrect {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+}
+
+.readingChoiceWrong {
+  border-color: #ff9b9b;
+  background: #fff0f0;
+}
+
+.ruleNoticeCard {
+  margin-top: 20px;
+  padding: 28px 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.crossedLetterWrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crossedLetterLarge {
+  font-size: 170px;
+  font-weight: 900;
+  color: #ff5b5b;
+  line-height: 1;
+}
+
+.crossLine {
+  position: absolute;
+  width: 220px;
+  height: 8px;
+  background: #6c45d8;
+  transform: rotate(-35deg);
+  border-radius: 999px;
+}
+
+.ruleNoticeText {
+  margin-bottom: 18px;
+  color: #4a2e9b;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.audioChoiceCard {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.audioChoiceGrid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.audioChoiceButton {
+  border: 3px solid #ece8ff;
+  border-radius: 24px;
+  background: #f8f6ff;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.audioChoiceButton img {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.audioChoiceCorrect {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+}
+
+.audioChoiceWrong {
+  border-color: #ff9b9b;
+  background: #fff0f0;
+}
+
+.yeriHotspotMiska {
+  left: 7%;
+  top: 52%;
+  width: 22%;
+  height: 22%;
+}
+
+.yeriHotspotTomaty {
+  left: 18%;
+  top: 35%;
+  width: 22%;
+  height: 20%;
+}
+
+.yeriHotspotRyba {
+  left: 58%;
+  top: 26%;
+  width: 26%;
+  height: 22%;
+}
+
+.yeriHotspotSyr {
+  left: 64%;
+  top: 58%;
+  width: 22%;
+  height: 18%;
+}
+
+.tasteChoiceCard {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.tasteChoiceImage {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 24px;
+}
+
+.tasteButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tasteOption {
+  border: 3px solid #ece8ff;
+  border-radius: 20px;
+  background: #f8f6ff;
+  color: #4a2e9b;
+  font-size: 26px;
+  font-weight: 900;
+  padding: 14px 24px;
+  cursor: pointer;
+}
+
+.tasteCorrect {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+}
+
+.tasteWrong {
+  border-color: #ff9b9b;
+  background: #fff0f0;
+}
+
+.comicListenCard {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.comicListenGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.comicListenItem {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f8f6ff;
+}
+
+.comicListenImage {
+  width: 100%;
+  display: block;
+}
+
+.comicMatchGrid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.comicMatchButton {
+  border: 3px solid #ece8ff;
+  border-radius: 22px;
+  background: #f8f6ff;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.comicMatchDone {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+}
+
+.comicMatchImage {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.comicMatchCaption {
+  margin-top: 10px;
+  color: #2f7d4f;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.lessonPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #6b63ff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.letterHeroCard,
+.readingCard,
+.writingDemoCard,
+.joinRowsCard,
+.pictureWordCard,
+.singleWordCard,
+.choiceSentenceCard,
+.successCard {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(60, 56, 110, 0.08);
+  margin-bottom: 20px;
+}
+
+.heroLetters {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.heroUpper,
+.heroLower {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+  color: #ff6a2a;
+}
+
+.bigLetterRows {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #4d2c91;
+}
+
+.writingGif {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 24px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.writeArea {
+  background: #fbfbff;
+  border: 2px solid #eee7f7;
+  border-radius: 24px;
+  padding: 18px;
+}
+
+.modelWord {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4d2c91;
+  margin-bottom: 14px;
+}
+
+.writeCanvas {
+  width: 100%;
+  height: 240px;
+  border-radius: 20px;
+  border: 2px solid #ece6f7;
+  background: #ffffff;
+  touch-action: none;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.joinLinesWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.joinLineRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.joinPairCard {
+  min-width: 110px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: #f8f6ff;
+  border: 2px solid #ebe4fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.joinPurple {
+  color: #4d2c91;
+}
+
+.joinOrange {
+  color: #ff6a2a;
+}
+
+.joinArrow {
+  color: #ff6a2a;
+  font-size: 24px;
+}
+
+.joinRowTitle {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #23304d;
+  margin-bottom: 18px;
+}
+
+.taskImageLarge {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 18px;
+  border-radius: 20px;
+}
+
+.singleWordText {
+  text-align: center;
+  font-size: 52px;
+  color: #4d2c91;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.prepositionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.prepositionCard {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(60, 56, 110, 0.08);
+  text-align: center;
+}
+
+.prepositionImage {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 10px;
+}
+
+.prepositionLabel {
+  font-size: 24px;
+  font-weight: 800;
+  color: #4d2c91;
+}
+
+.matchBank {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.matchSentenceCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 2px solid #ece6f7;
+  border-radius: 18px;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: #23304d;
+}
+
+.matchNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ff6a2a;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.matchGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.matchItem {
+  background: #fff;
+  border-radius: 22px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(60, 56, 110, 0.08);
+}
+
+.matchImage {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.matchOptionsRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.miniOption {
+  min-width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background: #efe8fb;
+  color: #4d2c91;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.selectedMiniOption {
+  background: #ff6a2a;
+  color: #fff;
+}
+
+.choiceSentenceText {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #23304d;
+  margin: 18px 0;
+}
+
+.gapOptions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gapOption {
+  min-width: 90px;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 18px;
+  background: #efe8fb;
+  color: #4d2c91;
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.selectedGapOption {
+  background: #ff6a2a;
+  color: #fff;
+}
+
+.miniFeedback {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.okFeedback {
+  color: #1b8a43;
+}
+
+.badFeedback {
+  color: #d03a3a;
+}
+
+.audioButton,
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.audioButton {
+  padding: 14px 20px;
+  border-radius: 18px;
+  background: #fff2ee;
+  color: #ff4c3d;
+  font-size: 18px;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: linear-gradient(90deg, #7b63ff 0%, #ff74a6 100%);
+  color: #fff;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.secondaryButton {
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: #efe8fb;
+  color: #4d2c91;
+  font-size: 16px;
+}
+
+.successCard {
+  text-align: center;
+}
+
+.successIcon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #33c46e;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+@media (max-width: 768px) {
+  .prepositionGrid,
+  .matchGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroUpper,
+  .heroLower {
+    font-size: 76px;
+  }
+
+  .singleWordText {
+    font-size: 42px;
+  }
+
+  .choiceSentenceText {
+    font-size: 28px;
+  }
+}
+
+.softExplainCard {
+  margin-top: 20px;
+  padding: 28px 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.softSignBig {
+  color: #ff3b3b;
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.softCompareCard {
+  margin-top: 20px;
+  padding: 28px 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.softCompareGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  max-width: 520px;
+  margin: 0 auto 22px;
+}
+
+.softCompareColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.softCompareItem {
+  border-radius: 18px;
+  background: #f8f6ff;
+  color: #4a2e9b;
+  font-size: 36px;
+  font-weight: 900;
+  padding: 12px 18px;
+}
+
+.softCompareSoft {
+  background: #fff2ea;
+  color: #ff6a2a;
+}
+
+.softListenChoiceCard {
+  margin-top: 20px;
+  padding: 28px 24px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 14px 32px rgba(42, 42, 90, 0.08);
+  text-align: center;
+}
+
+.softSignOptionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.softSignOption {
+  min-width: 120px;
+  min-height: 90px;
+  border: 3px solid #ece8ff;
+  border-radius: 24px;
+  background: #f8f6ff;
+  color: #4a2e9b;
+  font-size: 58px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.softSignCorrect {
+  border-color: #2fbd6b;
+  background: #e9fff1;
+}
+
+.softSignWrong {
+  border-color: #ff9b9b;
+  background: #fff0f0;
+}
+
+.softCrossedMark {
+  position: relative;
+  display: inline-block;
+}
+
+.softCrossedMark::after {
+  content: '';
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  top: 50%;
+  height: 6px;
+  background: #ff3b3b;
+  border-radius: 999px;
+  transform: rotate(-35deg);
+}
+
+.bonkaName {
+  color: #4a2e9b;
+  font-size: 44px;
+  font-weight: 900;
+  margin: 12px 0 18px;
+}
