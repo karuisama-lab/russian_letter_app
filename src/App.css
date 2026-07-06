@@ -1831,3 +1831,1406 @@ h3 {
   flex-wrap: wrap;
   margin-top: 20px;
 }
+
+/* ----- Стили для экрана "ОН. КА-КОЙ? КРАС-НЫЙ." ----- */
+.redPhraseCard {
+  width: min(920px, 100%);
+  margin: 0 auto 24px;
+  padding: 32px 24px;
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.redPhraseLine {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 900;
+  line-height: 1.3;
+  color: #111827;
+}
+
+.redPhraseAnswer {
+  color: #ef4444;
+  font-size: clamp(44px, 7vw, 80px);
+}
+
+/* ----- Стили для задания "Найди красный предмет" ----- */
+.redChoiceCard {
+  width: min(920px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yExplanationCard {
+  width: min(900px, 100%);
+  margin: 0 auto 24px;
+  padding: 34px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yExplanationLetter {
+  margin-bottom: 18px;
+  font-size: clamp(120px, 22vw, 220px);
+  line-height: 0.9;
+  font-weight: 900;
+  color: #ff3b3b;
+}
+
+.yWordBoardCard {
+  width: min(920px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yWordBoardImage {
+  display: block;
+  width: min(420px, 100%);
+  max-height: 320px;
+  object-fit: contain;
+  margin: 0 auto 22px;
+}
+
+.yBoard {
+  width: min(720px, 100%);
+  margin: 0 auto 22px;
+  padding: 22px 18px;
+  border-radius: 24px;
+  background: #f8fafc;
+  border: 4px solid #60a5fa;
+
+  font-size: clamp(42px, 8vw, 82px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #111827;
+}
+
+.yQuestionCard {
+  width: min(900px, 100%);
+  margin: 0 auto 24px;
+  padding: 34px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yQuestionLine {
+  font-size: clamp(42px, 8vw, 82px);
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #111827;
+}
+
+.yQuestionAnswer {
+  margin-top: 14px;
+  margin-bottom: 24px;
+  font-size: clamp(46px, 8vw, 88px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #ef4444;
+}
+
+.yColorChoiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.rStoryChoiceSentence {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px;
+
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1.4;
+
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 720px) {
+  .yColorChoiceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .yBoard {
+    letter-spacing: 0.04em;
+  }
+}
+
+.zStoryListenCard {
+  width: min(920px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.zStoryListenImage {
+  display: block;
+  width: min(620px, 100%);
+  max-height: 420px;
+  object-fit: contain;
+  margin: 0 auto 24px;
+}
+
+.zStoryChoiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.rStoryChoiceSentence {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px;
+
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1.4;
+
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 720px) {
+  .zStoryChoiceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.yaIntroCard {
+  width: min(940px, 100%);
+  margin: 0 auto 24px;
+  padding: 34px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yaFormula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 28px);
+  flex-wrap: wrap;
+  margin: 24px auto;
+}
+
+.yaFormulaPart {
+  font-size: clamp(68px, 14vw, 150px);
+  line-height: 1;
+  font-weight: 900;
+  color: #2563eb;
+}
+
+.yaFormulaPlus,
+.yaFormulaArrow {
+  font-size: clamp(44px, 9vw, 96px);
+  line-height: 1;
+  font-weight: 900;
+  color: #6b7280;
+}
+
+.yaFormulaResult {
+  font-size: clamp(86px, 17vw, 180px);
+  line-height: 1;
+  font-weight: 900;
+  color: #ff3b3b;
+}
+
+.yaWordBoardCard {
+  width: min(920px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yaWordBoardImage {
+  display: block;
+  width: min(420px, 100%);
+  max-height: 320px;
+  object-fit: contain;
+  margin: 0 auto 22px;
+}
+
+.yaBoard {
+  width: min(760px, 100%);
+  margin: 0 auto 22px;
+  padding: 22px 18px;
+  border-radius: 24px;
+  background: #f8fafc;
+  border: 4px solid #60a5fa;
+
+  font-size: clamp(40px, 8vw, 82px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #111827;
+}
+
+.yaQuestionCard {
+  width: min(900px, 100%);
+  margin: 0 auto 24px;
+  padding: 34px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yaQuestionLine {
+  font-size: clamp(42px, 8vw, 82px);
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #111827;
+}
+
+.yaQuestionAnswer {
+  margin-top: 14px;
+  margin-bottom: 24px;
+  font-size: clamp(46px, 8vw, 88px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #ef4444;
+}
+
+.yaColorChoiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.yaUlyanaIntroCard {
+  width: min(900px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yaUlyanaImage {
+  display: block;
+  width: min(460px, 100%);
+  max-height: 440px;
+  object-fit: contain;
+  margin: 0 auto 24px;
+}
+
+.yaStoryListenCard {
+  width: min(1040px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yaStoryListenGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.yaStoryChoiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.yaStoryPanelImage {
+  display: block;
+  width: 100%;
+  height: min(260px, 28vw);
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.yaStorySentence {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 20px;
+
+  font-size: clamp(24px, 4vw, 44px);
+  line-height: 1.45;
+
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.rStoryChoiceSentence {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px;
+
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1.4;
+
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 720px) {
+  .yaColorChoiceGrid,
+  .yaStoryListenGrid,
+  .yaStoryChoiceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .yaBoard {
+    letter-spacing: 0.04em;
+  }
+
+  .yaStoryPanelImage {
+    height: auto;
+    max-height: 260px;
+  }
+}
+
+.tsIntroCard {
+  width: min(940px, 100%);
+  margin: 0 auto 24px;
+  padding: 34px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.tsFormula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 28px);
+  flex-wrap: wrap;
+  margin: 24px auto;
+}
+
+.tsFormulaPart {
+  font-size: clamp(68px, 14vw, 150px);
+  line-height: 1;
+  font-weight: 900;
+  color: #2563eb;
+}
+
+.tsFormulaPlus,
+.tsFormulaArrow {
+  font-size: clamp(44px, 9vw, 96px);
+  line-height: 1;
+  font-weight: 900;
+  color: #6b7280;
+}
+
+.tsFormulaResult {
+  font-size: clamp(86px, 17vw, 180px);
+  line-height: 1;
+  font-weight: 900;
+  color: #ff3b3b;
+}
+
+.tsIntroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.tsStoryOverviewCard,
+.tsStoryFragmentCard,
+.tsHotspotCard,
+.tsMoodCard,
+.tsFoodMatchCard {
+  width: min(1040px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.tsStoryOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.tsStoryOverviewItem {
+  position: relative;
+  padding: 10px;
+  border-radius: 22px;
+  background: #f8fafc;
+}
+
+.tsStoryNumber {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 34px;
+  text-align: center;
+}
+
+.tsStoryOverviewImage {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.tsStorySentence {
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  padding: 12px 20px;
+
+  font-size: clamp(24px, 4vw, 44px);
+  line-height: 1.45;
+
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.tsStoryFragmentImage {
+  display: block;
+  width: min(720px, 100%);
+  max-height: 520px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 26px;
+}
+
+.tsHotspotSentenceList {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.tsHotspotSentenceButton {
+  padding: 14px 18px;
+  border: 4px solid transparent;
+  border-radius: 18px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.tsHotspotSentenceButton.selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.tsHotspotSentenceButton.matched {
+  border-color: #49b96f;
+  background: #dcfce7;
+  color: #166534;
+  cursor: default;
+}
+
+.tsHotspotImageWrap {
+  position: relative;
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.tsHotspotImage {
+  display: block;
+  width: 100%;
+  border-radius: 28px;
+}
+
+.tsHotspot {
+  position: absolute;
+  border: 4px dashed rgba(37, 99, 235, 0.7);
+  border-radius: 22px;
+  background: rgba(219, 234, 254, 0.28);
+  color: #111827;
+  font-size: clamp(14px, 2.4vw, 24px);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.tsHotspot.matched {
+  border-style: solid;
+  border-color: #49b96f;
+  background: rgba(220, 252, 231, 0.82);
+}
+
+.tsHotspotUlyana {
+  left: 6%;
+  top: 11%;
+  width: 33%;
+  height: 68%;
+}
+
+.tsHotspotBonka {
+  left: 38%;
+  top: 59%;
+  width: 22%;
+  height: 25%;
+}
+
+.tsHotspotChicken {
+  left: 68%;
+  top: 42%;
+  width: 27%;
+  height: 30%;
+}
+
+.tsHotspotChicks {
+  left: 58%;
+  top: 62%;
+  width: 35%;
+  height: 25%;
+}
+
+.tsMoodOptions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.tsMoodButton {
+  width: min(220px, 100%);
+  padding: 22px 18px;
+  border: 4px solid transparent;
+  border-radius: 28px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.tsMoodButton.correct {
+  border-color: #49b96f;
+  background: #dcfce7;
+}
+
+.tsMoodButton.wrong {
+  border-color: #f05a5a;
+  background: #fee2e2;
+}
+
+.tsMoodEmoji {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.tsMoodLabel {
+  display: block;
+  font-size: clamp(18px, 3vw, 28px);
+  line-height: 1.25;
+  font-weight: 900;
+  color: #111827;
+}
+
+.tsFoodColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.tsFoodColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tsFoodColumnTitle {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  color: #111827;
+}
+
+.tsFoodItem {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  gap: 14px;
+  min-height: 128px;
+  padding: 12px 16px;
+  border: 4px solid transparent;
+  border-radius: 24px;
+  background: #f8fafc;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tsFoodItem.selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.tsFoodItem.matched {
+  border-color: #49b96f;
+  background: #dcfce7;
+  cursor: default;
+}
+
+.tsFoodImage {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.tsFoodLabel {
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 1.2;
+  font-weight: 900;
+  color: #111827;
+}
+
+.tsFoodMatchedText {
+  grid-column: 1 / -1;
+  font-size: clamp(18px, 2.6vw, 28px);
+  font-weight: 900;
+  color: #166534;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .tsStoryOverviewGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tsFoodColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .tsFoodItem {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .tsFoodImage {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tsStoryOverviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tsStoryOverviewImage {
+    height: 220px;
+  }
+
+  .tsHotspotSentenceButton {
+    width: 100%;
+  }
+}
+
+.yeIntroCard {
+  width: min(940px, 100%);
+  margin: 0 auto 24px;
+  padding: 34px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yeFormula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 28px);
+  flex-wrap: wrap;
+  margin: 24px auto;
+}
+
+.yeFormulaPart {
+  font-size: clamp(68px, 14vw, 150px);
+  line-height: 1;
+  font-weight: 900;
+  color: #2563eb;
+}
+
+.yeFormulaPlus,
+.yeFormulaArrow {
+  font-size: clamp(44px, 9vw, 96px);
+  line-height: 1;
+  font-weight: 900;
+  color: #6b7280;
+}
+
+.yeFormulaResult {
+  font-size: clamp(86px, 17vw, 180px);
+  line-height: 1;
+  font-weight: 900;
+  color: #ff3b3b;
+}
+
+.yeIntroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.yeHouseTaskCard,
+.yeStoryOverviewCard,
+.yeStoryFragmentCard,
+.yeMatchCard,
+.yeActionMatchCard,
+.yeCharacterCard {
+  width: min(1040px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yeHouseSentence {
+  max-width: 900px;
+  margin: 0 auto 22px;
+  padding: 12px 18px;
+  border-radius: 24px;
+  background: #eff6ff;
+
+  font-size: clamp(30px, 5vw, 56px);
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #111827;
+  text-align: center;
+}
+
+.yeHouseImageWrap {
+  position: relative;
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.yeHouseImage {
+  display: block;
+  width: 100%;
+  border-radius: 28px;
+}
+
+.yeHouseSpot {
+  position: absolute;
+  width: clamp(36px, 5vw, 54px);
+  height: clamp(36px, 5vw, 54px);
+  border: 4px solid #2563eb;
+  border-radius: 999px;
+  background: rgba(219, 234, 254, 0.88);
+  color: #1d4ed8;
+  font-size: clamp(18px, 2.6vw, 30px);
+  line-height: 1;
+  font-weight: 900;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.yeHouseSpot.correct {
+  border-color: #49b96f;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.yeHouseSpot.wrong {
+  border-color: #f05a5a;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.yeHouseSpotDoll {
+  left: 31%;
+  top: 35%;
+}
+
+.yeHouseSpotCabbage {
+  left: 34%;
+  top: 89%;
+}
+
+.yeHouseSpotTrain {
+  left: 68%;
+  top: 40%;
+}
+
+.yeHouseSpotRobot {
+  left: 73%;
+  top: 69%;
+}
+
+.yeHouseSpotBackpack {
+  left: 51%;
+  top: 39%;
+}
+
+.yeStoryOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.yeStoryOverviewItem {
+  position: relative;
+  padding: 12px;
+  border-radius: 24px;
+  background: #f8fafc;
+}
+
+.yeStoryOverviewItem:nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(440px, 100%);
+}
+
+.yeStoryNumber {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 38px;
+  text-align: center;
+}
+
+.yeStoryOverviewImage {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.yeStorySentence {
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  padding: 12px 20px;
+
+  font-size: clamp(26px, 4vw, 46px);
+  line-height: 1.45;
+
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.yeStoryFragmentImage {
+  display: block;
+  width: min(720px, 100%);
+  max-height: 520px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 26px;
+}
+
+.yeTreeWordRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.yeMatchWordButton,
+.yeActionWordButton {
+  padding: 18px 28px;
+  border: 4px solid transparent;
+  border-radius: 22px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.yeMatchWordButton.selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.yeMatchWordButton.matched {
+  border-color: #49b96f;
+  background: #dcfce7;
+  color: #166534;
+  cursor: default;
+}
+
+.yeTreePictureGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.yeTreePictureButton {
+  min-height: 280px;
+  padding: 16px;
+  border: 4px solid transparent;
+  border-radius: 28px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.yeTreePictureButton.matched {
+  border-color: #49b96f;
+  background: #dcfce7;
+}
+
+.yeTreePicture {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.yeMatchedLabel {
+  display: block;
+  margin-top: 12px;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 900;
+  color: #166534;
+}
+
+.yeActionColumns {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.yeActionColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.yeActionColumnTitle {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  color: #111827;
+}
+
+.yeActionImageButton {
+  padding: 14px;
+  border: 4px solid transparent;
+  border-radius: 28px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.yeActionImageButton.selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.yeActionImageButton.matched {
+  border-color: #49b96f;
+  background: #dcfce7;
+  cursor: default;
+}
+
+.yeActionImage {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+}
+
+.yeCharacterGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.yeCharacterItem {
+  padding: 16px;
+  border-radius: 28px;
+  background: #f8fafc;
+}
+
+.yeCharacterImage {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.yeCharacterLabel {
+  margin-bottom: 14px;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.2;
+  font-weight: 900;
+  color: #111827;
+}
+
+.yeCharacterButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.yeMarkButton {
+  width: 62px;
+  height: 62px;
+  border: 4px solid transparent;
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.yeMarkButton.selected:first-child {
+  border-color: #49b96f;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.yeMarkButton.selected:last-child {
+  border-color: #f05a5a;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+@media (max-width: 820px) {
+  .yeStoryOverviewGrid,
+  .yeTreePictureGrid,
+  .yeActionColumns,
+  .yeCharacterGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .yeStoryOverviewItem:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .yeStoryOverviewImage,
+  .yeActionImage,
+  .yeCharacterImage {
+    height: auto;
+    max-height: 260px;
+  }
+}
+
+.yoIntroCard {
+  width: min(940px, 100%);
+  margin: 0 auto 24px;
+  padding: 34px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yoFormula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 28px);
+  flex-wrap: wrap;
+  margin: 24px auto;
+}
+
+.yoFormulaPart {
+  font-size: clamp(68px, 14vw, 150px);
+  line-height: 1;
+  font-weight: 900;
+  color: #2563eb;
+}
+
+.yoFormulaPlus,
+.yoFormulaArrow {
+  font-size: clamp(44px, 9vw, 96px);
+  line-height: 1;
+  font-weight: 900;
+  color: #6b7280;
+}
+
+.yoFormulaResult {
+  font-size: clamp(86px, 17vw, 180px);
+  line-height: 1;
+  font-weight: 900;
+  color: #ff3b3b;
+}
+
+.yoIntroButtons,
+.yoLetterChoiceRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.yoListenLetterCard,
+.yoPronounIntroCard,
+.yoToyCard,
+.yoStoryOverviewCard,
+.yoStoryFragmentCard,
+.yoSortCard,
+.yoHardSoftCard {
+  width: min(1040px, 100%);
+  margin: 0 auto 24px;
+  padding: 28px 24px;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  text-align: center;
+}
+
+.yoPronounIntroImage {
+  display: block;
+  width: min(620px, 100%);
+  max-height: 420px;
+  object-fit: contain;
+  margin: 0 auto 24px;
+  border-radius: 26px;
+}
+
+.yoToyImage,
+.yoHardSoftImage {
+  display: block;
+  width: min(460px, 100%);
+  max-height: 360px;
+  object-fit: contain;
+  margin: 0 auto 24px;
+}
+
+.yoStoryOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.yoStoryOverviewItem {
+  position: relative;
+  padding: 12px;
+  border-radius: 24px;
+  background: #f8fafc;
+}
+
+.yoStoryNumber {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 38px;
+  text-align: center;
+}
+
+.yoStoryOverviewImage {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.yoStorySentence {
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  padding: 16px 22px;
+  border-radius: 24px;
+  background: #eff6ff;
+
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.45;
+
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #1e3a8a;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+}
+
+.yoStoryFragmentImage {
+  display: block;
+  width: min(720px, 100%);
+  max-height: 520px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 26px;
+}
+
+.yoBasketGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.yoBasketButton {
+  min-height: 280px;
+  padding: 18px;
+  border: 4px solid #dbeafe;
+  border-radius: 30px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.yoBasketImage {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.yoBasketLabel {
+  margin-bottom: 12px;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  color: #1d4ed8;
+}
+
+.yoBasketItems {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-height: 38px;
+}
+
+.yoBasketItemName {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.yoSortItemsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.yoSortItemButton {
+  padding: 12px;
+  border: 4px solid transparent;
+  border-radius: 24px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.yoSortItemButton.selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.yoSortItemImage {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.yoSortItemLabel {
+  font-size: clamp(18px, 2.6vw, 28px);
+  line-height: 1.2;
+  font-weight: 900;
+  color: #111827;
+}
+
+@media (max-width: 820px) {
+  .yoStoryOverviewGrid,
+  .yoBasketGrid,
+  .yoSortItemsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .yoStoryOverviewImage,
+  .yoBasketImage,
+  .yoSortItemImage {
+    height: auto;
+    max-height: 240px;
+  }
+}
