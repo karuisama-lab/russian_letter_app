@@ -21896,6 +21896,899 @@ function LetterYoLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
+function LetterHLesson({ onBack }: { onBack: () => void }) {
+  const [step, setStep] = useState(1)
+
+  const [pictureIndex, setPictureIndex] = useState(0)
+  const [readWordIndex, setReadWordIndex] = useState(0)
+
+  const [animalAnswerOne, setAnimalAnswerOne] = useState<string | null>(null)
+  const [animalAnswerTwo, setAnimalAnswerTwo] = useState<string | null>(null)
+  const [drawAnswer, setDrawAnswer] = useState<string | null>(null)
+
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const isDrawingRef = useRef(false)
+  const lastPointRef = useRef<{ x: number; y: number } | null>(null)
+
+  const pictureTasks = [
+    {
+      word: 'хамелеон',
+      image: '/images/h-words/hameleon.png',
+      audio: '/audio/h-words/hameleon.mp3',
+    },
+    {
+      word: 'художник',
+      image: '/images/h-words/hudozhnik.png',
+      audio: '/audio/h-words/hudozhnik.mp3',
+    },
+    {
+      word: 'хоккей',
+      image: '/images/h-words/hokkey.png',
+      audio: '/audio/h-words/hokkey.mp3',
+    },
+    {
+      word: 'халат',
+      image: '/images/h-words/halat.png',
+      audio: '/audio/h-words/halat.mp3',
+    },
+    {
+      word: 'хлеб',
+      image: '/images/h-words/hleb.png',
+      audio: '/audio/h-words/hleb.mp3',
+    },
+  ]
+
+  const readWords = [
+    {
+      word: 'УХО',
+      audio: '/audio/h-read-words/uho.mp3',
+    },
+    {
+      word: 'ХО-БОТ',
+      audio: '/audio/h-read-words/ho-bot.mp3',
+    },
+    {
+      word: 'ХО-МЯК',
+      audio: '/audio/h-read-words/ho-myak.mp3',
+    },
+    {
+      word: 'ХВОСТ',
+      audio: '/audio/h-read-words/hvost.mp3',
+    },
+    {
+      word: 'ХО-ТЕЛ',
+      audio: '/audio/h-read-words/ho-tel.mp3',
+    },
+  ]
+
+  const animalOptions = [
+    {
+      id: 'elephant',
+      label: 'СЛОН',
+      image: '/images/h-story/elephant.png',
+      alt: 'Слон',
+    },
+    {
+      id: 'hamster',
+      label: 'ХО-МЯК',
+      image: '/images/h-story/hamster.png',
+      alt: 'Хомяк',
+    },
+    {
+      id: 'peacock',
+      label: 'ПАВ-ЛИН',
+      image: '/images/h-story/peacock.png',
+      alt: 'Павлин',
+    },
+  ]
+
+  const drawOptions = [
+    {
+      id: 'hobot',
+      label: 'ХО-БОТ',
+      image: '/images/h-choice/hobot.png',
+      alt: 'Хобот',
+    },
+    {
+      id: 'peacock-tail',
+      label: 'ХВОСТ',
+      image: '/images/h-choice/peacock-tail.png',
+      alt: 'Павлиний хвост',
+    },
+    {
+      id: 'hamster-cheeks',
+      label: 'ЩЁ-КИ',
+      image: '/images/h-choice/hamster-cheeks.png',
+      alt: 'Щёки хомяка',
+    },
+  ]
+
+  const currentPicture = pictureTasks[pictureIndex]
+  const currentReadWord = readWords[readWordIndex]
+
+  const playAudio = (audioPath: string) => {
+    const audio = new Audio(audioPath)
+    audio.play()
+  }
+
+  const drawLetterCanvasBase = (
+    ctx: CanvasRenderingContext2D,
+    width: number,
+    height: number,
+  ) => {
+    ctx.clearRect(0, 0, width, height)
+
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(0, 0, width, height)
+
+    ctx.strokeStyle = '#f2caca'
+    ctx.lineWidth = 2
+
+    ctx.beginPath()
+    ctx.moveTo(20, 80)
+    ctx.lineTo(width - 20, 80)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height / 2)
+    ctx.lineTo(width - 20, height / 2)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height - 80)
+    ctx.lineTo(width - 20, height - 80)
+    ctx.stroke()
+
+    ctx.save()
+    ctx.font = '170px Arial'
+    ctx.fillStyle = 'rgba(255, 59, 59, 0.12)'
+    ctx.textAlign = 'center'
+    ctx.textBaseline = 'middle'
+    ctx.fillText('Х', width / 2, height / 2 + 10)
+    ctx.restore()
+  }
+
+  const setupCanvas = () => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const rect = canvas.getBoundingClientRect()
+    const dpr = window.devicePixelRatio || 1
+
+    canvas.width = rect.width * dpr
+    canvas.height = rect.height * dpr
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0)
+    ctx.scale(dpr, dpr)
+
+    drawLetterCanvasBase(ctx, rect.width, rect.height)
+  }
+
+  useEffect(() => {
+    if (step === 4) {
+      requestAnimationFrame(() => {
+        setupCanvas()
+      })
+    }
+  }, [step])
+
+  const getPoint = (e: any) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    }
+  }
+
+  const startDrawing = (e: any) => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    canvas.setPointerCapture(e.pointerId)
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+
+    isDrawingRef.current = true
+    lastPointRef.current = point
+
+    ctx.beginPath()
+    ctx.moveTo(point.x, point.y)
+    ctx.strokeStyle = '#ff3b3b'
+    ctx.lineWidth = 8
+    ctx.lineCap = 'round'
+    ctx.lineJoin = 'round'
+  }
+
+  const draw = (e: any) => {
+    if (!isDrawingRef.current) return
+
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+    const lastPoint = lastPointRef.current
+
+    if (!lastPoint) return
+
+    ctx.lineTo(point.x, point.y)
+    ctx.stroke()
+
+    lastPointRef.current = point
+  }
+
+  const stopDrawing = () => {
+    isDrawingRef.current = false
+    lastPointRef.current = null
+  }
+
+  const clearCanvas = () => {
+    setupCanvas()
+  }
+
+  const nextPictureTask = () => {
+    if (pictureIndex < pictureTasks.length - 1) {
+      setPictureIndex((prev) => prev + 1)
+    } else {
+      setReadWordIndex(0)
+      setStep(8)
+    }
+  }
+
+  const nextReadWord = () => {
+    if (readWordIndex < readWords.length - 1) {
+      setReadWordIndex((prev) => prev + 1)
+    } else {
+      setStep(9)
+    }
+  }
+
+  const getImageChoiceStyle = (isSelected: boolean, isCorrect: boolean) =>
+    ({
+      border:
+        isSelected && isCorrect
+          ? '4px solid #49b96f'
+          : isSelected && !isCorrect
+            ? '4px solid #f05a5a'
+            : '4px solid transparent',
+      borderRadius: '24px',
+      padding: '10px',
+      background: '#ffffff',
+      cursor: 'pointer',
+    }) as const
+
+  return (
+    <main className="app">
+      <button className="backButton" onClick={onBack}>
+        ← Назад к урокам
+      </button>
+
+      {step === 1 && (
+        <>
+          <section className="letterIntro">
+            <p className="eyebrow dark">Урок 27</p>
+
+            <div className="redLetters">
+              <span className="bigRedLetter">Х</span>
+              <span className="smallRedLetter">х</span>
+            </div>
+
+            <h1 className="lessonTitle">Буква Х</h1>
+
+            <p className="lessonText">
+              Сначала послушай, как учитель читает букву.
+            </p>
+
+            <button
+              className="audioButton"
+              onClick={() => playAudio('/audio/letters/letter-h.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(2)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 2 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 1</p>
+            <h1 className="taskTitle">Читай буквы</h1>
+            <p className="lessonText">
+              Прочитай каждую строчку. Показывай на букву пальцем.
+            </p>
+          </section>
+
+          <section className="readingCard">
+            <div className="letterLine">Х Х Х Х Х Х</div>
+            <div className="letterLine">х х х х х х</div>
+            <div className="letterLine">Х х Х х Х х</div>
+          </section>
+
+          <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio('/audio/letters/letter-h.mp3')}
+          >
+            ▶ Послушать ещё раз
+          </button>
+
+          <button className="primaryButton" onClick={() => setStep(3)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 3 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 2</p>
+            <h1 className="taskTitle">Посмотри, как писать букву Х</h1>
+            <p className="lessonText">
+              Посмотри на образец. Потом попробуй написать букву сам.
+            </p>
+          </section>
+
+          <section className="sampleCard">
+            <img
+              src="/gifs/write/letter-h.gif"
+              alt="Как писать букву Х"
+              className="sampleImage"
+            />
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(4)}>
+            Попробовать написать
+          </button>
+        </>
+      )}
+
+      {step === 4 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 3</p>
+            <h1 className="taskTitle">Напиши букву Х пальцем</h1>
+            <p className="lessonText">
+              Веди пальцем или мышкой по экрану и рисуй большую букву Х.
+            </p>
+          </section>
+
+          <section className="drawingCard">
+            <canvas
+              ref={canvasRef}
+              className="drawingCanvas"
+              onPointerDown={startDrawing}
+              onPointerMove={draw}
+              onPointerUp={stopDrawing}
+              onPointerLeave={stopDrawing}
+            />
+          </section>
+
+          <div className="canvasButtons">
+            <button className="secondaryButton" onClick={clearCanvas}>
+              Очистить
+            </button>
+
+            <button
+              className="primaryButton smallPrimary"
+              onClick={() => setStep(5)}
+            >
+              Готово
+            </button>
+          </div>
+        </>
+      )}
+
+      {step === 5 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 4</p>
+            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <p className="lessonText">
+              Сначала послушай первую строку. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="joinReadingCard">
+            <p className="joinRowTitle">Строка 1</p>
+
+            <div className="joinTextLine">
+              <span className="joinPurple">Х-А</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Х-О</span>
+            </div>
+
+            <div className="joinTextLine">
+              <span className="joinOrange">Х-Э</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Х-Ы</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Х-У</span>
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/h-joins/h-row-1.mp3')}
+            >
+              ▶ Послушать строку 1
+            </button>
+
+            <p className="joinInstruction">
+              Теперь прочитай эту строку сам.
+            </p>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(6)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 6 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 4</p>
+            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <p className="lessonText">
+              Сначала послушай вторую строку. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="joinReadingCard">
+            <p className="joinRowTitle">Строка 2</p>
+
+            <div className="joinTextLine">
+              <span className="joinPurple">А-Х</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">О-Х</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Э-Х</span>
+            </div>
+
+            <div className="joinTextLine">
+              <span className="joinOrange">У-Х</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Ы-Х</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">И-Х</span>
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/h-joins/h-row-2.mp3')}
+            >
+              ▶ Послушать строку 2
+            </button>
+
+            <p className="joinInstruction">
+              Теперь прочитай эту строку сам.
+            </p>
+          </section>
+
+          <button
+            className="primaryButton"
+            onClick={() => {
+              setPictureIndex(0)
+              setStep(7)
+            }}
+          >
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 7 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 5</p>
+            <h1 className="taskTitle">Назови слово</h1>
+            <p className="lessonText">
+              Посмотри на картинку. Назови слово. Какая буква первая?
+            </p>
+          </section>
+
+          <section className="pictureTaskCard">
+            <button
+              className="hintButton"
+              onClick={() => playAudio(currentPicture.audio)}
+            >
+              ▶
+            </button>
+
+            <img
+              src={currentPicture.image}
+              alt={currentPicture.word}
+              className="pictureTaskImage"
+            />
+
+            <div className="pictureQuestion">
+              <p className="pictureQuestionText">
+                Назови. Какая буква первая?
+              </p>
+            </div>
+          </section>
+
+          <button className="primaryButton" onClick={nextPictureTask}>
+            {pictureIndex < pictureTasks.length - 1
+              ? 'Следующая картинка'
+              : 'Дальше'}
+          </button>
+        </>
+      )}
+
+      {step === 8 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 6</p>
+            <h1 className="taskTitle">Читай слово</h1>
+            <p className="lessonText">
+              Сначала послушай слово. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="readSingleWordCard">
+            <div className="readSingleWord">{currentReadWord.word}</div>
+          </section>
+
+          <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio(currentReadWord.audio)}
+          >
+            ▶ Послушать слово
+          </button>
+
+          <button className="primaryButton" onClick={nextReadWord}>
+            {readWordIndex < readWords.length - 1
+              ? 'Следующее слово'
+              : 'Дальше'}
+          </button>
+        </>
+      )}
+
+      {step === 9 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 7</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              У-ЛЬ-Я-НА РИ-СО-ВА-ЛА, А БО-НЬ-КА СМОТ-РЕЛ.
+            </div>
+
+            <img
+              src="/images/h-story/01-ulyana-risuet-bonka-smotrit.png"
+              alt="Ульяна рисовала, а Бонька смотрел"
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() =>
+                playAudio('/audio/h-story/01-ulyana-risuet-bonka-smotrit.mp3')
+              }
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(10)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 10 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 8</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              ВОТ НА БУ-МА-ГЕ ХО-БОТ И СЕ-РО-Е У-ХО. КТО ЭТО?
+            </div>
+
+            <img
+              src="/images/h-story/02-hobot-i-uho.png"
+              alt="На бумаге хобот и серое ухо"
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/h-story/02-hobot-i-uho.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(11)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 11 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 9</p>
+            <h1 className="taskTitle">Кто это?</h1>
+            <p className="lessonText">
+              Посмотри на картинки и выбери правильный ответ.
+            </p>
+          </section>
+
+          <section className="readSingleWordCard">
+            <div className="rStoryChoiceSentence">КТО ЭТО?</div>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="hThreeChoiceGrid">
+              {animalOptions.map((option) => {
+                const isSelected = animalAnswerOne === option.id
+                const isCorrect = option.id === 'elephant'
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    style={getImageChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setAnimalAnswerOne(option.id)}
+                  >
+                    <img
+                      src={option.image}
+                      alt={option.alt}
+                      className="hChoiceImage"
+                    />
+
+                    <div className="hChoiceLabel">{option.label}</div>
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {animalAnswerOne === 'elephant' && (
+            <p className="lessonText">Верно!</p>
+          )}
+
+          {animalAnswerOne !== null && animalAnswerOne !== 'elephant' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {animalAnswerOne === 'elephant' && (
+            <button className="primaryButton" onClick={() => setStep(12)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 12 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 10</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              А ВОТ РАЗ-НО-ЦВЕТ-НЫЙ, ДЛИН-НЫЙ ХВОСТ. А ЭТО КТО?
+            </div>
+
+            <img
+              src="/images/h-story/03-dlinnyy-hvost.png"
+              alt="Разноцветный длинный хвост"
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/h-story/03-dlinnyy-hvost.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(13)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 13 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 11</p>
+            <h1 className="taskTitle">А кто это?</h1>
+            <p className="lessonText">
+              Посмотри на картинки и выбери правильный ответ.
+            </p>
+          </section>
+
+          <section className="readSingleWordCard">
+            <div className="rStoryChoiceSentence">А КТО ЭТО?</div>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="hThreeChoiceGrid">
+              {animalOptions.map((option) => {
+                const isSelected = animalAnswerTwo === option.id
+                const isCorrect = option.id === 'peacock'
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    style={getImageChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setAnimalAnswerTwo(option.id)}
+                  >
+                    <img
+                      src={option.image}
+                      alt={option.alt}
+                      className="hChoiceImage"
+                    />
+
+                    <div className="hChoiceLabel">{option.label}</div>
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {animalAnswerTwo === 'peacock' && (
+            <p className="lessonText">Верно!</p>
+          )}
+
+          {animalAnswerTwo !== null && animalAnswerTwo !== 'peacock' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {animalAnswerTwo === 'peacock' && (
+            <button className="primaryButton" onClick={() => setStep(14)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 14 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 12</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              БО-НЬ-КА ХО-ТЕЛ НА-РИ-СО-ВА-ТЬ ХО-МЯ-КА. КАК БЫТЬ?
+            </div>
+
+            <img
+              src="/images/h-story/04-bonka-hochet-homyaka.png"
+              alt="Бонька хотел нарисовать хомяка"
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() =>
+                playAudio('/audio/h-story/04-bonka-hochet-homyaka.mp3')
+              }
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(15)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 15 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 13</p>
+            <h1 className="taskTitle">Что нарисовать?</h1>
+            <p className="lessonText">
+              Выбери, что нужно нарисовать для хомяка.
+            </p>
+          </section>
+
+          <section className="readSingleWordCard">
+            <div className="rStoryChoiceSentence">ЧТО НА-РИ-СО-ВА-ТЬ?</div>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="hThreeChoiceGrid">
+              {drawOptions.map((option) => {
+                const isSelected = drawAnswer === option.id
+                const isCorrect = option.id === 'hamster-cheeks'
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    style={getImageChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setDrawAnswer(option.id)}
+                  >
+                    <img
+                      src={option.image}
+                      alt={option.alt}
+                      className="hChoiceImage"
+                    />
+
+                    <div className="hChoiceLabel">{option.label}</div>
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {drawAnswer === 'hamster-cheeks' && (
+            <p className="lessonText">Верно!</p>
+          )}
+
+          {drawAnswer !== null && drawAnswer !== 'hamster-cheeks' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {drawAnswer === 'hamster-cheeks' && (
+            <button className="primaryButton" onClick={() => setStep(16)}>
+              Завершить урок
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 16 && (
+        <>
+          <section className="successCard">
+            <div className="successIcon">✓</div>
+            <h1 className="taskTitle">Молодец!</h1>
+            <p className="lessonText">
+              Ты послушал букву Х, прочитал слова и помог Боньке понять,
+              кого он хотел нарисовать.
+            </p>
+          </section>
+
+          <button className="primaryButton" onClick={onBack}>
+            Вернуться к урокам
+          </button>
+        </>
+      )}
+    </main>
+  )
+}
+
 function DefaultLesson({
   lesson,
   onBack,
