@@ -2157,31 +2157,31 @@ function LetterTLesson({ onBack }: { onBack: () => void }) {
 
   const writeWords = [
     {
-      word: 'та',
+      word: 'ТА',
       gif: '/gifs/t-words-write/t-word-ta.gif',
     },
     {
-      word: 'тот',
+      word: 'ТОТ',
       gif: '/gifs/t-words-write/t-word-tot.gif',
     },
     {
-      word: 'там',
+      word: 'ТАМ',
       gif: '/gifs/t-words-write/t-word-tam.gif',
     },
     {
-      word: 'том',
+      word: 'ТОМ',
       gif: '/gifs/t-words-write/t-word-tom.gif',
     },
     {
-      word: 'тут',
+      word: 'ТУТ',
       gif: '/gifs/t-words-write/t-word-tut.gif',
     },
     {
-      word: 'то-ма',
+      word: 'ТО-МА',
       gif: '/gifs/t-words-write/t-word-to-ma.gif',
     },
     {
-      word: 'то-мат',
+      word: 'ТО-МАТ',
       gif: '/gifs/t-words-write/t-word-to-mat.gif',
     },
   ]
@@ -8084,7 +8084,7 @@ function LetterYeriLesson({ onBack }: { onBack: () => void }) {
     if (readWordIndex < readWords.length - 1) {
       setReadWordIndex((prev) => prev + 1)
     } else {
-      setStep(10)
+      setStep(11)
     }
   }
 
@@ -9055,7 +9055,7 @@ function LetterLLesson({ onBack }: { onBack: () => void }) {
     if (readWordIndex < readWords.length - 1) {
       setReadWordIndex((prev) => prev + 1)
     } else {
-      setStep(9)
+      setStep(10)
     }
   }
 
@@ -9988,7 +9988,7 @@ function LetterPLesson({ onBack }: { onBack: () => void }) {
     if (readWordIndex < readWords.length - 1) {
       setReadWordIndex((prev) => prev + 1)
     } else {
-      setStep(9)
+      setStep(10)
     }
   }
 
@@ -10945,13 +10945,13 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
       drawLetterCanvasBase(ctx, rect.width, rect.height)
     }
 
-    if (step === 10) {
+    if (step === 9) {
       drawWordCanvasBase(ctx, rect.width, rect.height)
     }
   }
 
   useEffect(() => {
-    if (step === 4 || step === 10) {
+    if (step === 4 || step === 9) {
       requestAnimationFrame(() => {
         setupCanvas()
       })
@@ -11071,7 +11071,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
       setStoryChoiceIndex((prev) => prev + 1)
       setStoryChoiceAnswer(null)
     } else {
-      setStep(15)
+      setStep(14)
     }
   }
 
@@ -11395,30 +11395,6 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
-
-          <section className="sampleCard">
-            <img
-              src="/gifs/r-words-write/r-word-gor-ka.gif"
-              alt="Как писать слово гор-ка"
-              className="sampleImage wideSampleImage"
-            />
-          </section>
-
-          <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
-          </button>
-        </>
-      )}
-
-      {step === 10 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
             <h1 className="taskTitle">Напиши слово гор-ка</h1>
             <p className="lessonText">
               Веди пальцем или мышкой по экрану и напиши слово.
@@ -11443,7 +11419,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
 
             <button
               className="primaryButton smallPrimary"
-              onClick={() => setStep(11)}
+              onClick={() => setStep(10)}
             >
               Дальше
             </button>
@@ -11451,7 +11427,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
         </>
       )}
 
-      {step === 11 && (
+      {step === 10 && (
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 8</p>
@@ -11511,13 +11487,13 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
             </button>
           </section>
 
-          <button className="primaryButton" onClick={() => setStep(12)}>
+          <button className="primaryButton" onClick={() => setStep(11)}>
             Дальше
           </button>
         </>
       )}
 
-      {step === 12 && (
+      {step === 11 && (
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 9</p>
@@ -11583,14 +11559,14 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
           </section>
 
           {allMatched && (
-            <button className="primaryButton" onClick={() => setStep(13)}>
+            <button className="primaryButton" onClick={() => setStep(12)}>
               Дальше
             </button>
           )}
         </>
       )}
 
-      {step === 13 && (
+      {step === 12 && (
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 10</p>
@@ -11651,7 +11627,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
             onClick={() => {
               setStoryChoiceIndex(0)
               setStoryChoiceAnswer(null)
-              setStep(14)
+              setStep(13)
             }}
           >
             Дальше
@@ -11659,7 +11635,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
         </>
       )}
 
-      {step === 14 && (
+      {step === 13 && (
   <>
     <section className="taskHeader">
       <p className="eyebrow dark">Задание 11</p>
@@ -11719,7 +11695,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
     )}
   </>
 )}
-      {step === 15 && (
+      {step === 14 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
@@ -12068,7 +12044,7 @@ function LetterSoftSignLesson({ onBack }: { onBack: () => void }) {
       setListenIndex((prev) => prev + 1)
       setListenAnswer(null)
     } else {
-      setStep(9)
+      setStep(10)
     }
   }
 
@@ -12913,7 +12889,7 @@ function LetterBLesson({ onBack }: { onBack: () => void }) {
     if (readWordIndex < readWords.length - 1) {
       setReadWordIndex((prev) => prev + 1)
     } else {
-      setStep(9)
+      setStep(10)
     }
   }
 
@@ -13215,34 +13191,10 @@ function LetterBLesson({ onBack }: { onBack: () => void }) {
         </>
       )}
 
-      {step === 9 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать слово сам.
-            </p>
-          </section>
-
-          <section className="sampleCard">
-            <img
-              src="/gifs/b-words-write/bobr.gif"
-              alt="Как писать слово бобр"
-              className="sampleImage"
-            />
-          </section>
-
-          <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
-          </button>
-        </>
-      )}
-
       {step === 10 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
+            <p className="eyebrow dark">Задание 7</p>
             <h1 className="taskTitle">Напиши слово БОБР</h1>
             <p className="lessonText">
               Веди пальцем или мышкой по экрану и попробуй написать слово.
@@ -13282,7 +13234,7 @@ function LetterBLesson({ onBack }: { onBack: () => void }) {
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
+            <p className="eyebrow dark">Задание 8</p>
             <h1 className="taskTitle">Послушай рассказ</h1>
             <p className="lessonText">
               Посмотри на картинки. Сначала послушай аудио.
@@ -13331,7 +13283,7 @@ function LetterBLesson({ onBack }: { onBack: () => void }) {
       {step === 12 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
+            <p className="eyebrow dark">Задание 9</p>
             <h1 className="taskTitle">Прочитай и выбери картинку</h1>
             <p className="lessonText">
               Прочитай предложение и выбери правильную картинку.
@@ -13495,17 +13447,14 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
     {
       word: 'ОН',
       trace: 'он',
-      gif: '/gifs/n-write-words/on.gif',
     },
     {
       word: 'ОНА',
       trace: 'она',
-      gif: '/gifs/n-write-words/ona.gif',
     },
     {
       word: 'ОНО',
       trace: 'оно',
-      gif: '/gifs/n-write-words/ono.gif',
     },
   ]
 
@@ -13733,13 +13682,13 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
       drawLetterCanvasBase(ctx, rect.width, rect.height)
     }
 
-    if (step === 10) {
+    if (step === 9) {
       drawWordCanvasBase(ctx, rect.width, rect.height)
     }
   }
 
   useEffect(() => {
-    if (step === 4 || step === 10) {
+    if (step === 4 || step === 9) {
       requestAnimationFrame(() => {
         setupCanvas()
       })
@@ -13827,7 +13776,6 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
   const nextWriteWord = () => {
     if (writeWordIndex < writeWords.length - 1) {
       setWriteWordIndex((prev) => prev + 1)
-      setStep(9)
     } else {
       setGenderIndex(0)
       setGenderAnswer(null)
@@ -13864,7 +13812,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
     }
   }
 
-  const getImageChoiceStyle = (isSelected: boolean, isCorrect: boolean) => ({
+  const getImageChoiceStyle = (
+    isSelected: boolean,
+    isCorrect: boolean,
+  ) => ({
     border:
       isSelected && isCorrect
         ? '4px solid #49b96f'
@@ -13877,7 +13828,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
     cursor: 'pointer',
   })
 
-  const getTextChoiceStyle = (isSelected: boolean, isCorrect: boolean) => ({
+  const getTextChoiceStyle = (
+    isSelected: boolean,
+    isCorrect: boolean,
+  ) => ({
     minWidth: '140px',
     padding: '18px 28px',
     border:
@@ -13917,13 +13871,18 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
 
             <button
               className="audioButton"
-              onClick={() => playAudio('/audio/letters/letter-n.mp3')}
+              onClick={() =>
+                playAudio('/audio/letters/letter-n.mp3')
+              }
             >
               ▶ Послушать
             </button>
           </section>
 
-          <button className="primaryButton" onClick={() => setStep(2)}>
+          <button
+            className="primaryButton"
+            onClick={() => setStep(2)}
+          >
             Дальше
           </button>
         </>
@@ -13947,12 +13906,17 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
 
           <button
             className="audioButton secondaryAudio"
-            onClick={() => playAudio('/audio/letters/letter-n.mp3')}
+            onClick={() =>
+              playAudio('/audio/letters/letter-n.mp3')
+            }
           >
             ▶ Послушать ещё раз
           </button>
 
-          <button className="primaryButton" onClick={() => setStep(3)}>
+          <button
+            className="primaryButton"
+            onClick={() => setStep(3)}
+          >
             Дальше
           </button>
         </>
@@ -13962,7 +13926,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Н</h1>
+            <h1 className="taskTitle">
+              Посмотри, как писать букву Н
+            </h1>
             <p className="lessonText">
               Посмотри на образец. Потом попробуй написать букву сам.
             </p>
@@ -13976,7 +13942,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             />
           </section>
 
-          <button className="primaryButton" onClick={() => setStep(4)}>
+          <button
+            className="primaryButton"
+            onClick={() => setStep(4)}
+          >
             Попробовать написать
           </button>
         </>
@@ -13986,9 +13955,12 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Н пальцем</h1>
+            <h1 className="taskTitle">
+              Напиши букву Н пальцем
+            </h1>
             <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Н.
+              Веди пальцем или мышкой по экрану и рисуй большую
+              букву Н.
             </p>
           </section>
 
@@ -13999,12 +13971,16 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
               onPointerDown={startDrawing}
               onPointerMove={draw}
               onPointerUp={stopDrawing}
+              onPointerCancel={stopDrawing}
               onPointerLeave={stopDrawing}
             />
           </section>
 
           <div className="canvasButtons">
-            <button className="secondaryButton" onClick={clearCanvas}>
+            <button
+              className="secondaryButton"
+              onClick={clearCanvas}
+            >
               Очистить
             </button>
 
@@ -14022,9 +13998,12 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <h1 className="taskTitle">
+              Читай буквы вместе
+            </h1>
             <p className="lessonText">
-              Сначала послушай, как читает учитель. Потом прочитай сам.
+              Сначала послушай, как читает учитель. Потом прочитай
+              сам.
             </p>
           </section>
 
@@ -14047,7 +14026,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
 
             <button
               className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/n-joins/n-row-1.mp3')}
+              onClick={() =>
+                playAudio('/audio/n-joins/n-row-1.mp3')
+              }
             >
               ▶ Послушать строку 1
             </button>
@@ -14057,7 +14038,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={() => setStep(6)}>
+          <button
+            className="primaryButton"
+            onClick={() => setStep(6)}
+          >
             Дальше
           </button>
         </>
@@ -14067,7 +14051,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <h1 className="taskTitle">
+              Читай буквы вместе
+            </h1>
             <p className="lessonText">
               Сначала послушай вторую строку. Потом прочитай сам.
             </p>
@@ -14092,7 +14078,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
 
             <button
               className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/n-joins/n-row-2.mp3')}
+              onClick={() =>
+                playAudio('/audio/n-joins/n-row-2.mp3')
+              }
             >
               ▶ Послушать строку 2
             </button>
@@ -14120,14 +14108,17 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             <p className="eyebrow dark">Задание 5</p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              Посмотри на картинку. Назови слово. Какая буква
+              первая?
             </p>
           </section>
 
           <section className="pictureTaskCard">
             <button
               className="hintButton"
-              onClick={() => playAudio(currentPicture.audio)}
+              onClick={() =>
+                playAudio(currentPicture.audio)
+              }
             >
               ▶
             </button>
@@ -14145,7 +14136,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             </div>
           </section>
 
-          <button className="primaryButton" onClick={nextPictureTask}>
+          <button
+            className="primaryButton"
+            onClick={nextPictureTask}
+          >
             {pictureIndex < pictureTasks.length - 1
               ? 'Следующая картинка'
               : 'Дальше'}
@@ -14164,17 +14158,24 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
           </section>
 
           <section className="readSingleWordCard">
-            <div className="readSingleWord">{currentReadWord.word}</div>
+            <div className="readSingleWord">
+              {currentReadWord.word}
+            </div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
-            onClick={() => playAudio(currentReadWord.audio)}
+            onClick={() =>
+              playAudio(currentReadWord.audio)
+            }
           >
             ▶ Послушать слово
           </button>
 
-          <button className="primaryButton" onClick={nextReadWord}>
+          <button
+            className="primaryButton"
+            onClick={nextReadWord}
+          >
             {readWordIndex < readWords.length - 1
               ? 'Следующее слово'
               : 'Дальше'}
@@ -14186,35 +14187,14 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
+
+            <h1 className="taskTitle">
+              Напиши слово {currentWriteWord.word}
+            </h1>
+
             <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать слово сам.
-            </p>
-          </section>
-
-          <section className="sampleCard">
-            <img
-              src={currentWriteWord.gif}
-              alt={`Как писать слово ${currentWriteWord.word}`}
-              className="sampleImage"
-            />
-
-            <div className="readSingleWord">{currentWriteWord.word}</div>
-          </section>
-
-          <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
-          </button>
-        </>
-      )}
-
-      {step === 10 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово {currentWriteWord.word}</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и попробуй написать слово.
+              Веди пальцем или мышкой по экрану и попробуй написать
+              слово.
             </p>
           </section>
 
@@ -14225,16 +14205,23 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
               onPointerDown={startDrawing}
               onPointerMove={draw}
               onPointerUp={stopDrawing}
+              onPointerCancel={stopDrawing}
               onPointerLeave={stopDrawing}
             />
           </section>
 
           <div className="canvasButtons">
-            <button className="secondaryButton" onClick={clearCanvas}>
+            <button
+              className="secondaryButton"
+              onClick={clearCanvas}
+            >
               Очистить
             </button>
 
-            <button className="primaryButton smallPrimary" onClick={nextWriteWord}>
+            <button
+              className="primaryButton smallPrimary"
+              onClick={nextWriteWord}
+            >
               {writeWordIndex < writeWords.length - 1
                 ? 'Следующее слово'
                 : 'Дальше'}
@@ -14249,8 +14236,8 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             <p className="eyebrow dark">Задание 8</p>
             <h1 className="taskTitle">Он или она?</h1>
             <p className="lessonText">
-              Посмотри на картинку. Учитель объяснит, когда мы говорим
-              «он», а когда — «она».
+              Посмотри на картинку. Учитель объяснит, когда мы
+              говорим «он», а когда — «она».
             </p>
           </section>
 
@@ -14279,7 +14266,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Выбери: он или она</h1>
+            <h1 className="taskTitle">
+              Выбери: он или она
+            </h1>
             <p className="lessonText">
               Посмотри на картинку и выбери правильное слово.
             </p>
@@ -14341,7 +14330,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             )}
 
           {genderAnswer === currentGenderTask.correct && (
-            <button className="primaryButton" onClick={nextGenderTask}>
+            <button
+              className="primaryButton"
+              onClick={nextGenderTask}
+            >
               {genderIndex < genderTasks.length - 1
                 ? 'Следующая картинка'
                 : 'Дальше'}
@@ -14370,7 +14362,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
 
           <button
             className="audioButton secondaryAudio"
-            onClick={() => playAudio('/audio/n-na-nad/na-nad-info.mp3')}
+            onClick={() =>
+              playAudio('/audio/n-na-nad/na-nad-info.mp3')
+            }
           >
             ▶ Послушать
           </button>
@@ -14392,7 +14386,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Выбери: на или над</h1>
+            <h1 className="taskTitle">
+              Выбери: на или над
+            </h1>
             <p className="lessonText">
               Посмотри на картинку и выбери правильное слово.
             </p>
@@ -14448,7 +14444,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             )}
 
           {positionAnswer === currentPositionTask.correct && (
-            <button className="primaryButton" onClick={nextPositionTask}>
+            <button
+              className="primaryButton"
+              onClick={nextPositionTask}
+            >
               {positionIndex < positionTasks.length - 1
                 ? 'Следующая картинка'
                 : 'Дальше'}
@@ -14461,7 +14460,9 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="taskHeader">
             <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
+            <h1 className="taskTitle">
+              Прочитай и выбери картинку
+            </h1>
             <p className="lessonText">
               Прочитай предложение и выбери правильную картинку.
             </p>
@@ -14477,20 +14478,29 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+                gridTemplateColumns:
+                  'repeat(2, minmax(0, 1fr))',
                 gap: '16px',
               }}
             >
               {currentSentenceTask.options.map((option) => {
-                const isSelected = sentenceAnswer === option.id
-                const isCorrect = option.id === currentSentenceTask.correct
+                const isSelected =
+                  sentenceAnswer === option.id
+
+                const isCorrect =
+                  option.id === currentSentenceTask.correct
 
                 return (
                   <button
                     key={option.id}
                     type="button"
-                    onClick={() => setSentenceAnswer(option.id)}
-                    style={getImageChoiceStyle(isSelected, isCorrect)}
+                    onClick={() =>
+                      setSentenceAnswer(option.id)
+                    }
+                    style={getImageChoiceStyle(
+                      isSelected,
+                      isCorrect,
+                    )}
                   >
                     <img
                       src={option.image}
@@ -14513,7 +14523,10 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
             )}
 
           {sentenceAnswer === currentSentenceTask.correct && (
-            <button className="primaryButton" onClick={nextSentenceTask}>
+            <button
+              className="primaryButton"
+              onClick={nextSentenceTask}
+            >
               {sentenceIndex < sentenceTasks.length - 1
                 ? 'Следующее предложение'
                 : 'Завершить урок'}
@@ -14526,14 +14539,19 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
+
             <h1 className="taskTitle">Молодец!</h1>
+
             <p className="lessonText">
-              Ты послушал букву Н, прочитал её, написал слова и выбрал
-              правильные картинки.
+              Ты послушал букву Н, прочитал её, написал слова и
+              выбрал правильные картинки.
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button
+            className="primaryButton"
+            onClick={onBack}
+          >
             Вернуться к урокам
           </button>
         </>
@@ -14990,7 +15008,7 @@ function LetterVLesson({ onBack }: { onBack: () => void }) {
     if (readWordIndex < readWords.length - 1) {
       setReadWordIndex((prev) => prev + 1)
     } else {
-      setStep(10)
+      setStep(11)
     }
   }
 
@@ -25984,6 +26002,992 @@ function LetterZhLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
+function LetterFLesson({ onBack }: { onBack: () => void }) {
+  const [step, setStep] = useState(1)
+
+  const [pictureIndex, setPictureIndex] = useState(0)
+  const [readWordIndex, setReadWordIndex] = useState(0)
+
+  const [selectedMatchWordId, setSelectedMatchWordId] = useState<string | null>(null)
+  const [matchedPairs, setMatchedPairs] = useState<Record<string, string>>({})
+  const [matchFeedback, setMatchFeedback] = useState('')
+
+  const [flowersAnswer, setFlowersAnswer] = useState<string | null>(null)
+  const [figureActionAnswer, setFigureActionAnswer] = useState<string | null>(null)
+  const [whoFlewAnswer, setWhoFlewAnswer] = useState<string | null>(null)
+
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const isDrawingRef = useRef(false)
+  const lastPointRef = useRef<{ x: number; y: number } | null>(null)
+
+  const pictureTasks = [
+    {
+      word: 'фонарик',
+      image: '/images/f-words/fonarik.png',
+      audio: '/audio/f-words/fonarik.mp3',
+    },
+    {
+      word: 'филин',
+      image: '/images/f-words/filin.png',
+      audio: '/audio/f-words/filin.mp3',
+    },
+    {
+      word: 'фиалка',
+      image: '/images/f-words/fialka.png',
+      audio: '/audio/f-words/fialka.mp3',
+    },
+    {
+      word: 'фотоаппарат',
+      image: '/images/f-words/fotoapparat.png',
+      audio: '/audio/f-words/fotoapparat.mp3',
+    },
+    {
+      word: 'фломастеры',
+      image: '/images/f-words/flomastery.png',
+      audio: '/audio/f-words/flomastery.mp3',
+    },
+  ]
+
+  const readWords = [
+    {
+      word: 'ФО-ТО',
+      audio: '/audio/f-read-words/fo-to.mp3',
+    },
+    {
+      word: 'МИФ',
+      audio: '/audio/f-read-words/mif.mp3',
+    },
+    {
+      word: 'ФИ-ГУ-РА',
+      audio: '/audio/f-read-words/fi-gu-ra.mp3',
+    },
+    {
+      word: 'ФАН-ТИК',
+      audio: '/audio/f-read-words/fan-tik.mp3',
+    },
+    {
+      word: 'КОФ-ТА',
+      audio: '/audio/f-read-words/kof-ta.mp3',
+    },
+  ]
+
+  const matchWords = [
+    {
+      id: 'fu',
+      label: 'ФУ!',
+      correctImageId: 'disgust',
+    },
+    {
+      id: 'fyu',
+      label: 'ФЬЮ-ФЬЮ!',
+      correctImageId: 'whistle',
+    },
+    {
+      id: 'fyr',
+      label: 'ФЫР-ФЫР-ФЫР!',
+      correctImageId: 'hedgehog',
+    },
+    {
+      id: 'tfu',
+      label: 'ТЬФУ!',
+      correctImageId: 'spit',
+    },
+  ]
+
+  const matchImages = [
+    {
+      id: 'whistle',
+      image: '/images/f-match/whistle.png',
+      alt: 'Человек свистит',
+    },
+    {
+      id: 'disgust',
+      image: '/images/f-match/disgust.png',
+      alt: 'Человеку противно',
+    },
+    {
+      id: 'spit',
+      image: '/images/f-match/spit.png',
+      alt: 'Человек плюётся',
+    },
+    {
+      id: 'hedgehog',
+      image: '/images/f-match/hedgehog-snorts.png',
+      alt: 'Ёжик фырчит',
+    },
+  ]
+
+  const flowerOptions = [
+    {
+      id: 'roses',
+      label: 'РО-ЗЫ',
+      image: '/images/f-story/question-roses.png',
+      alt: 'Розы',
+    },
+    {
+      id: 'violets',
+      label: 'ФИ-АЛ-КИ',
+      image: '/images/f-story/question-violets.png',
+      alt: 'Фиалки',
+    },
+    {
+      id: 'poppies',
+      label: 'МА-КИ',
+      image: '/images/f-story/question-poppies.png',
+      alt: 'Маки',
+    },
+  ]
+
+  const whoFlewOptions = [
+    {
+      id: 'duck',
+      label: 'УТ-КА',
+      image: '/images/f-story/question-duck.png',
+      alt: 'Утка',
+    },
+    {
+      id: 'bee',
+      label: 'ПЧЕ-ЛА',
+      image: '/images/f-story/question-bee.png',
+      alt: 'Пчела',
+    },
+    {
+      id: 'filin',
+      label: 'ФИ-ЛИН',
+      image: '/images/f-story/question-filin.png',
+      alt: 'Филин',
+    },
+  ]
+
+  const currentPicture = pictureTasks[pictureIndex]
+  const currentReadWord = readWords[readWordIndex]
+  const allMatched = Object.keys(matchedPairs).length === matchWords.length
+
+  const playAudio = (audioPath: string) => {
+    const audio = new Audio(audioPath)
+    audio.play()
+  }
+
+  const drawLetterCanvasBase = (
+    ctx: CanvasRenderingContext2D,
+    width: number,
+    height: number,
+  ) => {
+    ctx.clearRect(0, 0, width, height)
+
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(0, 0, width, height)
+
+    ctx.strokeStyle = '#f2caca'
+    ctx.lineWidth = 2
+
+    ctx.beginPath()
+    ctx.moveTo(20, 80)
+    ctx.lineTo(width - 20, 80)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height / 2)
+    ctx.lineTo(width - 20, height / 2)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height - 80)
+    ctx.lineTo(width - 20, height - 80)
+    ctx.stroke()
+
+    ctx.save()
+    ctx.font = '170px Arial'
+    ctx.fillStyle = 'rgba(255, 59, 59, 0.12)'
+    ctx.textAlign = 'center'
+    ctx.textBaseline = 'middle'
+    ctx.fillText('Ф', width / 2, height / 2 + 10)
+    ctx.restore()
+  }
+
+  const setupCanvas = () => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const rect = canvas.getBoundingClientRect()
+    const dpr = window.devicePixelRatio || 1
+
+    canvas.width = rect.width * dpr
+    canvas.height = rect.height * dpr
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0)
+    ctx.scale(dpr, dpr)
+
+    drawLetterCanvasBase(ctx, rect.width, rect.height)
+  }
+
+  useEffect(() => {
+    if (step === 4) {
+      requestAnimationFrame(() => {
+        setupCanvas()
+      })
+    }
+  }, [step])
+
+  const getPoint = (e: any) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    }
+  }
+
+  const startDrawing = (e: any) => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    canvas.setPointerCapture(e.pointerId)
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+
+    isDrawingRef.current = true
+    lastPointRef.current = point
+
+    ctx.beginPath()
+    ctx.moveTo(point.x, point.y)
+    ctx.strokeStyle = '#ff3b3b'
+    ctx.lineWidth = 8
+    ctx.lineCap = 'round'
+    ctx.lineJoin = 'round'
+  }
+
+  const draw = (e: any) => {
+    if (!isDrawingRef.current) return
+
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+    const lastPoint = lastPointRef.current
+
+    if (!lastPoint) return
+
+    ctx.lineTo(point.x, point.y)
+    ctx.stroke()
+
+    lastPointRef.current = point
+  }
+
+  const stopDrawing = () => {
+    isDrawingRef.current = false
+    lastPointRef.current = null
+  }
+
+  const clearCanvas = () => {
+    setupCanvas()
+  }
+
+  const nextPictureTask = () => {
+    if (pictureIndex < pictureTasks.length - 1) {
+      setPictureIndex((prev) => prev + 1)
+    } else {
+      setReadWordIndex(0)
+      setStep(8)
+    }
+  }
+
+  const nextReadWord = () => {
+    if (readWordIndex < readWords.length - 1) {
+      setReadWordIndex((prev) => prev + 1)
+    } else {
+      setStep(9)
+    }
+  }
+
+  const handleMatchWordClick = (wordId: string) => {
+    if (matchedPairs[wordId]) return
+
+    setSelectedMatchWordId(wordId)
+    setMatchFeedback('')
+  }
+
+  const handleMatchImageClick = (imageId: string) => {
+    if (!selectedMatchWordId) {
+      setMatchFeedback('Сначала выбери слово.')
+      return
+    }
+
+    const word = matchWords.find((item) => item.id === selectedMatchWordId)
+    if (!word) return
+
+    if (word.correctImageId === imageId) {
+      setMatchedPairs((prev) => ({
+        ...prev,
+        [word.id]: imageId,
+      }))
+      setSelectedMatchWordId(null)
+      setMatchFeedback('Верно!')
+    } else {
+      setMatchFeedback('Попробуй ещё раз.')
+    }
+  }
+
+  const getImageChoiceStyle = (isSelected: boolean, isCorrect: boolean) =>
+    ({
+      border:
+        isSelected && isCorrect
+          ? '4px solid #49b96f'
+          : isSelected && !isCorrect
+            ? '4px solid #f05a5a'
+            : '4px solid transparent',
+      borderRadius: '24px',
+      padding: '10px',
+      background: '#ffffff',
+      cursor: 'pointer',
+    }) as const
+
+  return (
+    <main className="app">
+      <button className="backButton" onClick={onBack}>
+        ← Назад к урокам
+      </button>
+
+      {step === 1 && (
+        <>
+          <section className="letterIntro">
+            <p className="eyebrow dark">Урок Ф</p>
+
+            <div className="redLetters">
+              <span className="bigRedLetter">Ф</span>
+              <span className="smallRedLetter">ф</span>
+            </div>
+
+            <h1 className="lessonTitle">Буква Ф</h1>
+
+            <p className="lessonText">
+              Сначала послушай, как учитель читает букву.
+            </p>
+
+            <button
+              className="audioButton"
+              onClick={() => playAudio('/audio/letters/letter-f.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(2)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 2 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 1</p>
+            <h1 className="taskTitle">Читай буквы</h1>
+            <p className="lessonText">
+              Прочитай каждую строчку. Показывай на букву пальцем.
+            </p>
+          </section>
+
+          <section className="readingCard">
+            <div className="letterLine">Ф Ф Ф Ф Ф Ф</div>
+            <div className="letterLine">ф ф ф ф ф ф</div>
+            <div className="letterLine">Ф ф Ф ф Ф ф</div>
+          </section>
+
+          <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio('/audio/letters/letter-f.mp3')}
+          >
+            ▶ Послушать ещё раз
+          </button>
+
+          <button className="primaryButton" onClick={() => setStep(3)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 3 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 2</p>
+            <h1 className="taskTitle">Посмотри, как писать букву Ф</h1>
+            <p className="lessonText">
+              Посмотри на образец. Потом попробуй написать букву сам.
+            </p>
+          </section>
+
+          <section className="sampleCard">
+            <img
+              src="/gifs/write/letter-f.gif"
+              alt="Как писать букву Ф"
+              className="sampleImage"
+            />
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(4)}>
+            Попробовать написать
+          </button>
+        </>
+      )}
+
+      {step === 4 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 3</p>
+            <h1 className="taskTitle">Напиши букву Ф пальцем</h1>
+            <p className="lessonText">
+              Веди пальцем или мышкой по экрану и рисуй большую букву Ф.
+            </p>
+          </section>
+
+          <section className="drawingCard">
+            <canvas
+              ref={canvasRef}
+              className="drawingCanvas"
+              onPointerDown={startDrawing}
+              onPointerMove={draw}
+              onPointerUp={stopDrawing}
+              onPointerLeave={stopDrawing}
+            />
+          </section>
+
+          <div className="canvasButtons">
+            <button className="secondaryButton" onClick={clearCanvas}>
+              Очистить
+            </button>
+
+            <button
+              className="primaryButton smallPrimary"
+              onClick={() => setStep(5)}
+            >
+              Готово
+            </button>
+          </div>
+        </>
+      )}
+
+      {step === 5 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 4</p>
+            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <p className="lessonText">
+              Сначала послушай первую строку. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="joinReadingCard">
+            <p className="joinRowTitle">Строка 1</p>
+
+            <div className="joinTextLine">
+              <span className="joinPurple">Ф-А</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Ф-О</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Ф-У</span>
+            </div>
+
+            <div className="joinTextLine">
+              <span className="joinOrange">Ф-И</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Ф-Е</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Ф-Ё</span>
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/f-joins/f-row-1.mp3')}
+            >
+              ▶ Послушать строку 1
+            </button>
+
+            <p className="joinInstruction">
+              Теперь прочитай эту строку сам.
+            </p>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(6)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 6 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 4</p>
+            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <p className="lessonText">
+              Сначала послушай вторую строку. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="joinReadingCard">
+            <p className="joinRowTitle">Строка 2</p>
+
+            <div className="joinTextLine">
+              <span className="joinPurple">А-Ф</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">О-Ф</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Э-Ф</span>
+            </div>
+
+            <div className="joinTextLine">
+              <span className="joinOrange">У-Ф</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Ы-Ф</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">И-Ф</span>
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/f-joins/f-row-2.mp3')}
+            >
+              ▶ Послушать строку 2
+            </button>
+
+            <p className="joinInstruction">
+              Теперь прочитай эту строку сам.
+            </p>
+          </section>
+
+          <button
+            className="primaryButton"
+            onClick={() => {
+              setPictureIndex(0)
+              setStep(7)
+            }}
+          >
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 7 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 5</p>
+            <h1 className="taskTitle">Назови слово</h1>
+            <p className="lessonText">
+              Посмотри на картинку. Назови слово. Какая буква первая?
+            </p>
+          </section>
+
+          <section className="pictureTaskCard">
+            <button
+              className="hintButton"
+              onClick={() => playAudio(currentPicture.audio)}
+            >
+              ▶
+            </button>
+
+            <img
+              src={currentPicture.image}
+              alt={currentPicture.word}
+              className="pictureTaskImage"
+            />
+
+            <div className="pictureQuestion">
+              <p className="pictureQuestionText">
+                Назови. Какая буква первая?
+              </p>
+            </div>
+          </section>
+
+          <button className="primaryButton" onClick={nextPictureTask}>
+            {pictureIndex < pictureTasks.length - 1
+              ? 'Следующая картинка'
+              : 'Дальше'}
+          </button>
+        </>
+      )}
+
+      {step === 8 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 6</p>
+            <h1 className="taskTitle">Читай слово</h1>
+            <p className="lessonText">
+              Сначала послушай слово. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="readSingleWordCard">
+            <div className="readSingleWord">{currentReadWord.word}</div>
+          </section>
+
+          <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio(currentReadWord.audio)}
+          >
+            ▶ Послушать слово
+          </button>
+
+          <button className="primaryButton" onClick={nextReadWord}>
+            {readWordIndex < readWords.length - 1
+              ? 'Следующее слово'
+              : 'Дальше'}
+          </button>
+        </>
+      )}
+
+      {step === 9 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 7</p>
+            <h1 className="taskTitle">Соедини слово и картинку</h1>
+            <p className="lessonText">
+              Сначала выбери слово, потом подходящую картинку.
+            </p>
+          </section>
+
+          <section className="fMatchCard">
+            <div className="fMatchGrid">
+              <div className="fMatchColumn">
+                {matchWords.map((word) => (
+                  <button
+                    key={word.id}
+                    type="button"
+                    className={
+                      selectedMatchWordId === word.id
+                        ? 'fMatchWord selected'
+                        : matchedPairs[word.id]
+                          ? 'fMatchWord done'
+                          : 'fMatchWord'
+                    }
+                    onClick={() => handleMatchWordClick(word.id)}
+                  >
+                    {word.label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="fMatchColumn">
+                {matchImages.map((image) => {
+                  const isUsed = Object.values(matchedPairs).includes(image.id)
+
+                  return (
+                    <button
+                      key={image.id}
+                      type="button"
+                      className={isUsed ? 'fMatchImageButton done' : 'fMatchImageButton'}
+                      onClick={() => handleMatchImageClick(image.id)}
+                    >
+                      <img
+                        src={image.image}
+                        alt={image.alt}
+                        className="fMatchImage"
+                      />
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </section>
+
+          {matchFeedback && <p className="lessonText">{matchFeedback}</p>}
+
+          {allMatched && (
+            <button className="primaryButton" onClick={() => setStep(10)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 10 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 8</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              У-ЛЬ-Я-НА И БО-НЬ-КА СО-БИ-РА-ЛИ ЦВЕ-ТЫ В ЛЕ-СУ.
+            </div>
+
+            <img
+              src="/images/f-story/01-flowers-forest.png"
+              alt="Ульяна и Бонька собирали цветы в лесу"
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/f-story/01-flowers-forest.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(11)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 11 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Вопрос</p>
+            <h1 className="taskTitle">КА-КИ-Е ЦВЕ-ТЫ ОНИ СО-БИ-РА-ЮТ?</h1>
+            <p className="lessonText">
+              Посмотри на картинки и выбери правильный ответ.
+            </p>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="hThreeChoiceGrid">
+              {flowerOptions.map((option) => {
+                const isSelected = flowersAnswer === option.id
+                const isCorrect = option.id === 'violets'
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    style={getImageChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setFlowersAnswer(option.id)}
+                  >
+                    <img
+                      src={option.image}
+                      alt={option.alt}
+                      className="hChoiceImage"
+                    />
+
+                    <div className="hChoiceLabel">{option.label}</div>
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {flowersAnswer === 'violets' && <p className="lessonText">Верно!</p>}
+
+          {flowersAnswer !== null && flowersAnswer !== 'violets' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {flowersAnswer === 'violets' && (
+            <button className="primaryButton" onClick={() => setStep(12)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 12 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 9</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              ВД-РУГ НАД НИ-МИ ПРО-ЛЕ-ТЕ-ЛА ФИ-ГУ-РА!
+            </div>
+
+            <img
+              src="/images/f-story/02-figure-flying.png"
+              alt="Над ними пролетела фигура"
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/f-story/02-figure-flying.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(13)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 13 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Вопрос</p>
+            <h1 className="taskTitle">ЧТО ФИ-ГУ-РА ДЕ-ЛА-ЕТ?</h1>
+            <p className="lessonText">
+              Выбери правильное слово.
+            </p>
+          </section>
+
+          <section className="fWordChoiceCard">
+            <div className="fActionGrid">
+              <button
+                type="button"
+                style={getImageChoiceStyle(figureActionAnswer === 'jump', false)}
+                className="fActionButton"
+                onClick={() => setFigureActionAnswer('jump')}
+              >
+                ПРЫ-ГА-ЕТ
+              </button>
+
+              <button
+                type="button"
+                style={getImageChoiceStyle(figureActionAnswer === 'swim', false)}
+                className="fActionButton"
+                onClick={() => setFigureActionAnswer('swim')}
+              >
+                ПЛЫ-ВЁТ
+              </button>
+
+              <button
+                type="button"
+                style={getImageChoiceStyle(figureActionAnswer === 'fly', true)}
+                className="fActionButton"
+                onClick={() => setFigureActionAnswer('fly')}
+              >
+                ЛЕ-ТИТ
+              </button>
+            </div>
+          </section>
+
+          {figureActionAnswer === 'fly' && <p className="lessonText">Верно!</p>}
+
+          {figureActionAnswer !== null && figureActionAnswer !== 'fly' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {figureActionAnswer === 'fly' && (
+            <button className="primaryButton" onClick={() => setStep(14)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 14 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 10</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              У-ЛЬ-Я-НА ДОС-ТА-ЛА ФО-НА-РИК. ЭТО ЖЕ ФИ-ЛИН С ФИ-АЛ-КО-Й!
+            </div>
+
+            <img
+              src="/images/f-story/03-filin-violet.png"
+              alt="Филин с фиалкой"
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/f-story/03-filin-violet.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(15)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 15 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Вопрос</p>
+            <h1 className="taskTitle">КТО ЛЕ-ТЕЛ?</h1>
+            <p className="lessonText">
+              Посмотри на картинки и выбери правильный ответ.
+            </p>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="hThreeChoiceGrid">
+              {whoFlewOptions.map((option) => {
+                const isSelected = whoFlewAnswer === option.id
+                const isCorrect = option.id === 'filin'
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    style={getImageChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setWhoFlewAnswer(option.id)}
+                  >
+                    <img
+                      src={option.image}
+                      alt={option.alt}
+                      className="hChoiceImage"
+                    />
+
+                    <div className="hChoiceLabel">{option.label}</div>
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {whoFlewAnswer === 'filin' && <p className="lessonText">Верно!</p>}
+
+          {whoFlewAnswer !== null && whoFlewAnswer !== 'filin' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {whoFlewAnswer === 'filin' && (
+            <button className="primaryButton" onClick={() => setStep(16)}>
+              Завершить урок
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 16 && (
+        <>
+          <section className="successCard">
+            <div className="successIcon">✓</div>
+            <h1 className="taskTitle">Молодец!</h1>
+            <p className="lessonText">
+              Ты послушал букву Ф, прочитал слова, соединил картинки
+              и помог узнать, кто пролетел над Ульяной и Бонькой.
+            </p>
+          </section>
+
+          <button className="primaryButton" onClick={onBack}>
+            Вернуться к урокам
+          </button>
+        </>
+      )}
+    </main>
+  )
+}
+
 function LetterShLesson({ onBack }: { onBack: () => void }) {
   const [step, setStep] = useState(1)
 
@@ -26995,6 +27999,1882 @@ function LetterShLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
+function LetterSchLesson({ onBack }: { onBack: () => void }) {
+  const [step, setStep] = useState(1)
+
+  const [pictureIndex, setPictureIndex] = useState(0)
+  const [readWordIndex, setReadWordIndex] = useState(0)
+
+  const [selectedSortItemId, setSelectedSortItemId] = useState<string | null>(null)
+  const [sortedItems, setSortedItems] = useState<Record<string, string>>({})
+  const [sortFeedback, setSortFeedback] = useState('')
+
+  const [boxAnswer, setBoxAnswer] = useState<string | null>(null)
+  const [tailAnswer, setTailAnswer] = useState<string | null>(null)
+  const [creatureAnswer, setCreatureAnswer] = useState<string | null>(null)
+
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const isDrawingRef = useRef(false)
+  const lastPointRef = useRef<{ x: number; y: number } | null>(null)
+
+  const pictureTasks = [
+    {
+      word: 'щётка',
+      image: '/images/sch-words/schetka.png',
+      audio: '/audio/sch-words/schetka.mp3',
+    },
+    {
+      word: 'щит',
+      image: '/images/sch-words/schit.png',
+      audio: '/audio/sch-words/schit.mp3',
+    },
+    {
+      word: 'щека',
+      image: '/images/sch-words/scheka.png',
+      audio: '/audio/sch-words/scheka.mp3',
+    },
+    {
+      word: 'щенок',
+      image: '/images/sch-words/schenok.png',
+      audio: '/audio/sch-words/schenok.mp3',
+    },
+  ]
+
+  const readWords = [
+    {
+      word: 'ЕЩЁ',
+      audio: '/audio/sch-read-words/escho.mp3',
+    },
+    {
+      word: 'ЩУ-КА',
+      audio: '/audio/sch-read-words/schu-ka.mp3',
+    },
+    {
+      word: 'ПЛАЩ',
+      audio: '/audio/sch-read-words/plasch.mp3',
+    },
+    {
+      word: 'БОРЩ',
+      audio: '/audio/sch-read-words/borsch.mp3',
+    },
+    {
+      word: 'Я-ЩЕ-РИ-ЦА',
+      audio: '/audio/sch-read-words/ya-sche-ri-tsa.mp3',
+    },
+  ]
+
+  const sortItems = [
+    { id: 'kogti', label: 'КОГ-ТИ', correct: 'normal' },
+    { id: 'kogtischi', label: 'КОГ-ТИ-ЩИ', correct: 'schi' },
+    { id: 'usy', label: 'У-СЫ', correct: 'normal' },
+    { id: 'usischi', label: 'У-СИ-ЩИ', correct: 'schi' },
+    { id: 'nogi', label: 'НО-ГИ', correct: 'normal' },
+    { id: 'nozhischi', label: 'НО-ЖИ-ЩИ', correct: 'schi' },
+  ]
+
+  const storyPanels = [
+    {
+      image: '/images/sch-story/01-box-puppy.png',
+      alt: 'Папа принёс коробку, щенок Бонька заглянул туда',
+    },
+    {
+      image: '/images/sch-story/02-tail-teeth.png',
+      alt: 'Длинный хвостище и острые зубищи',
+    },
+    {
+      image: '/images/sch-story/03-ulyana-lizard.png',
+      alt: 'Ульяна увидела ящерицу',
+    },
+  ]
+
+  const boxOptions = [
+    {
+      id: 'box',
+      label: 'Я-ЩИК',
+    },
+    {
+      id: 'basket',
+      label: 'КОР-ЗИН-КУ',
+    },
+    {
+      id: 'cardboard-box',
+      label: 'КО-РОБ-КУ',
+    },
+  ]
+
+  const creatureOptions = [
+    {
+      id: 'puppy',
+      label: 'ЩЕ-НОК',
+    },
+    {
+      id: 'pike',
+      label: 'ЩУ-КА',
+    },
+    {
+      id: 'lizard',
+      label: 'Я-ЩЕ-РИ-ЦА',
+    },
+  ]
+
+  const currentPicture = pictureTasks[pictureIndex]
+  const currentReadWord = readWords[readWordIndex]
+  const allSorted = Object.keys(sortedItems).length === sortItems.length
+
+  const playAudio = (audioPath: string) => {
+    const audio = new Audio(audioPath)
+    audio.play()
+  }
+
+  const drawLetterCanvasBase = (
+    ctx: CanvasRenderingContext2D,
+    width: number,
+    height: number,
+  ) => {
+    ctx.clearRect(0, 0, width, height)
+
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(0, 0, width, height)
+
+    ctx.strokeStyle = '#f2caca'
+    ctx.lineWidth = 2
+
+    ctx.beginPath()
+    ctx.moveTo(20, 80)
+    ctx.lineTo(width - 20, 80)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height / 2)
+    ctx.lineTo(width - 20, height / 2)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height - 80)
+    ctx.lineTo(width - 20, height - 80)
+    ctx.stroke()
+
+    ctx.save()
+    ctx.font = '170px Arial'
+    ctx.fillStyle = 'rgba(255, 59, 59, 0.12)'
+    ctx.textAlign = 'center'
+    ctx.textBaseline = 'middle'
+    ctx.fillText('Щ', width / 2, height / 2 + 10)
+    ctx.restore()
+  }
+
+  const setupCanvas = () => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const rect = canvas.getBoundingClientRect()
+    const dpr = window.devicePixelRatio || 1
+
+    canvas.width = rect.width * dpr
+    canvas.height = rect.height * dpr
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0)
+    ctx.scale(dpr, dpr)
+
+    drawLetterCanvasBase(ctx, rect.width, rect.height)
+  }
+
+  useEffect(() => {
+    if (step === 4) {
+      requestAnimationFrame(() => {
+        setupCanvas()
+      })
+    }
+  }, [step])
+
+  const getPoint = (e: any) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    }
+  }
+
+  const startDrawing = (e: any) => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    canvas.setPointerCapture(e.pointerId)
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+
+    isDrawingRef.current = true
+    lastPointRef.current = point
+
+    ctx.beginPath()
+    ctx.moveTo(point.x, point.y)
+    ctx.strokeStyle = '#ff3b3b'
+    ctx.lineWidth = 8
+    ctx.lineCap = 'round'
+    ctx.lineJoin = 'round'
+  }
+
+  const draw = (e: any) => {
+    if (!isDrawingRef.current) return
+
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+    const lastPoint = lastPointRef.current
+
+    if (!lastPoint) return
+
+    ctx.lineTo(point.x, point.y)
+    ctx.stroke()
+
+    lastPointRef.current = point
+  }
+
+  const stopDrawing = () => {
+    isDrawingRef.current = false
+    lastPointRef.current = null
+  }
+
+  const clearCanvas = () => {
+    setupCanvas()
+  }
+
+  const nextPictureTask = () => {
+    if (pictureIndex < pictureTasks.length - 1) {
+      setPictureIndex((prev) => prev + 1)
+    } else {
+      setReadWordIndex(0)
+      setStep(8)
+    }
+  }
+
+  const nextReadWord = () => {
+    if (readWordIndex < readWords.length - 1) {
+      setReadWordIndex((prev) => prev + 1)
+    } else {
+      setStep(9)
+    }
+  }
+
+  const handleSortItemSelect = (itemId: string) => {
+    if (sortedItems[itemId]) return
+
+    setSelectedSortItemId(itemId)
+    setSortFeedback('')
+  }
+
+  const handleBasketClick = (basketId: string) => {
+    if (!selectedSortItemId) {
+      setSortFeedback('Сначала выбери слово.')
+      return
+    }
+
+    const item = sortItems.find((sortItem) => sortItem.id === selectedSortItemId)
+    if (!item) return
+
+    if (item.correct === basketId) {
+      setSortedItems((prev) => ({
+        ...prev,
+        [item.id]: basketId,
+      }))
+      setSelectedSortItemId(null)
+      setSortFeedback('Верно!')
+    } else {
+      setSortFeedback('Попробуй ещё раз.')
+    }
+  }
+
+  const getImageChoiceStyle = (isSelected: boolean, isCorrect: boolean) =>
+    ({
+      border:
+        isSelected && isCorrect
+          ? '4px solid #49b96f'
+          : isSelected && !isCorrect
+            ? '4px solid #f05a5a'
+            : '4px solid transparent',
+      borderRadius: '24px',
+      padding: '10px',
+      background: '#ffffff',
+      cursor: 'pointer',
+    }) as const
+
+  const getWordChoiceStyle = (isSelected: boolean, isCorrect: boolean) =>
+    ({
+      border:
+        isSelected && isCorrect
+          ? '4px solid #49b96f'
+          : isSelected && !isCorrect
+            ? '4px solid #f05a5a'
+            : '4px solid transparent',
+    }) as const
+
+  return (
+    <main className="app">
+      <button className="backButton" onClick={onBack}>
+        ← Назад к урокам
+      </button>
+
+      {step === 1 && (
+        <>
+          <section className="letterIntro">
+            <p className="eyebrow dark">Урок Щ</p>
+
+            <div className="redLetters">
+              <span className="bigRedLetter">Щ</span>
+              <span className="smallRedLetter">щ</span>
+            </div>
+
+            <h1 className="lessonTitle">Буква Щ</h1>
+
+            <p className="lessonText">
+              Сначала послушай, как учитель читает букву.
+            </p>
+
+            <button
+              className="audioButton"
+              onClick={() => playAudio('/audio/letters/letter-sch.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(2)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 2 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 1</p>
+            <h1 className="taskTitle">Читай буквы</h1>
+            <p className="lessonText">
+              Прочитай каждую строчку. Показывай на букву пальцем.
+            </p>
+          </section>
+
+          <section className="readingCard">
+            <div className="letterLine">Щ Щ Щ Щ Щ Щ</div>
+            <div className="letterLine">щ щ щ щ щ щ</div>
+            <div className="letterLine">Щ щ Щ щ Щ щ</div>
+          </section>
+
+          <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio('/audio/letters/letter-sch.mp3')}
+          >
+            ▶ Послушать ещё раз
+          </button>
+
+          <button className="primaryButton" onClick={() => setStep(3)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 3 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 2</p>
+            <h1 className="taskTitle">Посмотри, как писать букву Щ</h1>
+            <p className="lessonText">
+              Посмотри на образец. Потом попробуй написать букву сам.
+            </p>
+          </section>
+
+          <section className="sampleCard">
+            <img
+              src="/gifs/write/letter-sch.gif"
+              alt="Как писать букву Щ"
+              className="sampleImage"
+            />
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(4)}>
+            Попробовать написать
+          </button>
+        </>
+      )}
+
+      {step === 4 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 3</p>
+            <h1 className="taskTitle">Напиши букву Щ пальцем</h1>
+            <p className="lessonText">
+              Веди пальцем или мышкой по экрану и рисуй большую букву Щ.
+            </p>
+          </section>
+
+          <section className="drawingCard">
+            <canvas
+              ref={canvasRef}
+              className="drawingCanvas"
+              onPointerDown={startDrawing}
+              onPointerMove={draw}
+              onPointerUp={stopDrawing}
+              onPointerLeave={stopDrawing}
+            />
+          </section>
+
+          <div className="canvasButtons">
+            <button className="secondaryButton" onClick={clearCanvas}>
+              Очистить
+            </button>
+
+            <button
+              className="primaryButton smallPrimary"
+              onClick={() => setStep(5)}
+            >
+              Готово
+            </button>
+          </div>
+        </>
+      )}
+
+      {step === 5 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 4</p>
+            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <p className="lessonText">
+              Сначала послушай первую строку. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="joinReadingCard">
+            <p className="joinRowTitle">Строка 1</p>
+
+            <div className="joinTextLine">
+              <span className="joinPurple">Щ-А</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Щ-У</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Щ-О</span>
+            </div>
+
+            <div className="joinTextLine">
+              <span className="joinOrange">Щ-И</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Щ-Е</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Щ-Ё</span>
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/sch-joins/sch-row-1.mp3')}
+            >
+              ▶ Послушать строку 1
+            </button>
+
+            <p className="joinInstruction">
+              Теперь прочитай эту строку сам.
+            </p>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(6)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 6 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 4</p>
+            <h1 className="taskTitle">Читай буквы вместе</h1>
+            <p className="lessonText">
+              Сначала послушай вторую строку. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="joinReadingCard">
+            <p className="joinRowTitle">Строка 2</p>
+
+            <div className="joinTextLine">
+              <span className="joinPurple">А-Щ</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">О-Щ</span>
+              <span className="joinSpace" />
+              <span className="joinPurple">Е-Щ</span>
+            </div>
+
+            <div className="joinTextLine">
+              <span className="joinOrange">И-Щ</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Я-Щ</span>
+              <span className="joinSpace" />
+              <span className="joinOrange">Ю-Щ</span>
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/sch-joins/sch-row-2.mp3')}
+            >
+              ▶ Послушать строку 2
+            </button>
+
+            <p className="joinInstruction">
+              Теперь прочитай эту строку сам.
+            </p>
+          </section>
+
+          <button
+            className="primaryButton"
+            onClick={() => {
+              setPictureIndex(0)
+              setStep(7)
+            }}
+          >
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 7 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 5</p>
+            <h1 className="taskTitle">Назови слово</h1>
+            <p className="lessonText">
+              Посмотри на картинку. Назови слово. Какая буква первая?
+            </p>
+          </section>
+
+          <section className="pictureTaskCard">
+            <button
+              className="hintButton"
+              onClick={() => playAudio(currentPicture.audio)}
+            >
+              ▶
+            </button>
+
+            <img
+              src={currentPicture.image}
+              alt={currentPicture.word}
+              className="pictureTaskImage"
+            />
+
+            <div className="pictureQuestion">
+              <p className="pictureQuestionText">
+                Назови. Какая буква первая?
+              </p>
+            </div>
+          </section>
+
+          <button className="primaryButton" onClick={nextPictureTask}>
+            {pictureIndex < pictureTasks.length - 1
+              ? 'Следующая картинка'
+              : 'Дальше'}
+          </button>
+        </>
+      )}
+
+      {step === 8 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 6</p>
+            <h1 className="taskTitle">Читай слово</h1>
+            <p className="lessonText">
+              Сначала послушай слово. Потом прочитай сам.
+            </p>
+          </section>
+
+          <section className="readSingleWordCard">
+            <div className="readSingleWord">{currentReadWord.word}</div>
+          </section>
+
+          <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio(currentReadWord.audio)}
+          >
+            ▶ Послушать слово
+          </button>
+
+          <button className="primaryButton" onClick={nextReadWord}>
+            {readWordIndex < readWords.length - 1
+              ? 'Следующее слово'
+              : 'Дальше'}
+          </button>
+        </>
+      )}
+
+      {step === 9 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 7</p>
+            <h1 className="taskTitle">Разложи слова по корзинкам</h1>
+            <p className="lessonText">
+              Слова, которые обозначают предметы побольше, отправь в корзинку ЩИ.
+            </p>
+          </section>
+
+          <section className="schSortCard">
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/sch-sort/schi-explanation.mp3')}
+            >
+              ▶ Послушать подсказку
+            </button>
+
+            <div className="schBasketGrid">
+              <button
+                type="button"
+                className="schBasketCard"
+                onClick={() => handleBasketClick('normal')}
+              >
+                <div className="schBasketIcon">🧺</div>
+                <div className="schBasketTitle"></div>
+
+                <div className="schBasketItems">
+                  {sortItems
+                    .filter((item) => sortedItems[item.id] === 'normal')
+                    .map((item) => (
+                      <span className="schBasketWord" key={item.id}>
+                        {item.label}
+                      </span>
+                    ))}
+                </div>
+              </button>
+
+              <button
+                type="button"
+                className="schBasketCard"
+                onClick={() => handleBasketClick('schi')}
+              >
+                <div className="schBasketIcon">🧺</div>
+                <div className="schBasketTitle">ЩИ</div>
+
+                <div className="schBasketItems">
+                  {sortItems
+                    .filter((item) => sortedItems[item.id] === 'schi')
+                    .map((item) => (
+                      <span className="schBasketWord" key={item.id}>
+                        {item.label}
+                      </span>
+                    ))}
+                </div>
+              </button>
+            </div>
+
+            <div className="schSortWords">
+              {sortItems
+                .filter((item) => !sortedItems[item.id])
+                .map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className={
+                      selectedSortItemId === item.id
+                        ? 'schSortWord selected'
+                        : 'schSortWord'
+                    }
+                    onClick={() => handleSortItemSelect(item.id)}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+            </div>
+          </section>
+
+          {sortFeedback && <p className="lessonText">{sortFeedback}</p>}
+
+          {allSorted && (
+            <button className="primaryButton" onClick={() => setStep(10)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 10 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 8</p>
+            <h1 className="taskTitle">Послушай историю</h1>
+            <p className="lessonText">
+              Посмотри на картинки. Послушай рассказ.
+            </p>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="schStoryGrid">
+              {storyPanels.map((panel, index) => (
+                <div className="schStoryPreviewCard" key={panel.image}>
+                  <img
+                    src={panel.image}
+                    alt={panel.alt}
+                    className="schStoryPreviewImage"
+                  />
+                  <div className="schStoryNumber">{index + 1}</div>
+                </div>
+              ))}
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/sch-story/story.mp3')}
+            >
+              ▶ Послушать историю
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(11)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 11 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 9</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">Прочитай предложение.</p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              ПА-ПА ПРИ-НЁС Я-ЩИК ДО-МО-Й. ЩЕ-НОК БО-НЬ-КА ЗА-ГЛЯ-НУЛ ТУ-ДА.
+            </div>
+
+            <img
+              src="/images/sch-story/01-box-puppy.png"
+              alt="Папа принёс коробку, щенок Бонька заглянул туда"
+              className="hStoryFragmentImage"
+            />
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(12)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 12 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Вопрос</p>
+            <h1 className="taskTitle">ЧТО ПРИ-НЁС ПА-ПА?</h1>
+            <p className="lessonText">
+              Прочитай слова и выбери правильный ответ.
+            </p>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="schWordChoiceGrid">
+              {boxOptions.map((option) => {
+                const isSelected = boxAnswer === option.id
+                const isCorrect = option.id === 'cardboard-box'
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    className="schWordChoiceButton"
+                    style={getWordChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setBoxAnswer(option.id)}
+                  >
+                    {option.label}
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {boxAnswer === 'cardboard-box' && <p className="lessonText">Верно!</p>}
+
+          {boxAnswer !== null && boxAnswer !== 'cardboard-box' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {boxAnswer === 'cardboard-box' && (
+            <button className="primaryButton" onClick={() => setStep(13)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 13 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 10</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">Прочитай предложение.</p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              КТО ЭТО? ДЛИН-НЫ-Й ХВОС-ТИ-ЩЕ ЕЩЁ И ЗУ-БИ-ЩИ ОСТ-РЫ-Е.
+            </div>
+
+            <img
+              src="/images/sch-story/02-tail-teeth.png"
+              alt="Длинный хвостище и острые зубищи"
+              className="hStoryFragmentImage"
+            />
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(14)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 14 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Вопрос</p>
+            <h1 className="taskTitle">КА-КОЙ ХВОС-ТИ-ЩЕ?</h1>
+            <p className="lessonText">
+              Посмотри на картинки и выбери правильный ответ.
+            </p>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="schTwoChoiceGrid">
+              <button
+                type="button"
+                style={getImageChoiceStyle(tailAnswer === 'long', true)}
+                onClick={() => setTailAnswer('long')}
+              >
+                <img
+                  src="/images/sch-story/question-long-tail.png"
+                  alt="Длинный хвост"
+                  className="hChoiceImage"
+                />
+
+                <div className="hChoiceLabel">ДЛИН-НЫ-Й</div>
+              </button>
+
+              <button
+                type="button"
+                style={getImageChoiceStyle(tailAnswer === 'short', false)}
+                onClick={() => setTailAnswer('short')}
+              >
+                <img
+                  src="/images/sch-story/question-short-tail.png"
+                  alt="Короткий хвост"
+                  className="hChoiceImage"
+                />
+
+                <div className="hChoiceLabel">КО-РОТ-КИ-Й</div>
+              </button>
+            </div>
+          </section>
+
+          {tailAnswer === 'long' && <p className="lessonText">Верно!</p>}
+
+          {tailAnswer !== null && tailAnswer !== 'long' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {tailAnswer === 'long' && (
+            <button className="primaryButton" onClick={() => setStep(15)}>
+              Дальше
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 15 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 11</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">Прочитай предложение.</p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">
+              И У-ЛЬ-Я-НА ЗА-ГЛЯ-НУ-ЛА — НЕ БОЙ-СЯ, ЩЕ-НО-ЧЕК, ЭТО ЖЕ Я-ЩЕ-РИ-ЦА.
+            </div>
+
+            <img
+              src="/images/sch-story/03-ulyana-lizard.png"
+              alt="Ульяна увидела ящерицу"
+              className="hStoryFragmentImage"
+            />
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(16)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 16 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Вопрос</p>
+            <h1 className="taskTitle">КТО В КО-РОБ-КЕ?</h1>
+            <p className="lessonText">
+              Прочитай слова и выбери правильный ответ.
+            </p>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="schWordChoiceGrid">
+              {creatureOptions.map((option) => {
+                const isSelected = creatureAnswer === option.id
+                const isCorrect = option.id === 'lizard'
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    className="schWordChoiceButton"
+                    style={getWordChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setCreatureAnswer(option.id)}
+                  >
+                    {option.label}
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {creatureAnswer === 'lizard' && <p className="lessonText">Верно!</p>}
+
+          {creatureAnswer !== null && creatureAnswer !== 'lizard' && (
+            <p className="lessonText">Попробуй ещё раз.</p>
+          )}
+
+          {creatureAnswer === 'lizard' && (
+            <button className="primaryButton" onClick={() => setStep(17)}>
+              Завершить урок
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 17 && (
+        <>
+          <section className="successCard">
+            <div className="successIcon">✓</div>
+            <h1 className="taskTitle">Молодец!</h1>
+            <p className="lessonText">
+              Ты послушал букву Щ, прочитал слова и историю про щенка Боньку
+              и ящерицу.
+            </p>
+          </section>
+
+          <button className="primaryButton" onClick={onBack}>
+            Вернуться к урокам
+          </button>
+        </>
+      )}
+    </main>
+  )
+}
+
+function LetterHardSignLesson({ onBack }: { onBack: () => void }) {
+  const [step, setStep] = useState(1)
+
+  const [pictureWordIndex, setPictureWordIndex] = useState(0)
+  const [audioGuessIndex, setAudioGuessIndex] = useState(0)
+  const [audioGuessAnswer, setAudioGuessAnswer] = useState<string | null>(null)
+
+  const [meaningIndex, setMeaningIndex] = useState(0)
+  const [meaningAnswer, setMeaningAnswer] = useState<string | null>(null)
+
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const isDrawingRef = useRef(false)
+  const lastPointRef = useRef<{ x: number; y: number } | null>(null)
+
+  const pictureWords = [
+    {
+      word: 'СЪ-ЕЛ',
+      image: '/images/hard-sign-words/siel.png',
+      audio: '/audio/hard-sign-words/siel.mp3',
+      alt: 'Человек съел еду',
+    },
+    {
+      word: 'СЪ-Е-ХАЛ',
+      image: '/images/hard-sign-words/siehal.png',
+      audio: '/audio/hard-sign-words/siehal.mp3',
+      alt: 'Человек съехал с горы',
+    },
+    {
+      word: 'ОБЪ-Е-ДА-ЕТ',
+      image: '/images/hard-sign-words/obiedaet.png',
+      audio: '/audio/hard-sign-words/obiedaet.mp3',
+      alt: 'Человек объедает еду',
+    },
+    {
+      word: 'ПОДЪ-ЁМ',
+      image: '/images/hard-sign-words/podiom.png',
+      audio: '/audio/hard-sign-words/podiom.mp3',
+      alt: 'Подъём в гору',
+    },
+    {
+      word: 'ОБЪ-ЯВ-ЛЯ-ЕТ',
+      image: '/images/hard-sign-words/obiavliaet.png',
+      audio: '/audio/hard-sign-words/obiavliaet.mp3',
+      alt: 'Человек объявляет',
+    },
+  ]
+
+  const audioGuessTasks = [
+    {
+      audio: '/audio/hard-sign-guess/sel.mp3',
+      correct: 'no',
+    },
+    {
+      audio: '/audio/hard-sign-guess/siel.mp3',
+      correct: 'yes',
+    },
+    {
+      audio: '/audio/hard-sign-guess/obedal.mp3',
+      correct: 'no',
+    },
+    {
+      audio: '/audio/hard-sign-guess/obiehal.mp3',
+      correct: 'yes',
+    },
+    {
+      audio: '/audio/hard-sign-guess/poydiom.mp3',
+      correct: 'no',
+    },
+    {
+      audio: '/audio/hard-sign-guess/podiom.mp3',
+      correct: 'yes',
+    },
+  ]
+
+  const meaningTasks = [
+    {
+      word: 'СЪ-ЕЛ',
+      correct: 'empty-plate',
+      options: [
+        {
+          id: 'sitting',
+          image: '/images/hard-sign-meaning/person-sitting.png',
+          alt: 'Человек сидит',
+        },
+        {
+          id: 'empty-plate',
+          image: '/images/hard-sign-meaning/empty-plate.png',
+          alt: 'Человек с пустой тарелкой',
+        },
+      ],
+    },
+    {
+      word: 'СЕЛ',
+      correct: 'sitting',
+      options: [
+        {
+          id: 'sitting',
+          image: '/images/hard-sign-meaning/person-sitting.png',
+          alt: 'Человек сидит',
+        },
+        {
+          id: 'empty-plate',
+          image: '/images/hard-sign-meaning/empty-plate.png',
+          alt: 'Человек с пустой тарелкой',
+        },
+      ],
+    },
+    {
+      word: 'СЪ-ЁМ-КА',
+      correct: 'camera',
+      options: [
+        {
+          id: 'seven',
+          image: '/images/hard-sign-meaning/seven.png',
+          alt: 'Цифра семь',
+        },
+        {
+          id: 'camera',
+          image: '/images/hard-sign-meaning/camera.png',
+          alt: 'Камера',
+        },
+      ],
+    },
+    {
+      word: 'СЕМЬ',
+      correct: 'seven',
+      options: [
+        {
+          id: 'seven',
+          image: '/images/hard-sign-meaning/seven.png',
+          alt: 'Цифра семь',
+        },
+        {
+          id: 'camera',
+          image: '/images/hard-sign-meaning/camera.png',
+          alt: 'Камера',
+        },
+      ],
+    },
+    {
+      word: 'ОБЪ-ЕЛ-СЯ',
+      correct: 'overeaten-boy',
+      options: [
+        {
+          id: 'offended-boy',
+          image: '/images/hard-sign-meaning/offended-boy.png',
+          alt: 'Мальчик надул губы',
+        },
+        {
+          id: 'overeaten-boy',
+          image: '/images/hard-sign-meaning/overeaten-boy.png',
+          alt: 'Мальчик объелся',
+        },
+      ],
+    },
+    {
+      word: 'О-БИ-ДЕЛ-СЯ',
+      correct: 'offended-boy',
+      options: [
+        {
+          id: 'offended-boy',
+          image: '/images/hard-sign-meaning/offended-boy.png',
+          alt: 'Мальчик надул губы',
+        },
+        {
+          id: 'overeaten-boy',
+          image: '/images/hard-sign-meaning/overeaten-boy.png',
+          alt: 'Мальчик объелся',
+        },
+      ],
+    },
+  ]
+
+  const storyPanels = [
+    {
+      image: '/images/hard-sign-story/01-mountain-arrival.png',
+      alt: 'Ульяна и Бонька подъехали к горе',
+      text: 'У-ЛЬ-Я-НА И БО-НЬ-КА ПОДЪ-Е-ХА-ЛИ К ГО-РЕ. ПО-СМОТ-РЕ-ЛИ — ПОДЪ-ЁМ БУ-ДЕТ ТРУД-НЫМ!',
+      audio: '/audio/hard-sign-story/01-mountain-arrival.mp3',
+    },
+    {
+      image: '/images/hard-sign-story/02-filming-rest.png',
+      alt: 'Ульяна готовила, а Бонька начал съёмку',
+      text: 'НА ПРИ-ВА-ЛЕ У-ЛЬ-Я-НА ГО-ТО-ВИ-ЛА, А БО-НЬ-КА НА-ЧАЛ СЪ-ЁМ-КУ.',
+      audio: '/audio/hard-sign-story/02-filming-rest.mp3',
+    },
+    {
+      image: '/images/hard-sign-story/03-ate-porridge.png',
+      alt: 'Ульяна и Бонька съели всю кашу',
+      text: 'ОХ, КАК ОНИ ПРО-ГО-ЛО-ДА-ЛИСЬ! СЪ-Е-ЛИ ВСЮ КА-ШУ!',
+      audio: '/audio/hard-sign-story/03-ate-porridge.mp3',
+    },
+    {
+      image: '/images/hard-sign-story/04-bonka-overate.png',
+      alt: 'Бонька объелся и не может двигаться',
+      text: 'БО-НЬ-КА ОБЪ-ЕЛ-СЯ И НЕ МО-ЖЕТ БО-ЛЬ-ШЕ ДВИ-ГА-ТЬ-СЯ.',
+      audio: '/audio/hard-sign-story/04-bonka-overate.mp3',
+    },
+  ]
+
+  const currentPictureWord = pictureWords[pictureWordIndex]
+  const currentAudioGuess = audioGuessTasks[audioGuessIndex]
+  const currentMeaningTask = meaningTasks[meaningIndex]
+
+  const playAudio = (audioPath: string) => {
+    const audio = new Audio(audioPath)
+    audio.play()
+  }
+
+  const drawLetterCanvasBase = (
+    ctx: CanvasRenderingContext2D,
+    width: number,
+    height: number,
+  ) => {
+    ctx.clearRect(0, 0, width, height)
+
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(0, 0, width, height)
+
+    ctx.strokeStyle = '#f2caca'
+    ctx.lineWidth = 2
+
+    ctx.beginPath()
+    ctx.moveTo(20, 80)
+    ctx.lineTo(width - 20, 80)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height / 2)
+    ctx.lineTo(width - 20, height / 2)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.moveTo(20, height - 80)
+    ctx.lineTo(width - 20, height - 80)
+    ctx.stroke()
+
+    ctx.save()
+    ctx.font = '170px Arial'
+    ctx.fillStyle = 'rgba(255, 59, 59, 0.12)'
+    ctx.textAlign = 'center'
+    ctx.textBaseline = 'middle'
+    ctx.fillText('Ъ', width / 2, height / 2 + 10)
+    ctx.restore()
+  }
+
+  const setupCanvas = () => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const rect = canvas.getBoundingClientRect()
+    const dpr = window.devicePixelRatio || 1
+
+    canvas.width = rect.width * dpr
+    canvas.height = rect.height * dpr
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0)
+    ctx.scale(dpr, dpr)
+
+    drawLetterCanvasBase(ctx, rect.width, rect.height)
+  }
+
+  useEffect(() => {
+    if (step === 4) {
+      requestAnimationFrame(() => {
+        setupCanvas()
+      })
+    }
+  }, [step])
+
+  const getPoint = (e: any) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    }
+  }
+
+  const startDrawing = (e: any) => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    canvas.setPointerCapture(e.pointerId)
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+
+    isDrawingRef.current = true
+    lastPointRef.current = point
+
+    ctx.beginPath()
+    ctx.moveTo(point.x, point.y)
+    ctx.strokeStyle = '#ff3b3b'
+    ctx.lineWidth = 8
+    ctx.lineCap = 'round'
+    ctx.lineJoin = 'round'
+  }
+
+  const draw = (e: any) => {
+    if (!isDrawingRef.current) return
+
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const point = getPoint(e)
+    const lastPoint = lastPointRef.current
+
+    if (!lastPoint) return
+
+    ctx.lineTo(point.x, point.y)
+    ctx.stroke()
+
+    lastPointRef.current = point
+  }
+
+  const stopDrawing = () => {
+    isDrawingRef.current = false
+    lastPointRef.current = null
+  }
+
+  const clearCanvas = () => {
+    setupCanvas()
+  }
+
+  const nextPictureWord = () => {
+    if (pictureWordIndex < pictureWords.length - 1) {
+      setPictureWordIndex((prev) => prev + 1)
+    } else {
+      setAudioGuessIndex(0)
+      setAudioGuessAnswer(null)
+      setStep(7)
+    }
+  }
+
+  const nextAudioGuess = () => {
+    if (audioGuessIndex < audioGuessTasks.length - 1) {
+      setAudioGuessIndex((prev) => prev + 1)
+      setAudioGuessAnswer(null)
+    } else {
+      setMeaningIndex(0)
+      setMeaningAnswer(null)
+      setStep(8)
+    }
+  }
+
+  const nextMeaningTask = () => {
+    if (meaningIndex < meaningTasks.length - 1) {
+      setMeaningIndex((prev) => prev + 1)
+      setMeaningAnswer(null)
+    } else {
+      setStep(9)
+    }
+  }
+
+  const getImageChoiceStyle = (isSelected: boolean, isCorrect: boolean) =>
+    ({
+      border:
+        isSelected && isCorrect
+          ? '4px solid #49b96f'
+          : isSelected && !isCorrect
+            ? '4px solid #f05a5a'
+            : '4px solid transparent',
+      borderRadius: '24px',
+      padding: '10px',
+      background: '#ffffff',
+      cursor: 'pointer',
+    }) as const
+
+  const getAudioGuessButtonClassName = (buttonId: string) => {
+    if (audioGuessAnswer !== buttonId) {
+      return 'hardSignGuessButton'
+    }
+
+    if (buttonId === currentAudioGuess.correct) {
+      return 'hardSignGuessButton correct'
+    }
+
+    return 'hardSignGuessButton wrong'
+  }
+
+  return (
+    <main className="app">
+      <button className="backButton" onClick={onBack}>
+        ← Назад к урокам
+      </button>
+
+      {step === 1 && (
+        <>
+          <section className="letterIntro">
+            <p className="eyebrow dark">Урок Ъ</p>
+
+            <div className="redLetters">
+              <span className="bigRedLetter">Ъ</span>
+              <span className="smallRedLetter">ъ</span>
+            </div>
+
+            <h1 className="lessonTitle">Твёрдый знак</h1>
+
+            <p className="lessonText">
+              Сначала послушай, как учитель читает букву.
+            </p>
+
+            <button
+              className="audioButton"
+              onClick={() => playAudio('/audio/letters/letter-hard-sign.mp3')}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(2)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 2 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 1</p>
+            <h1 className="taskTitle">Читай знак</h1>
+            <p className="lessonText">
+              Посмотри на твёрдый знак. Он пишется, но сам звука не обозначает.
+            </p>
+          </section>
+
+          <section className="readingCard">
+            <div className="letterLine">Ъ Ъ Ъ Ъ Ъ Ъ</div>
+            <div className="letterLine">ъ ъ ъ ъ ъ ъ</div>
+            <div className="letterLine">Ъ ъ Ъ ъ Ъ ъ</div>
+          </section>
+
+          <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio('/audio/letters/letter-hard-sign.mp3')}
+          >
+            ▶ Послушать ещё раз
+          </button>
+
+          <button className="primaryButton" onClick={() => setStep(3)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 3 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 2</p>
+            <h1 className="taskTitle">Посмотри, как писать Ъ</h1>
+            <p className="lessonText">
+              Посмотри на образец. Потом попробуй написать знак сам.
+            </p>
+          </section>
+
+          <section className="sampleCard">
+            <img
+              src="/gifs/write/letter-hard-sign.gif"
+              alt="Как писать твёрдый знак"
+              className="sampleImage"
+            />
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(4)}>
+            Попробовать написать
+          </button>
+        </>
+      )}
+
+      {step === 4 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 3</p>
+            <h1 className="taskTitle">Напиши Ъ пальцем</h1>
+            <p className="lessonText">
+              Веди пальцем или мышкой по экрану и рисуй большой твёрдый знак.
+            </p>
+          </section>
+
+          <section className="drawingCard">
+            <canvas
+              ref={canvasRef}
+              className="drawingCanvas"
+              onPointerDown={startDrawing}
+              onPointerMove={draw}
+              onPointerUp={stopDrawing}
+              onPointerLeave={stopDrawing}
+            />
+          </section>
+
+          <div className="canvasButtons">
+            <button className="secondaryButton" onClick={clearCanvas}>
+              Очистить
+            </button>
+
+            <button
+              className="primaryButton smallPrimary"
+              onClick={() => setStep(5)}
+            >
+              Готово
+            </button>
+          </div>
+        </>
+      )}
+
+      {step === 5 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 4</p>
+            <h1 className="taskTitle">Твёрдый знак звука не обозначает</h1>
+            <p className="lessonText">
+              Посмотри: твёрдый знак есть, но своего звука у него нет.
+            </p>
+          </section>
+
+          <section className="hardSignNoSoundCard">
+            <div className="hardSignCrossed">
+              <span>Ъ</span>
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/hard-sign/no-sound.mp3')}
+            >
+              ▶ Послушать подсказку
+            </button>
+          </section>
+
+          <button
+            className="primaryButton"
+            onClick={() => {
+              setPictureWordIndex(0)
+              setStep(6)
+            }}
+          >
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 6 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 5</p>
+            <h1 className="taskTitle">Читай слово</h1>
+            <p className="lessonText">
+              Посмотри на картинку. Прочитай слово. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="pictureTaskCard">
+            <button
+              className="hintButton"
+              onClick={() => playAudio(currentPictureWord.audio)}
+            >
+              ▶
+            </button>
+
+            <img
+              src={currentPictureWord.image}
+              alt={currentPictureWord.alt}
+              className="pictureTaskImage"
+            />
+
+            <div className="pictureQuestion">
+              <p className="pictureQuestionText">{currentPictureWord.word}</p>
+            </div>
+          </section>
+
+          <button className="primaryButton" onClick={nextPictureWord}>
+            {pictureWordIndex < pictureWords.length - 1
+              ? 'Следующее слово'
+              : 'Дальше'}
+          </button>
+        </>
+      )}
+
+      {step === 7 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 6</p>
+            <h1 className="taskTitle">Есть Ъ или нет?</h1>
+            <p className="lessonText">
+              Послушай слово и выбери: есть там твёрдый знак или нет.
+            </p>
+          </section>
+
+          <section className="hardSignGuessCard">
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio(currentAudioGuess.audio)}
+            >
+              ▶ Послушать слово
+            </button>
+
+            <div className="hardSignGuessButtons">
+              <button
+                type="button"
+                className={getAudioGuessButtonClassName('yes')}
+                onClick={() => setAudioGuessAnswer('yes')}
+              >
+                <span>Ъ</span>
+                <span>ЕСТЬ</span>
+              </button>
+
+              <button
+                type="button"
+                className={getAudioGuessButtonClassName('no')}
+                onClick={() => setAudioGuessAnswer('no')}
+              >
+                <span>—</span>
+                <span>НЕТ</span>
+              </button>
+            </div>
+          </section>
+
+          {audioGuessAnswer === currentAudioGuess.correct && (
+            <p className="lessonText">Верно!</p>
+          )}
+
+          {audioGuessAnswer !== null &&
+            audioGuessAnswer !== currentAudioGuess.correct && (
+              <p className="lessonText">Попробуй ещё раз.</p>
+            )}
+
+          {audioGuessAnswer === currentAudioGuess.correct && (
+            <button className="primaryButton" onClick={nextAudioGuess}>
+              {audioGuessIndex < audioGuessTasks.length - 1
+                ? 'Следующее слово'
+                : 'Дальше'}
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 8 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 7</p>
+            <h1 className="taskTitle">Выбери картинку</h1>
+            <p className="lessonText">
+              Прочитай слово и выбери подходящую картинку.
+            </p>
+          </section>
+
+          <section className="readSingleWordCard">
+            <div className="rStoryChoiceSentence">{currentMeaningTask.word}</div>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="hardSignTwoChoiceGrid">
+              {currentMeaningTask.options.map((option) => {
+                const isSelected = meaningAnswer === option.id
+                const isCorrect = option.id === currentMeaningTask.correct
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    style={getImageChoiceStyle(isSelected, isCorrect)}
+                    onClick={() => setMeaningAnswer(option.id)}
+                  >
+                    <img
+                      src={option.image}
+                      alt={option.alt}
+                      className="hChoiceImage"
+                    />
+
+                    <div className="hChoiceLabel">{option.label}</div>
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+
+          {meaningAnswer === currentMeaningTask.correct && (
+            <p className="lessonText">Верно!</p>
+          )}
+
+          {meaningAnswer !== null &&
+            meaningAnswer !== currentMeaningTask.correct && (
+              <p className="lessonText">Попробуй ещё раз.</p>
+            )}
+
+          {meaningAnswer === currentMeaningTask.correct && (
+            <button className="primaryButton" onClick={nextMeaningTask}>
+              {meaningIndex < meaningTasks.length - 1
+                ? 'Следующее слово'
+                : 'Дальше'}
+            </button>
+          )}
+        </>
+      )}
+
+      {step === 9 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 8</p>
+            <h1 className="taskTitle">Послушай историю</h1>
+            <p className="lessonText">
+              Посмотри на картинки. Послушай рассказ.
+            </p>
+          </section>
+
+          <section className="hChoiceCard">
+            <div className="hardSignStoryGrid">
+              {storyPanels.map((panel, index) => (
+                <div className="hardSignStoryPreviewCard" key={panel.image}>
+                  <img
+                    src={panel.image}
+                    alt={panel.alt}
+                    className="hardSignStoryPreviewImage"
+                  />
+                  <div className="hardSignStoryNumber">{index + 1}</div>
+                </div>
+              ))}
+            </div>
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/hard-sign-story/story.mp3')}
+            >
+              ▶ Послушать историю
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(10)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 10 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 9</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">{storyPanels[0].text}</div>
+
+            <img
+              src={storyPanels[0].image}
+              alt={storyPanels[0].alt}
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio(storyPanels[0].audio)}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(11)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 11 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 10</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">{storyPanels[1].text}</div>
+
+            <img
+              src={storyPanels[1].image}
+              alt={storyPanels[1].alt}
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio(storyPanels[1].audio)}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(12)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 12 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 11</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">{storyPanels[2].text}</div>
+
+            <img
+              src={storyPanels[2].image}
+              alt={storyPanels[2].alt}
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio(storyPanels[2].audio)}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(13)}>
+            Дальше
+          </button>
+        </>
+      )}
+
+      {step === 13 && (
+        <>
+          <section className="taskHeader">
+            <p className="eyebrow dark">Задание 12</p>
+            <h1 className="taskTitle">Прочитай текст</h1>
+            <p className="lessonText">
+              Прочитай предложение. Потом послушай подсказку.
+            </p>
+          </section>
+
+          <section className="hStoryFragmentCard">
+            <div className="hStorySentence">{storyPanels[3].text}</div>
+
+            <img
+              src={storyPanels[3].image}
+              alt={storyPanels[3].alt}
+              className="hStoryFragmentImage"
+            />
+
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio(storyPanels[3].audio)}
+            >
+              ▶ Послушать
+            </button>
+          </section>
+
+          <button className="primaryButton" onClick={() => setStep(14)}>
+            Завершить урок
+          </button>
+        </>
+      )}
+
+      {step === 14 && (
+        <>
+          <section className="successCard">
+            <div className="successIcon">✓</div>
+            <h1 className="taskTitle">Молодец!</h1>
+            <p className="lessonText">
+              Ты узнал, что твёрдый знак звука не обозначает, но помогает
+              читать слова правильно.
+            </p>
+          </section>
+
+          <button className="primaryButton" onClick={onBack}>
+            Вернуться к урокам
+          </button>
+        </>
+      )}
+    </main>
+  )
+}
+
 function DefaultLesson({
   lesson,
   onBack,
@@ -27184,7 +30064,7 @@ if (selectedLesson?.id === 32) {
 }
 
 if (selectedLesson?.id === 33) {
-  return <LetterHardSingLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterHardSignLesson onBack={() => setSelectedLesson(null)} />
 }
 
 
