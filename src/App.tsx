@@ -11,6 +11,11 @@ type Lesson = {
   progress: number
 }
 
+type LessonProps = {
+  onBack: () => void
+  onComplete: () => void
+}
+
 const lessons: Lesson[] = [
   { id: 1, letter: 'Аа', title: 'Урок 1', subtitle: 'Буква А', words: [], tasks: [], progress: 0 },
   { id: 2, letter: 'Оо', title: 'Урок 2', subtitle: 'Буква О', words: [], tasks: [], progress: 0 },
@@ -52,7 +57,10 @@ const lessons: Lesson[] = [
   { id: 33, letter: 'ъ', title: 'Урок 33', subtitle: 'Твёрдый знак', words: [], tasks: [], progress: 0 },
 ]
 
-function LetterALesson({ onBack }: { onBack: () => void }) {
+function LetterALesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
 
@@ -394,7 +402,7 @@ function LetterALesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -403,7 +411,10 @@ function LetterALesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterOLesson({ onBack }: { onBack: () => void }) {
+function LetterOLesson({
+  onBack,
+  onComplete,
+}: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
 
@@ -867,7 +878,7 @@ function LetterOLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -876,7 +887,10 @@ function LetterOLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterULesson({ onBack }: { onBack: () => void }) {
+function LetterULesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
 
@@ -1357,7 +1371,7 @@ function LetterULesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -1366,7 +1380,10 @@ function LetterULesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterMLesson({ onBack }: { onBack: () => void }) {
+function LetterMLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -2016,7 +2033,7 @@ function LetterMLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -2025,7 +2042,10 @@ function LetterMLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterTLesson({ onBack }: { onBack: () => void }) {
+function LetterTLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [genderIndex, setGenderIndex] = useState(0)
@@ -2882,7 +2902,7 @@ function LetterTLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -2891,7 +2911,7 @@ function LetterTLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterKLesson({ onBack }: { onBack: () => void }) {
+function LetterKLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [readWordIndex, setReadWordIndex] = useState(0)
   const [writeWordIndex, setWriteWordIndex] = useState(0)
@@ -3443,7 +3463,7 @@ function LetterKLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -3452,7 +3472,10 @@ function LetterKLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterSLesson({ onBack }: { onBack: () => void }) {
+function LetterSLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [actionIndex, setActionIndex] = useState(0)
@@ -4294,7 +4317,7 @@ function LetterSLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -4303,7 +4326,7 @@ function LetterSLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterELesson({ onBack }: { onBack: () => void }) {
+function LetterELesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -5100,7 +5123,7 @@ function LetterELesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -5109,7 +5132,7 @@ function LetterELesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterILesson({ onBack }: { onBack: () => void }) {
+function LetterILesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -5925,7 +5948,7 @@ function LetterILesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -5934,7 +5957,7 @@ function LetterILesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterGLesson({ onBack }: { onBack: () => void }) {
+function LetterGLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -6801,7 +6824,7 @@ function LetterGLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -6810,7 +6833,7 @@ function LetterGLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterDLesson({ onBack }: { onBack: () => void }) {
+function LetterDLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -7678,7 +7701,7 @@ function LetterDLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -7687,7 +7710,7 @@ function LetterDLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterYeriLesson({ onBack }: { onBack: () => void }) {
+function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -8697,7 +8720,7 @@ function LetterYeriLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -8706,7 +8729,7 @@ function LetterYeriLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterLLesson({ onBack }: { onBack: () => void }) {
+function LetterLLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -9647,7 +9670,7 @@ function LetterLLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -9656,7 +9679,7 @@ function LetterLLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterPLesson({ onBack }: { onBack: () => void }) {
+function LetterPLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -10632,7 +10655,7 @@ function LetterPLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -10641,7 +10664,7 @@ function LetterPLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterRLesson({ onBack }: { onBack: () => void }) {
+function LetterRLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -11706,7 +11729,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -11715,7 +11738,7 @@ function LetterRLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterSoftSignLesson({ onBack }: { onBack: () => void }) {
+function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [readWordIndex, setReadWordIndex] = useState(0)
   const [pairIndex, setPairIndex] = useState(0)
@@ -12522,7 +12545,7 @@ function LetterSoftSignLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -12531,7 +12554,7 @@ function LetterSoftSignLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterBLesson({ onBack }: { onBack: () => void }) {
+function LetterBLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -13369,7 +13392,7 @@ function LetterBLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -13378,7 +13401,7 @@ function LetterBLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterNLesson({ onBack }: { onBack: () => void }) {
+function LetterNLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -14550,7 +14573,7 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
 
           <button
             className="primaryButton"
-            onClick={onBack}
+            onClick={onComplete}
           >
             Вернуться к урокам
           </button>
@@ -14560,7 +14583,7 @@ function LetterNLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterVLesson({ onBack }: { onBack: () => void }) {
+function LetterVLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -15652,7 +15675,7 @@ function LetterVLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -15661,7 +15684,7 @@ function LetterVLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterYLesson({ onBack }: { onBack: () => void }) {
+function LetterYLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [firstWordIndex, setFirstWordIndex] = useState(0)
   const [middleWordIndex, setMiddleWordIndex] = useState(0)
@@ -16502,7 +16525,7 @@ function LetterYLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -16511,7 +16534,7 @@ function LetterYLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterZLesson({ onBack }: { onBack: () => void }) {
+function LetterZLesson({ onBack, onComplete }: LessonProps) {
   const [step, setStep] = useState(1)
   const [pictureIndex, setPictureIndex] = useState(0)
   const [readWordIndex, setReadWordIndex] = useState(0)
@@ -17268,7 +17291,7 @@ function LetterZLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -17277,7 +17300,7 @@ function LetterZLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterYaLesson({ onBack }: { onBack: () => void }) {
+function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete: () => void }) {
   const [step, setStep] = useState(1)
 
   const [firstWordIndex, setFirstWordIndex] = useState(0)
@@ -18171,7 +18194,7 @@ function LetterYaLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -18180,7 +18203,10 @@ function LetterYaLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterTsLesson({ onBack }: { onBack: () => void }) {
+function LetterTsLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -19376,7 +19402,7 @@ function LetterTsLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -19385,7 +19411,10 @@ function LetterTsLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterYeLesson({ onBack }: { onBack: () => void }) {
+function LetterYeLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -20636,7 +20665,7 @@ function LetterYeLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -20645,7 +20674,10 @@ function LetterYeLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterYoLesson({ onBack }: { onBack: () => void }) {
+function LetterYoLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -21905,7 +21937,7 @@ function LetterYoLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -21914,7 +21946,10 @@ function LetterYoLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterHLesson({ onBack }: { onBack: () => void }) {
+function LetterHLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -22798,7 +22833,7 @@ function LetterHLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -22807,7 +22842,10 @@ function LetterHLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterChLesson({ onBack }: { onBack: () => void }) {
+function LetterChLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -23880,7 +23918,7 @@ function LetterChLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -23889,7 +23927,10 @@ function LetterChLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterYuLesson({ onBack }: { onBack: () => void }) {
+function LetterYuLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -24918,7 +24959,7 @@ function LetterYuLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -24927,7 +24968,10 @@ function LetterYuLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterZhLesson({ onBack }: { onBack: () => void }) {
+function LetterZhLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -25993,7 +26037,7 @@ function LetterZhLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -26002,7 +26046,10 @@ function LetterZhLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterFLesson({ onBack }: { onBack: () => void }) {
+function LetterFLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -26979,7 +27026,7 @@ function LetterFLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -26988,7 +27035,10 @@ function LetterFLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterShLesson({ onBack }: { onBack: () => void }) {
+function LetterShLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -27990,7 +28040,7 @@ function LetterShLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -27999,7 +28049,10 @@ function LetterShLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterSchLesson({ onBack }: { onBack: () => void }) {
+function LetterSchLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureIndex, setPictureIndex] = useState(0)
@@ -28973,7 +29026,7 @@ function LetterSchLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -28982,7 +29035,10 @@ function LetterSchLesson({ onBack }: { onBack: () => void }) {
   )
 }
 
-function LetterHardSignLesson({ onBack }: { onBack: () => void }) {
+function LetterHardSignLesson({
+  onBack,
+  onComplete,
+}: LessonProps)  {
   const [step, setStep] = useState(1)
 
   const [pictureWordIndex, setPictureWordIndex] = useState(0)
@@ -29866,7 +29922,7 @@ function LetterHardSignLesson({ onBack }: { onBack: () => void }) {
             </p>
           </section>
 
-          <button className="primaryButton" onClick={onBack}>
+          <button className="primaryButton" onClick={onComplete}>
             Вернуться к урокам
           </button>
         </>
@@ -29934,133 +29990,188 @@ function DefaultLesson({
 function App() {
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null)
 
+  const [completedLessonIds, setCompletedLessonIds] = useState<number[]>(() => {
+    try {
+      const savedCompletedLessons = localStorage.getItem(
+        'completedLessonIds',
+      )
+
+      if (!savedCompletedLessons) {
+        return []
+      }
+
+      const parsedCompletedLessons = JSON.parse(savedCompletedLessons)
+
+      if (!Array.isArray(parsedCompletedLessons)) {
+        return []
+      }
+
+      return parsedCompletedLessons.filter(
+        (lessonId): lessonId is number =>
+          typeof lessonId === 'number',
+      )
+    } catch {
+      return []
+    }
+  })
+
+  useEffect(() => {
+    localStorage.setItem(
+      'completedLessonIds',
+      JSON.stringify(completedLessonIds),
+    )
+  }, [completedLessonIds])
+
+  const closeLesson = () => {
+    setSelectedLesson(null)
+  }
+
+  const completeSelectedLesson = () => {
+    if (!selectedLesson) {
+      return
+    }
+
+    setCompletedLessonIds((previousCompletedLessonIds) => {
+      if (previousCompletedLessonIds.includes(selectedLesson.id)) {
+        return previousCompletedLessonIds
+      }
+
+      return [
+        ...previousCompletedLessonIds,
+        selectedLesson.id,
+      ]
+    })
+
+    setSelectedLesson(null)
+  }
+
   if (selectedLesson?.id === 1) {
-    return <LetterALesson onBack={() => setSelectedLesson(null)} />
+    return <LetterALesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
   }
 
   if (selectedLesson?.id === 2) {
-    return <LetterOLesson onBack={() => setSelectedLesson(null)} />
+    return <LetterOLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
   }
 
    if (selectedLesson?.id === 3) {
-    return <LetterULesson onBack={() => setSelectedLesson(null)} />
+    return <LetterULesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
   }
 
   if (selectedLesson?.id === 4) {
-  return <LetterMLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterMLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 5) {
-  return <LetterTLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterTLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 6) {
-  return <LetterELesson onBack={() => setSelectedLesson(null)} />
+  return <LetterELesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 7) {
-  return <LetterKLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterKLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 8) {
-  return <LetterSLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterSLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 9) {
-  return <LetterILesson onBack={() => setSelectedLesson(null)} />
+  return <LetterILesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 10) {
-  return <LetterGLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterGLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 11) {
-  return <LetterDLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterDLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 12) {
-  return <LetterYeriLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterYeriLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 13) {
-  return <LetterNLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterNLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 14) {
-  return <LetterPLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterPLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 15) {
-  return <LetterRLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterRLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 
 if (selectedLesson?.id === 16) {
-  return <LetterBLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterBLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 17) {
-  return <LetterLLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterLLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 18) {
-  return <LetterSoftSignLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterSoftSignLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 19) {
-  return <LetterVLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterVLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 20) {
-  return <LetterYLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterYLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 21) {
-  return <LetterZLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterZLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 22) {
-  return <LetterYaLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterYaLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 23) {
-  return <LetterTsLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterTsLesson onBack={() =>setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 24) {
-  return <LetterYeLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterYeLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 25) {
-  return <LetterHLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterHLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 26) {
-  return <LetterYoLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterYoLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 27) {
-  return <LetterChLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterChLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 28) {
-  return <LetterYuLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterYuLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 29) {
-  return <LetterZhLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterZhLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 30) {
-  return <LetterFLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterFLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 31) {
-  return <LetterShLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterShLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 32) {
-  return <LetterSchLesson onBack={() => setSelectedLesson(null)} />
+  return <LetterSchLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
 if (selectedLesson?.id === 33) {
@@ -30101,14 +30212,14 @@ if (selectedLesson?.id === 33) {
           >
             <div className="lessonTop">
               <span>{lesson.title}</span>
-              <span>{lesson.progress}%</span>
+              <span>{completedLessonIds.includes(lesson.id) ? 100 : 0}%</span>
             </div>
 
             <div className="letter">{lesson.letter}</div>
             <div className="subtitle">{lesson.subtitle}</div>
 
             <div className="progress">
-              <div style={{ width: `${lesson.progress}%` }} />
+              <div style={{ width: `${completedLessonIds.includes(lesson.id) ? 100 : 0}%` }} />
             </div>
           </button>
         ))}
