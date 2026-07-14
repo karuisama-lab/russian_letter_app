@@ -1298,6 +1298,25 @@ h3 {
   background: #fff;
 }
 
+/* Только гифки написания отдельных букв */
+img.writingGif[src*="/gifs/write/letter-"] {
+  width: min(100%, 360px);
+  max-width: 360px;
+  height: auto;
+  max-height: 48vh;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  img.writingGif[src*="/gifs/write/letter-"] {
+    width: min(100%, 290px);
+    max-width: 290px;
+    max-height: 42vh;
+  }
+}
+
 .writeArea {
   background: #fbfbff;
   border: 2px solid #eee7f7;
@@ -4153,5 +4172,86 @@ h3 {
 
   .schWordChoiceButton {
     min-height: 110px;
+  }
+}
+
+/* ========================================
+   ГИФКИ НАПИСАНИЯ СЛОВ — STEP 9
+   ======================================== */
+
+/* Чтобы padding не увеличивал размеры элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Главный контейнер приложения не выходит за ширину телефона */
+.app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Карточка с гифкой написания слова */
+.wordGifCard {
+  width: min(100%, 380px);
+  max-width: 100%;
+  margin: 0 auto 24px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Сама гифка */
+.wordGifImage {
+  display: block;
+
+  width: 100%;
+  max-width: 356px;
+  height: auto;
+  max-height: 42vh;
+
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+/* Адаптация под телефон */
+@media (max-width: 600px) {
+  .wordGifCard {
+    width: min(100%, 320px);
+    max-width: calc(100vw - 32px);
+    padding: 8px;
+    margin: 0 auto 18px;
+    border-radius: 16px;
+  }
+
+  .wordGifImage {
+    width: 100%;
+    max-width: 304px;
+    height: auto;
+    max-height: 38vh;
+
+    object-fit: contain;
+    border-radius: 12px;
+  }
+}
+
+/* Для очень узких телефонов */
+@media (max-width: 360px) {
+  .wordGifCard {
+    max-width: calc(100vw - 20px);
+    padding: 6px;
+  }
+
+  .wordGifImage {
+    max-width: 100%;
+    max-height: 35vh;
   }
 }
