@@ -1298,22 +1298,61 @@ h3 {
   background: #fff;
 }
 
-/* Только гифки написания отдельных букв */
-img.writingGif[src*="/gifs/write/letter-"] {
-  width: min(100%, 360px);
-  max-width: 360px;
+/* =========================================================
+   GIF НАПИСАНИЯ ВСЕХ БУКВ
+   Работает независимо от className в App.tsx
+   ========================================================= */
+
+img[src*="/gifs/write/"] {
+  display: block;
+
+  width: auto;
   height: auto;
-  max-height: 48vh;
+
+  max-width: min(100%, 320px);
+  max-height: 42vh;
+  max-height: 42svh;
+
+  margin: 0 auto 20px;
+
   object-fit: contain;
-  margin-left: auto;
-  margin-right: auto;
+  object-position: center;
 }
 
+/* Телефон */
 @media (max-width: 600px) {
-  img.writingGif[src*="/gifs/write/letter-"] {
-    width: min(100%, 290px);
-    max-width: 290px;
-    max-height: 42vh;
+  .writingDemoCard {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  img[src*="/gifs/write/"] {
+    width: auto !important;
+    height: auto !important;
+
+    /*
+      Ограничиваем и шириной телефона,
+      и высотой видимой области.
+    */
+    max-width: min(72vw, 250px) !important;
+    max-height: 32vh !important;
+    max-height: 32svh !important;
+
+    margin: 0 auto 14px !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+
+/* Очень маленькие телефоны */
+@media (max-width: 380px) {
+  img[src*="/gifs/write/"] {
+    max-width: min(68vw, 220px) !important;
+    max-height: 29vh !important;
+    max-height: 29svh !important;
   }
 }
 
@@ -4253,5 +4292,748 @@ img.writingGif[src*="/gifs/write/letter-"] {
   .wordGifImage {
     max-width: 100%;
     max-height: 35vh;
+  }
+}
+
+/* =========================================================
+   МОБИЛЬНЫЕ GIF И КАРТИНКИ
+   ВСТАВИТЬ В САМЫЙ КОНЕЦ App.css
+   ========================================================= */
+
+/* Запрещаем всему приложению выходить за ширину телефона */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app,
+.lessonPage {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/*
+  Позволяет элементам внутри flex/grid нормально уменьшаться,
+  а не растягивать страницу.
+*/
+.lessonPage > *,
+.lessonPage section,
+.lessonPage div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Базовое правило для ВСЕХ картинок внутри урока */
+.lessonPage img {
+  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* =========================================================
+   ТЕЛЕФОНЫ
+   ========================================================= */
+
+@media (max-width: 600px) {
+  /*
+    Уменьшаем лишние внешние отступы.
+    Так для картинки остаётся больше полезной ширины.
+  */
+  .app {
+    padding: 12px;
+  }
+
+  .lessonPage {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 0 32px;
+    overflow-x: hidden;
+  }
+
+  /*
+    Карточки с GIF и картинками никогда
+    не должны быть шире экрана.
+  */
+  .writingDemoCard,
+  .wordGifCard,
+  .pictureTaskCard,
+  .pictureWordCard,
+  .singleWordCard,
+  .readSingleWordCard,
+  .genderChoiceCard,
+  .storyCard,
+  .matchCard,
+  .readingCard,
+  .actionExplainCard,
+  .actionChoiceCard {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    overflow: hidden;
+  }
+
+  /* ---------------------------------------------------------
+     ВСЕ GIF: и буквы, и слова
+     --------------------------------------------------------- */
+
+  .lessonPage img[src*=".gif"],
+  .lessonPage .writingGif,
+  .lessonPage .wordGifImage {
+    display: block !important;
+
+    width: auto !important;
+    max-width: min(100%, 320px) !important;
+
+    height: auto !important;
+
+    /* Запасной вариант для старых браузеров */
+    max-height: 38vh !important;
+
+    /* Видимая высота мобильного экрана */
+    max-height: 38svh !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    object-fit: contain !important;
+  }
+
+  /*
+    GIF написания отдельных букв делаем ещё немного меньше.
+  */
+  .lessonPage img[src*="/gifs/write/letter-"] {
+    width: auto !important;
+    max-width: min(100%, 280px) !important;
+    max-height: 36vh !important;
+    max-height: 36svh !important;
+  }
+
+  /*
+    GIF написания слов обычно горизонтальные,
+    поэтому им разрешаем всю доступную ширину,
+    но ограничиваем высоту.
+  */
+  .lessonPage img[src*="-words-write/"],
+  .lessonPage .wordGifImage {
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 34vh !important;
+    max-height: 34svh !important;
+  }
+
+  /* ---------------------------------------------------------
+     ОБЫЧНЫЕ КАРТИНКИ
+     --------------------------------------------------------- */
+
+  .pictureTaskImage,
+  .taskImageLarge,
+  .wideSampleImage,
+  .genderChoiceImage,
+  .wordReadImage,
+  .actionMainImage,
+  .storyImage,
+  .sceneImage,
+  .comicListenImage,
+  .comicMatchImage,
+  .tasteChoiceImage,
+  .matchImage,
+  .prepositionImage {
+    max-width: 100% !important;
+    height: auto !important;
+
+    max-height: 48vh !important;
+    max-height: 48svh !important;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    object-fit: contain !important;
+  }
+
+  /*
+    Картинки внутри сеток должны занимать ширину своей карточки,
+    а не ширину всего экрана.
+  */
+  .comicListenImage,
+  .comicMatchImage,
+  .storyImage,
+  .sceneImage,
+  .matchImage,
+  .prepositionImage {
+    width: 100% !important;
+  }
+}
+
+/* =========================================================
+   ОЧЕНЬ УЗКИЕ ТЕЛЕФОНЫ
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .app {
+    padding: 8px;
+  }
+
+  .writingDemoCard,
+  .wordGifCard,
+  .pictureTaskCard,
+  .pictureWordCard,
+  .singleWordCard,
+  .readSingleWordCard,
+  .storyCard,
+  .matchCard {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .lessonPage img[src*=".gif"],
+  .lessonPage .writingGif,
+  .lessonPage .wordGifImage {
+    max-width: min(100%, 280px) !important;
+    max-height: 32vh !important;
+    max-height: 32svh !important;
+  }
+
+  .pictureTaskImage,
+  .taskImageLarge,
+  .wideSampleImage,
+  .genderChoiceImage,
+  .wordReadImage,
+  .storyImage,
+  .sceneImage,
+  .comicListenImage,
+  .comicMatchImage {
+    max-height: 42vh !important;
+    max-height: 42svh !important;
+  }
+}
+
+/* =========================================================
+   GIF С НАПИСАНИЕМ СЛОВ
+   Центрирование для М, Т и остальных букв
+   ========================================================= */
+
+img[src*="-words-write/"] {
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: min(100%, 420px) !important;
+  max-height: 42vh !important;
+  max-height: 42svh !important;
+
+  margin-top: 0 !important;
+  margin-right: auto !important;
+  margin-bottom: 18px !important;
+  margin-left: auto !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+  img[src*="-words-write/"] {
+    width: auto !important;
+    height: auto !important;
+
+    max-width: min(90vw, 310px) !important;
+    max-height: 34vh !important;
+    max-height: 34svh !important;
+
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+/* Очень узкий телефон */
+@media (max-width: 380px) {
+  img[src*="-words-write/"] {
+    max-width: min(86vw, 270px) !important;
+    max-height: 31vh !important;
+    max-height: 31svh !important;
+  }
+}
+
+/* =========================================================
+   ДЛИННЫЕ СЛОВА В ЗАДАНИЯХ НА ЧТЕНИЕ
+   Исправляет наложение строк во всех уроках
+   ========================================================= */
+
+.singleWordText,
+.readSingleWord,
+.readWordText {
+  display: block;
+
+  max-width: 100%;
+
+  /* Главное исправление: нормальное расстояние между строками */
+  line-height: 1.3 !important;
+
+  text-align: center;
+
+  /* Разрешаем перенос длинного слова */
+  white-space: normal !important;
+  word-break: normal;
+  overflow-wrap: break-word;
+
+  /* Небольшой запас сверху и снизу для высоких букв */
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+  .singleWordText,
+  .readSingleWord {
+    /*
+      На узком экране размер плавно уменьшается:
+      32–42 пикселя в зависимости от ширины телефона.
+    */
+    font-size: clamp(32px, 10vw, 42px) !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.01em;
+  }
+
+  .readWordText {
+    line-height: 1.3 !important;
+  }
+}
+
+/* Очень узкие телефоны */
+@media (max-width: 360px) {
+  .singleWordText,
+  .readSingleWord {
+    font-size: clamp(29px, 9.5vw, 35px) !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* Задание: соедини слова и картинки */
+
+.fMatchStep {
+  width: 100%;
+  max-width: 720px;
+  height: calc(100dvh - 110px);
+  min-height: 0;
+  margin: 0 auto;
+  padding: 6px 12px 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  overflow: hidden;
+}
+
+.fMatchCard {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+.fMatchGrid {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+/* Обе колонки делятся на одинаковые строки */
+
+.fMatchColumn {
+  min-width: 0;
+  min-height: 0;
+
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(0, 1fr);
+  gap: 7px;
+}
+
+/* Кнопки со словами */
+
+.fMatchWord {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 6px 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #dedbea;
+  border-radius: 14px;
+  background: #ffffff;
+
+  font-size: clamp(15px, 4.2vw, 22px);
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+
+  cursor: pointer;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.fMatchWord.selected {
+  border-color: #7657e8;
+  background: #f1edff;
+  transform: scale(0.97);
+}
+
+.fMatchWord.done {
+  border-color: #64b87b;
+  background: #e9f8ed;
+  opacity: 0.7;
+}
+
+/* Кнопки с картинками */
+
+.fMatchImageButton {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #dedbea;
+  border-radius: 14px;
+  background: #ffffff;
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.fMatchImageButton:active {
+  transform: scale(0.97);
+}
+
+.fMatchImageButton.done {
+  border-color: #64b87b;
+  background: #e9f8ed;
+  opacity: 0.7;
+}
+
+/* Главное исправление: картинка уменьшается внутри своей строки */
+
+.fMatchImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Нижняя область с подсказкой и кнопкой */
+
+.fMatchBottom {
+  flex: 0 0 auto;
+  min-height: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.fMatchFeedback {
+  min-height: 16px;
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.fMatchNextButton {
+  margin: 0 auto;
+}
+
+/* Невысокие телефоны */
+
+@media (max-height: 750px) {
+  .fMatchStep {
+    height: calc(100dvh - 90px);
+    gap: 5px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+  }
+
+  .fMatchCard {
+    padding: 5px;
+  }
+
+  .fMatchGrid {
+    gap: 6px;
+  }
+
+  .fMatchColumn {
+    gap: 5px;
+  }
+
+  .fMatchWord {
+    padding: 3px 5px;
+    border-radius: 11px;
+    font-size: clamp(13px, 3.8vw, 18px);
+  }
+
+  .fMatchImageButton {
+    padding: 2px;
+    border-radius: 11px;
+  }
+
+  .fMatchBottom {
+    min-height: 34px;
+  }
+}
+
+/* Очень узкие телефоны */
+
+@media (max-width: 380px) {
+  .fMatchStep {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .fMatchGrid {
+    gap: 5px;
+  }
+
+  .fMatchWord {
+    font-size: 13px;
+    padding: 3px;
+  }
+}
+
+/* Урок №34 — Контакты */
+
+.contactsLessonPage {
+  width: 100%;
+  min-height: 100dvh;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 18px 16px 28px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(90, 200, 210, 0.22),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #f3fffe 0%, #eef8ff 100%);
+}
+
+.contactsBackButton {
+  align-self: flex-start;
+  padding: 10px 15px;
+
+  border: 0;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #315d68;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(50, 105, 115, 0.1);
+}
+
+.contactsLessonCard {
+  width: 100%;
+  max-width: 560px;
+  min-height: 390px;
+  margin: auto;
+  padding: 30px 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+
+  border: 3px solid #a6dfe2;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.94);
+
+  text-align: center;
+
+  box-shadow:
+    0 18px 45px rgba(63, 135, 145, 0.15),
+    inset 0 0 0 5px rgba(224, 248, 248, 0.8);
+}
+
+.contactsLessonNumber {
+  padding: 6px 13px;
+
+  border-radius: 999px;
+  background: #ddf6f4;
+
+  color: #36727b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.contactsLessonIcon {
+  font-size: clamp(60px, 18vw, 92px);
+  line-height: 1;
+}
+
+.contactsLessonTitle {
+  margin: 0;
+
+  color: #265965;
+  font-size: clamp(30px, 9vw, 46px);
+  line-height: 1.05;
+}
+
+.contactsLessonText {
+  max-width: 450px;
+  margin: 0;
+
+  color: #394f55;
+  font-size: clamp(18px, 5vw, 23px);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.contactsTelegramLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 24px;
+
+  border-radius: 17px;
+  background: #38a9d6;
+
+  color: #ffffff;
+  font-size: clamp(19px, 5vw, 23px);
+  font-weight: 800;
+  text-decoration: none;
+
+  box-shadow: 0 9px 22px rgba(56, 169, 214, 0.28);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.contactsTelegramLink:active {
+  transform: scale(0.97);
+  box-shadow: 0 5px 13px rgba(56, 169, 214, 0.24);
+}
+
+/* Карточка Контакты в общем списке */
+
+.contactsLessonTile {
+  border-color: #91d4d9;
+  background:
+    linear-gradient(
+      145deg,
+      #e8fffc 0%,
+      #e7f4ff 100%
+    );
+}
+
+.contactsLessonTileContent {
+  min-height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.contactsLessonTileIcon {
+  font-size: 42px;
+  line-height: 1;
+}
+
+.contactsLessonTileTitle {
+  color: #28616d;
+  font-size: clamp(17px, 4vw, 23px);
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .contactsLessonPage {
+    padding: 12px 12px 20px;
+    gap: 14px;
+  }
+
+  .contactsLessonCard {
+    min-height: min(420px, 72dvh);
+    padding: 24px 17px;
+    border-radius: 24px;
+    gap: 14px;
+  }
+
+  .contactsBackButton {
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 650px) {
+  .contactsLessonCard {
+    min-height: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    gap: 10px;
+  }
+
+  .contactsLessonIcon {
+    font-size: 54px;
+  }
+
+  .contactsLessonTitle {
+    font-size: 28px;
+  }
+
+  .contactsLessonText {
+    font-size: 17px;
+  }
+
+  .contactsTelegramLink {
+    min-height: 45px;
+    font-size: 18px;
   }
 }

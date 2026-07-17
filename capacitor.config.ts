@@ -1,9 +1,9 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
   appId: 'com.example.myapp',
-  appName: 'russian-letters-app',
-  webDir: 'dist'
-};
+  appName: 'Алфавит для билингвов',
+  webDir: 'dist',
+}
 
-export default config;
+export default config

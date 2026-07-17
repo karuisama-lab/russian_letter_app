@@ -54,6 +54,7 @@ const lessons: Lesson[] = [
   { id: 31, letter: 'Шш', title: '31', words: [], tasks: [], progress: 0 },
   { id: 32, letter: 'Щщ', title: '32', words: [], tasks: [], progress: 0 },
   { id: 33, letter: 'ъ', title: '33',  words: [], tasks: [], progress: 0 },
+  { id: 34, letter: '✉️', title: '34', words: [], tasks: [], progress: 0 },
 ]
 
 function LetterALesson({
@@ -265,9 +266,7 @@ function LetterALesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <h1 className="taskTitle">Читай буквы</h1>
-          </section>
+          
 
           <section className="readingCard">
             <div className="letterLine">А А А</div>
@@ -617,10 +616,7 @@ function LetterOLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-           
-            <h1 className="taskTitle">Читай буквы</h1>
-          </section>
+         
 
           <section className="readingCard">
             <div className="letterLine">О О О</div>
@@ -815,7 +811,7 @@ function LetterOLesson({
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -1815,13 +1811,7 @@ function LetterMLesson({
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+          
 
           <section className="wordGifImage">
             <img
@@ -1832,20 +1822,14 @@ function LetterMLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Напиши слово {currentWriteWord.word}</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -1860,7 +1844,7 @@ function LetterMLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={nextWriteWord}>
@@ -1876,14 +1860,14 @@ function LetterMLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
+            <h1 className="taskTitle"></h1>
             <p className="lessonText">
-              Ты послушал букву М, прочитал её, написал, прочитал слоги и слова.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -2330,39 +2314,27 @@ function LetterTLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Т Т Т Т Т Т</div>
-            <div className="letterLine">т т т т т т</div>
-            <div className="letterLine">Т т Т т Т т</div>
+            <div className="letterLine">Т Т Т</div>
+            <div className="letterLine">т т т</div>
+            <div className="letterLine">Т т Т</div>
           </section>
 
           <button className="audioButton secondaryAudio" onClick={playLetterAudio}>
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Т</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -2373,20 +2345,14 @@ function LetterTLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Т пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Т.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -2401,7 +2367,7 @@ function LetterTLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -2420,10 +2386,10 @@ function LetterTLesson({
       {step === 5 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+             
             </p>
           </section>
 
@@ -2439,30 +2405,24 @@ function LetterTLesson({
             />
 
             <div className="pictureQuestion">
-              <p className="pictureQuestionText">Назови. Какая буква первая?</p>
+              <p className="pictureQuestionText"></p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
               ? 'Следующая картинка'
-              : 'Дальше'}
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Т</span>
@@ -2486,32 +2446,26 @@ function LetterTLesson({
               className="audioButton secondaryAudio"
               onClick={() => playJoinAudio('/audio/t-joins/t-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ТА, ТО, ТУ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А</span>
@@ -2535,29 +2489,23 @@ function LetterTLesson({
               className="audioButton secondaryAudio"
               onClick={() => playJoinAudio('/audio/t-joins/t-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: АТ, ОТ, УТ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(8)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Та и тот</h1>
-            <p className="lessonText">
-              Посмотри на подсказку. Девочка — та. Мальчик — тот.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -2575,7 +2523,7 @@ function LetterTLesson({
               setStep(9)
             }}
           >
-            Попробовать
+            ▶
           </button>
         </>
       )}
@@ -2583,10 +2531,10 @@ function LetterTLesson({
       {step === 9 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Выбери: та или тот?</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">та или тот?</h1>
             <p className="lessonText">
-              Посмотри на картинку и выбери правильное слово.
+              
             </p>
           </section>
 
@@ -2598,7 +2546,7 @@ function LetterTLesson({
             />
 
             <button className="audioButton secondaryAudio" onClick={playGenderAudio}>
-              🔊 Послушать подсказку
+              🔊  подсказка
             </button>
 
             <p className="genderQuestion">Как правильно?</p>
@@ -2647,31 +2595,24 @@ function LetterTLesson({
 
           <button className="primaryButton" onClick={nextGenderTask}>
             {genderIndex < genderTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
-
+          
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
 
             <button className="audioButton secondaryAudio" onClick={playReadWordAudio}>
-              ▶ Послушать слово
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай это слово сам.
+              
             </p>
           </section>
 
@@ -2683,14 +2624,7 @@ function LetterTLesson({
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src={currentWriteWord.gif}
@@ -2700,20 +2634,14 @@ function LetterTLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Напиши слово {currentWriteWord.word}</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -2728,7 +2656,7 @@ function LetterTLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={nextWriteWord}>
@@ -2744,15 +2672,14 @@ function LetterTLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
+            <h1 className="taskTitle"></h1>
             <p className="lessonText">
-              Ты послушал букву Т, прочитал её, написал, назвал слова, выбрал
-              та или тот и написал новые слова.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+           ▶
           </button>
         </>
       )}
@@ -3091,39 +3018,27 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+         
 
           <section className="readingCard">
-            <div className="letterLine">К К К К К К</div>
-            <div className="letterLine">к к к к к к</div>
-            <div className="letterLine">К к К к К к</div>
+            <div className="letterLine">К К К</div>
+            <div className="letterLine">к к к</div>
+            <div className="letterLine">К к К</div>
           </section>
 
           <button className="audioButton secondaryAudio" onClick={playLetterAudio}>
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву К</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -3134,20 +3049,14 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву К пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву К.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -3162,7 +3071,7 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -3180,13 +3089,7 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             {currentReadWord.image && (
@@ -3200,10 +3103,10 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
             <div className="readSingleWord">{currentReadWord.word}</div>
 
             <button className="audioButton secondaryAudio" onClick={playReadWordAudio}>
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -3214,13 +3117,7 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -3231,20 +3128,14 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Напиши слово {currentWriteWord.word}</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -3259,7 +3150,7 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={nextWriteWord}>
@@ -3273,30 +3164,24 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай предложение</h1>
-            <p className="lessonText">
-              Сначала послушай предложение. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="sentenceReadText">{currentSentence.text}</div>
 
             <button className="audioButton secondaryAudio" onClick={playSentenceAudio}>
-              ▶ Послушать предложение
+              🔊
             </button>
 
             <p className="wordReadHint">
-              Обрати внимание: в конце предложения мы делаем паузу.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={nextSentence}>
             {sentenceIndex < sentenceTasks.length - 1
-              ? 'Следующее предложение'
-              : 'Завершить урок'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
@@ -3305,15 +3190,11 @@ function LetterKLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву К, прочитал её, написал букву, прочитал слова,
-              написал слова и прочитал предложения.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -3739,39 +3620,27 @@ function LetterSLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">С С С С С С</div>
-            <div className="letterLine">с с с с с с</div>
-            <div className="letterLine">С с С с С с</div>
+            <div className="letterLine">С С </div>
+            <div className="letterLine">с с с</div>
+            <div className="letterLine">С с С</div>
           </section>
 
           <button className="audioButton secondaryAudio" onClick={playLetterAudio}>
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву С</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+         
 
           <section className="sampleCard">
             <img
@@ -3782,21 +3651,14 @@ function LetterSLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву С пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву С.
-            </p>
-          </section>
-
+          
           <section className="drawingCard">
             <canvas
               ref={canvasRef}
@@ -3810,7 +3672,7 @@ function LetterSLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -3822,16 +3684,10 @@ function LetterSLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">С</span>
@@ -3855,30 +3711,24 @@ function LetterSLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/s-joins/s-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
-            <p className="joinInstruction">Теперь прочитай сам: СА, СО, СУ.</p>
+            <p className="joinInstruction"></p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А</span>
@@ -3902,10 +3752,10 @@ function LetterSLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/s-joins/s-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
-            <p className="joinInstruction">Теперь прочитай сам: АС, ОС, УС.</p>
+            <p className="joinInstruction"></p>
           </section>
 
           <button
@@ -3915,20 +3765,14 @@ function LetterSLesson({
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Посмотри и назови слово</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Назови слово. Нажми на подсказку, если нужно.
-            </p>
-          </section>
+          
 
           <section className="pictureTaskCard">
             <button className="hintButton" onClick={playWordAudio}>
@@ -3947,7 +3791,7 @@ function LetterSLesson({
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
@@ -3955,10 +3799,10 @@ function LetterSLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Пьём или едим?</h1>
             <p className="lessonText">
-              Посмотри на картинки. Сначала послушай подсказку.
+             
             </p>
           </section>
 
@@ -3979,7 +3823,7 @@ function LetterSLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/s-actions/pyem-edim.mp3')}
             >
-              ▶ Послушать: пьём — едим
+             🔊
             </button>
           </section>
 
@@ -3991,20 +3835,14 @@ function LetterSLesson({
               setStep(9)
             }}
           >
-            Попробовать
+            ▶
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Выбери картинку</h1>
-            <p className="lessonText">
-              Что мы делаем с этим словом: пьём или едим?
-            </p>
-          </section>
+          
 
           <section className="actionChoiceCard">
             <img
@@ -4017,7 +3855,7 @@ function LetterSLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentActionTask.audio)}
             >
-              🔊 Послушать слово
+              🔊 
             </button>
 
             <div className="actionChoiceButtons">
@@ -4059,20 +3897,14 @@ function LetterSLesson({
           </section>
 
           <button className="primaryButton" onClick={nextActionTask}>
-            {actionIndex < actionTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {actionIndex < actionTasks.length - 1 ? 'Следующая картинка' : '▶'}
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <img
@@ -4084,10 +3916,10 @@ function LetterSLesson({
             <div className="readSingleWord">{currentReadWord.word}</div>
 
             <button className="audioButton secondaryAudio" onClick={playReadWordAudio}>
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -4098,13 +3930,7 @@ function LetterSLesson({
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -4115,20 +3941,14 @@ function LetterSLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Напиши слово {currentWriteWord.word}</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -4143,7 +3963,7 @@ function LetterSLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={nextWriteWord}>
@@ -4159,15 +3979,11 @@ function LetterSLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву С, прочитал её, написал, назвал слова и выбрал:
-              пьём или едим.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -4529,39 +4345,27 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+         
 
           <section className="readingCard">
-            <div className="letterLine">Э Э Э Э Э Э</div>
-            <div className="letterLine">э э э э э э</div>
-            <div className="letterLine">Э э Э э Э э</div>
+            <div className="letterLine">Э Э Э</div>
+            <div className="letterLine">э э э</div>
+            <div className="letterLine">Э э Э</div>
           </section>
 
           <button className="audioButton secondaryAudio" onClick={playLetterAudio}>
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Э</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -4572,20 +4376,14 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Э пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Э.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -4600,7 +4398,7 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -4612,16 +4410,10 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А</span>
@@ -4645,28 +4437,22 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/e-joins/e-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Т</span>
@@ -4684,28 +4470,22 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/e-joins/e-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай третью строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Э</span>
@@ -4723,7 +4503,7 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/e-joins/e-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
           </section>
 
@@ -4734,7 +4514,7 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -4742,10 +4522,10 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -4761,34 +4541,28 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
             />
 
             <div className="pictureQuestion">
-              <p className="pictureQuestionText">Назови. Какая буква первая?</p>
+              <p className="pictureQuestionText"></p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
 
             <button className="audioButton secondaryAudio" onClick={playReadWordAudio}>
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -4799,13 +4573,7 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Эта и это</h1>
-            <p className="lessonText">
-              Посмотри на подсказку. Девочка — эта. Предмет — это.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -4823,7 +4591,7 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
               setStep(11)
             }}
           >
-            Попробовать
+            ▶
           </button>
         </>
       )}
@@ -4831,10 +4599,10 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Выбери: эта или этот?</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">эта или этот?</h1>
             <p className="lessonText">
-              Посмотри на картинку и выбери правильное слово.
+              
             </p>
           </section>
 
@@ -4849,10 +4617,10 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentGenderTask.audio)}
             >
-              🔊 Послушать подсказку
+              🔊  подсказка
             </button>
 
-            <p className="genderQuestion">Как правильно?</p>
+            <p className="genderQuestion"></p>
 
             <div className="genderButtons">
               <button
@@ -4893,20 +4661,14 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={nextGenderTask}>
-            {genderIndex < genderTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {genderIndex < genderTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Посмотри, как писать</h1>
-            <p className="lessonText">
-              Посмотри на картинку и образец. Потом напиши сам.
-            </p>
-          </section>
+          
 
           <section className="finalWritingCard">
             <img
@@ -4915,28 +4677,18 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
               className="finalWritingImage"
             />
 
-            <img
-              src="/gifs/e-words-write/e-word-eto-mama.gif"
-              alt="Как писать это мама"
-              className="sampleImage wideSampleImage"
-            />
+            
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Напиши: это мама</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слова.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -4951,7 +4703,7 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(14)}>
@@ -4965,15 +4717,11 @@ function LetterELesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Э, прочитал её, написал, назвал слова и выбрал:
-              эта или этот.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -5365,39 +5113,27 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">И И И И И И</div>
-            <div className="letterLine">и и и и и и</div>
-            <div className="letterLine">И и И и И и</div>
+            <div className="letterLine">И И И</div>
+            <div className="letterLine">и и и</div>
+            <div className="letterLine">И и И</div>
           </section>
 
           <button className="audioButton secondaryAudio" onClick={playLetterAudio}>
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву И</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -5408,21 +5144,14 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву И пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву И.
-            </p>
-          </section>
-
+          
           <section className="drawingCard">
             <canvas
               ref={canvasRef}
@@ -5436,7 +5165,7 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -5448,16 +5177,9 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">М</span>
@@ -5484,32 +5206,26 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/i-joins/i-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: МИ, ТИ, КИ, СИ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">И</span>
@@ -5539,11 +5255,11 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/i-joins/i-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ИМ, ИТ, ИК, ИС.
+              
             </p>
           </section>
 
@@ -5554,7 +5270,7 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -5562,10 +5278,10 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Скажи, какая буква первая.
+              
             </p>
           </section>
 
@@ -5582,26 +5298,20 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови слово. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <img
@@ -5613,10 +5323,10 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
             <div className="readSingleWord">{currentReadWord.word}</div>
 
             <button className="audioButton secondaryAudio" onClick={playReadWordAudio}>
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -5627,14 +5337,7 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src="/gifs/i-words-write/i-word-ut-ki.gif"
@@ -5644,20 +5347,14 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
+            
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово УТ-КИ</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -5672,11 +5369,11 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(11)}>
-              Дальше
+              ▶
             </button>
           </div>
         </>
@@ -5685,11 +5382,9 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай рассказ</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Сначала послушай аудио.
-            </p>
+            <button className="audioButton secondaryAudio" onClick={playStoryAudio}>
+             🔊 рассказ
+            </button>
           </section>
 
           <section className="storyCard">
@@ -5699,9 +5394,7 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
               className="storyImage"
             />
 
-            <button className="audioButton secondaryAudio" onClick={playStoryAudio}>
-              ▶ Послушать рассказ
-            </button>
+            
           </section>
 
           <button
@@ -5713,92 +5406,92 @@ function LetterILesson({ onBack, onComplete }: LessonProps) {
               setStep(12)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Соедини предложение с местом на картинке</h1>
-            <p className="lessonText">
-              Сначала нажми на предложение. Потом нажми на нужное место на картинке.
-            </p>
-          </section>
+  <>
+    <section className="matchCard">
+      <div className="sentenceBank">
+        {sentenceTasks.map((sentence) => {
+          const isMatched = Object.values(matchedZones).includes(sentence.text)
+          const isSelected = selectedSentenceId === sentence.id
 
-          <section className="matchCard">
-            <div className="sentenceBank">
-              {sentenceTasks.map((sentence) => {
-                const isMatched = Object.values(matchedZones).includes(sentence.text)
-                const isSelected = selectedSentenceId === sentence.id
-
-                return (
-                  <button
-                    key={sentence.id}
-                    className={
-                      isMatched
-                        ? 'sentenceOption sentenceMatched'
-                        : isSelected
-                          ? 'sentenceOption sentenceSelected'
-                          : 'sentenceOption'
-                    }
-                    onClick={() => !isMatched && handleSentenceSelect(sentence.id)}
-                    disabled={isMatched}
-                  >
-                    {sentence.text}
-                  </button>
-                )
-              })}
-            </div>
-
-            <div className="sceneWrapper">
-              <img
-                src="/images/i-story/park-scene.png"
-                alt="Парк, мостик, утка и котик"
-                className="sceneImage"
-              />
-
-              {hotspots.map((spot) => (
-                <button
-                  key={spot.id}
-                  className={
-                    matchedZones[spot.id]
-                      ? `storyHotspot ${spot.className} hotspotMatched`
-                      : `storyHotspot ${spot.className}`
-                  }
-                  onClick={() => handleZoneClick(spot.id)}
-                >
-                  {matchedZones[spot.id] ? matchedZones[spot.id] : ''}
-                </button>
-              ))}
-            </div>
-
-            {matchFeedback && <p className="matchFeedback">{matchFeedback}</p>}
-          </section>
-
-          {allMatched && (
-            <button className="primaryButton" onClick={() => setStep(13)}>
-              Завершить урок
+          return (
+            <button
+              key={sentence.id}
+              type="button"
+              className={
+                isMatched
+                  ? 'sentenceOption sentenceMatched'
+                  : isSelected
+                    ? 'sentenceOption sentenceSelected'
+                    : 'sentenceOption'
+              }
+              onClick={() => !isMatched && handleSentenceSelect(sentence.id)}
+              disabled={isMatched}
+            >
+              {sentence.text}
             </button>
-          )}
-        </>
+          )
+        })}
+      </div>
+
+      <div className="sceneWrapper">
+        <img
+          src="/images/i-story/park-scene.png"
+          alt="Парк, мостик, утка и котик"
+          className="sceneImage"
+        />
+
+        {hotspots.map((spot) => (
+          <button
+            key={spot.id}
+            type="button"
+            className={
+              matchedZones[spot.id]
+                ? `storyHotspot ${spot.className} hotspotMatched`
+                : `storyHotspot ${spot.className}`
+            }
+            onClick={() => handleZoneClick(spot.id)}
+            aria-label={
+              matchedZones[spot.id]
+                ? 'Ответ размещён'
+                : 'Выбрать это место на картинке'
+            }
+          />
+        ))}
+      </div>
+
+      {matchFeedback && (
+        <p className="matchFeedback">{matchFeedback}</p>
       )}
+    </section>
+
+    {allMatched && (
+      <button
+        type="button"
+        className="primaryButton"
+        onClick={() => setStep(13)}
+      >
+        ▶
+      </button>
+    )}
+  </>
+)}
+
 
       {step === 13 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву И, прочитал её, написал, назвал слова, прочитал
-              слова и выполнил задание по картинке.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -6191,40 +5884,27 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Г Г Г Г Г Г</div>
-            <div className="letterLine">г г г г г г</div>
-            <div className="letterLine">Г г Г г Г г</div>
+            <div className="letterLine">Г Г ГГ</div>
+            <div className="letterLine">г г г</div>
+            <div className="letterLine">Г г Г</div>
           </section>
 
           <button className="audioButton secondaryAudio" onClick={playLetterAudio}>
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Г</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-g.gif"
@@ -6234,20 +5914,14 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+           ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Г пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Г.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -6262,7 +5936,7 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -6275,10 +5949,10 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
       {step === 5 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Скажи, какая буква первая.
+              
             </p>
           </section>
 
@@ -6295,29 +5969,22 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови слово. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">Г</span>
@@ -6347,32 +6014,26 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/g-joins/g-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ГА, ГУ, ГО, ГИ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">А</span>
@@ -6402,32 +6063,25 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/g-joins/g-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: АГ, УГ, ОГ, ИГ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(8)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай третью строку. Потом прочитай сам.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">ГАМ</span>
@@ -6449,11 +6103,11 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/g-joins/g-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ГАМ, ГОМ, ГУМ, ГИМ.
+             
             </p>
           </section>
 
@@ -6464,20 +6118,14 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
               setStep(9)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <img
@@ -6489,10 +6137,10 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
             <div className="readSingleWord">{currentReadWord.word}</div>
 
             <button className="audioButton secondaryAudio" onClick={playReadWordAudio}>
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -6503,13 +6151,7 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+         
 
           <section className="sampleCard">
             <img
@@ -6520,20 +6162,14 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово ГУ-СИ</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -6548,11 +6184,11 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(12)}>
-              Дальше
+              ▶
             </button>
           </div>
         </>
@@ -6561,11 +6197,9 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
       {step === 12 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай рассказ</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Сначала послушай аудио.
-            </p>
+            <button className="audioButton secondaryAudio" onClick={playStoryAudio}>
+              🔊 рассказ
+            </button>
           </section>
 
           <section className="storyCard">
@@ -6575,9 +6209,7 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
               className="storyImage"
             />
 
-            <button className="audioButton secondaryAudio" onClick={playStoryAudio}>
-              ▶ Послушать рассказ
-            </button>
+            
           </section>
 
           <button
@@ -6589,92 +6221,91 @@ function LetterGLesson({ onBack, onComplete }: LessonProps) {
               setStep(13)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
-      {step === 13 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Соедини предложение с местом на картинке</h1>
-            <p className="lessonText">
-              Сначала нажми на предложение. Потом нажми на нужное место на картинке.
-            </p>
-          </section>
+{step === 13 && (
+  <>
+    <section className="matchCard">
+      <div className="sentenceBank">
+        {sentenceTasks.map((sentence) => {
+          const isMatched = Object.values(matchedZones).includes(sentence.text)
+          const isSelected = selectedSentenceId === sentence.id
 
-          <section className="matchCard">
-            <div className="sentenceBank">
-              {sentenceTasks.map((sentence) => {
-                const isMatched = Object.values(matchedZones).includes(sentence.text)
-                const isSelected = selectedSentenceId === sentence.id
-
-                return (
-                  <button
-                    key={sentence.id}
-                    className={
-                      isMatched
-                        ? 'sentenceOption sentenceMatched'
-                        : isSelected
-                          ? 'sentenceOption sentenceSelected'
-                          : 'sentenceOption'
-                    }
-                    onClick={() => !isMatched && handleSentenceSelect(sentence.id)}
-                    disabled={isMatched}
-                  >
-                    {sentence.text}
-                  </button>
-                )
-              })}
-            </div>
-
-            <div className="sceneWrapper">
-              <img
-                src="/images/g-story/g-story-scene.png"
-                alt="Гуси, маки и кустик"
-                className="sceneImage"
-              />
-
-              {hotspots.map((spot) => (
-                <button
-                  key={spot.id}
-                  className={
-                    matchedZones[spot.id]
-                      ? `storyHotspot ${spot.className} hotspotMatched`
-                      : `storyHotspot ${spot.className}`
-                  }
-                  onClick={() => handleZoneClick(spot.id)}
-                >
-                  {matchedZones[spot.id] ? matchedZones[spot.id] : ''}
-                </button>
-              ))}
-            </div>
-
-            {matchFeedback && <p className="matchFeedback">{matchFeedback}</p>}
-          </section>
-
-          {allMatched && (
-            <button className="primaryButton" onClick={() => setStep(14)}>
-              Завершить урок
+          return (
+            <button
+              key={sentence.id}
+              type="button"
+              className={
+                isMatched
+                  ? 'sentenceOption sentenceMatched'
+                  : isSelected
+                    ? 'sentenceOption sentenceSelected'
+                    : 'sentenceOption'
+              }
+              onClick={() => !isMatched && handleSentenceSelect(sentence.id)}
+              disabled={isMatched}
+            >
+              {sentence.text}
             </button>
-          )}
-        </>
+          )
+        })}
+      </div>
+
+      <div className="sceneWrapper">
+        <img
+          src="/images/g-story/g-story-scene.png"
+          alt="Гуси, маки и кустик"
+          className="sceneImage"
+        />
+
+        {hotspots.map((spot) => (
+          <button
+            key={spot.id}
+            type="button"
+            className={
+              matchedZones[spot.id]
+                ? `storyHotspot ${spot.className} hotspotMatched`
+                : `storyHotspot ${spot.className}`
+            }
+            onClick={() => handleZoneClick(spot.id)}
+            aria-label={
+              matchedZones[spot.id]
+                ? 'Ответ размещён'
+                : 'Выбрать место на картинке'
+            }
+          />
+        ))}
+      </div>
+
+      {matchFeedback && (
+        <p className="matchFeedback">{matchFeedback}</p>
       )}
+    </section>
+
+    {allMatched && (
+      <button
+        type="button"
+        className="primaryButton"
+        onClick={() => setStep(14)}
+      >
+        ▶
+      </button>
+    )}
+  </>
+)}
 
       {step === 14 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Г, прочитал её, написал, назвал слова и выполнил
-              задание по картинке.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -7147,39 +6778,26 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
-
+          
           <section className="readingCard">
-            <div className="letterLine">Д Д Д Д Д Д</div>
-            <div className="letterLine">д д д д д д</div>
-            <div className="letterLine">Д д Д д Д д</div>
+            <div className="letterLine">Д Д Д</div>
+            <div className="letterLine">д д д</div>
+            <div className="letterLine">Д д Д</div>
           </section>
 
           <button className="audioButton secondaryAudio" onClick={playLetterAudio}>
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Д</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -7190,21 +6808,14 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Д пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Д.
-            </p>
-          </section>
-
+          
           <section className="drawingCard">
             <canvas
               ref={canvasRef}
@@ -7218,7 +6829,7 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -7231,10 +6842,10 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
       {step === 5 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Скажи, какая буква первая.
+              
             </p>
           </section>
 
@@ -7251,29 +6862,22 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови слово. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">Д</span>
@@ -7303,32 +6907,26 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/d-joins/d-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+             🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ДА, ДО, ДУ, ДИ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">А</span>
@@ -7358,11 +6956,11 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/d-joins/d-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: АД, ОД, УД, ИД.
+              
             </p>
           </section>
 
@@ -7373,29 +6971,23 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
 
             <button className="audioButton secondaryAudio" onClick={playReadWordAudio}>
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -7406,13 +6998,7 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -7423,20 +7009,14 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово {currentWriteWord.word}</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -7451,7 +7031,7 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={nextWriteWord}>
@@ -7465,13 +7045,7 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Посмотри и послушай</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Потом послушай аудио.
-            </p>
-          </section>
+          
 
           <section className="storyCard">
             <img
@@ -7481,25 +7055,19 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
             />
 
             <button className="audioButton secondaryAudio" onClick={playStoryAudio}>
-              ▶ Послушать
+             🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={nextStory}>
-            {storyIndex < storyTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {storyIndex < storyTasks.length - 1 ? '▶ ' : '▶'}
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом выбери подходящую картинку.
-            </p>
-          </section>
+          
 
           <section className="readingChoiceCard">
             <div className="readingChoiceSentence">{currentQuiz.sentence}</div>
@@ -7533,7 +7101,7 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
 
           {quizAnswer === currentQuiz.correctId && (
             <button className="primaryButton" onClick={nextQuiz}>
-              {quizIndex < quizTasks.length - 1 ? 'Следующее предложение' : 'Завершить урок'}
+              {quizIndex < quizTasks.length - 1 ? '▶' : '▶'}
             </button>
           )}
         </>
@@ -7543,15 +7111,11 @@ function LetterDLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Д, прочитал её, написал, назвал слова и выбрал
-              картинки к предложениям.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -8051,42 +7615,30 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Ы Ы Ы Ы Ы Ы</div>
-            <div className="letterLine">ы ы ы ы ы ы</div>
-            <div className="letterLine">Ы ы Ы ы Ы ы</div>
+            <div className="letterLine">Ы Ы Ы</div>
+            <div className="letterLine">ы ы ы</div>
+            <div className="letterLine">Ы ы Ы</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-yeri.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ы</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+         
 
           <section className="sampleCard">
             <img
@@ -8097,20 +7649,14 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ы пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ы.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -8125,7 +7671,7 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -8137,16 +7683,10 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">М</span>
@@ -8170,32 +7710,26 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yeri-joins/yeri-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: МЫ, ТЫ, КЫ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">С</span>
@@ -8219,29 +7753,23 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yeri-joins/yeri-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: СЫ, ГЫ, ДЫ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Важное правило</h1>
-            <p className="lessonText">
-              Послушай правило про букву Ы.
-            </p>
-          </section>
+         
 
           <section className="ruleNoticeCard">
             <div className="crossedLetterWrap">
@@ -8250,14 +7778,14 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
             </div>
 
             <p className="ruleNoticeText">
-              Буква Ы никогда не стоит первая в слове.
+             
             </p>
 
             <button
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yeri-rule/yeri-never-first.mp3')}
             >
-              ▶ Послушать правило
+              🔊
             </button>
           </section>
 
@@ -8268,7 +7796,7 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -8276,10 +7804,10 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Скажи, какая буква первая.
+              
             </p>
           </section>
 
@@ -8299,26 +7827,20 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови слово. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -8327,10 +7849,10 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentReadWord.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -8341,13 +7863,7 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+         
 
           <section className="sampleCard">
             <img
@@ -8358,20 +7874,14 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Напиши слово усы</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -8386,7 +7896,7 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -8397,7 +7907,7 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
                 setStep(12)
               }}
             >
-              Дальше
+              ▶
             </button>
           </div>
         </>
@@ -8405,20 +7915,14 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Послушай и выбери картинку</h1>
-            <p className="lessonText">
-              Нажми на кнопку, послушай аудио и выбери правильную картинку.
-            </p>
-          </section>
+         
 
           <section className="audioChoiceCard">
             <button
               className="audioButton"
               onClick={() => playAudio(currentListenChoice.audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
 
             <div className="audioChoiceGrid">
@@ -8453,7 +7957,7 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
             <button className="primaryButton" onClick={nextListenChoice}>
               {listenChoiceIndex < listenChoiceTasks.length - 1
                 ? 'Следующее задание'
-                : 'Дальше'}
+                : '▶'}
             </button>
           )}
         </>
@@ -8461,13 +7965,7 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Посмотри и послушай</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Потом послушай аудио.
-            </p>
-          </section>
+          
 
           <section className="storyCard">
             <img
@@ -8480,97 +7978,101 @@ function LetterYeriLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentStory.audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={nextStory}>
-            {storyIndex < storyTasks.length - 1 ? 'Следующее аудио' : 'Дальше'}
+            {storyIndex < storyTasks.length - 1 ? 'Следующее аудио' : '▶'}
           </button>
         </>
       )}
 
       {step === 14 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Соедини предложение с частью картинки</h1>
-            <p className="lessonText">
-              Сначала нажми на предложение. Потом нажми на нужное место на картинке.
-            </p>
-          </section>
+  <>
+    <section className="matchCard">
+      <div className="sentenceBank">
+        {sentenceTasks.map((sentence) => {
+          const isMatched = Object.values(matchedZones).includes(sentence.text)
+          const isSelected = selectedSentenceId === sentence.id
 
-          <section className="matchCard">
-            <div className="sentenceBank">
-              {sentenceTasks.map((sentence) => {
-                const isMatched = Object.values(matchedZones).includes(sentence.text)
-                const isSelected = selectedSentenceId === sentence.id
-
-                return (
-                  <button
-                    key={sentence.id}
-                    className={
-                      isMatched
-                        ? 'sentenceOption sentenceMatched'
-                        : isSelected
-                          ? 'sentenceOption sentenceSelected'
-                          : 'sentenceOption'
-                    }
-                    onClick={() => !isMatched && handleSentenceSelect(sentence.id)}
-                    disabled={isMatched}
-                  >
-                    {sentence.text}
-                  </button>
-                )
-              })}
-            </div>
-
-            <div className="sceneWrapper">
-              <img
-                src="/images/yeri-story/yeri-story-scene.png"
-                alt="Миска, томаты, рыба и сыр"
-                className="sceneImage"
-              />
-
-              {hotspots.map((spot) => (
-                <button
-                  key={spot.id}
-                  className={
-                    matchedZones[spot.id]
-                      ? `storyHotspot ${spot.className} hotspotMatched`
-                      : `storyHotspot ${spot.className}`
-                  }
-                  onClick={() => handleZoneClick(spot.id)}
-                >
-                  {matchedZones[spot.id] ? matchedZones[spot.id] : ''}
-                </button>
-              ))}
-            </div>
-
-            {matchFeedback && <p className="matchFeedback">{matchFeedback}</p>}
-          </section>
-
-          {allMatched && (
-            <button className="primaryButton" onClick={() => setStep(15)}>
-              Завершить урок
+          return (
+            <button
+              key={sentence.id}
+              type="button"
+              className={
+                isMatched
+                  ? 'sentenceOption sentenceMatched'
+                  : isSelected
+                    ? 'sentenceOption sentenceSelected'
+                    : 'sentenceOption'
+              }
+              onClick={() => {
+                if (!isMatched) {
+                  handleSentenceSelect(sentence.id)
+                }
+              }}
+              disabled={isMatched}
+            >
+              {sentence.text}
             </button>
-          )}
-        </>
+          )
+        })}
+      </div>
+
+      <div className="sceneWrapper">
+        <img
+          src="/images/yeri-story/yeri-story-scene.png"
+          alt="Миска, томаты, рыба и сыр"
+          className="sceneImage"
+        />
+
+        {hotspots.map((spot) => {
+          const isMatched = Boolean(matchedZones[spot.id])
+
+          return (
+            <button
+              key={spot.id}
+              type="button"
+              aria-label={isMatched ? 'Предложение размещено правильно' : 'Выбрать поле'}
+              className={
+                isMatched
+                  ? `storyHotspot ${spot.className} hotspotMatched`
+                  : `storyHotspot ${spot.className}`
+              }
+              onClick={() => handleZoneClick(spot.id)}
+              disabled={isMatched}
+            />
+          )
+        })}
+      </div>
+
+      {matchFeedback && (
+        <p className="matchFeedback">{matchFeedback}</p>
       )}
+    </section>
+
+    {allMatched && (
+      <button
+        type="button"
+        className="primaryButton"
+        onClick={() => setStep(15)}
+      >
+        ▶
+      </button>
+    )}
+  </>
+)}
 
       {step === 15 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ы, прочитал её, написал, выбрал картинки и
-              выполнил задание по большой картинке.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -8981,7 +8483,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
       {step === 1 && (
         <>
           <section className="letterIntro">
-            <p className="eyebrow dark">Урок 13</p>
+            <p className="eyebrow dark"></p>
 
             <div className="redLetters">
               <span className="bigRedLetter">Л</span>
@@ -9010,42 +8512,30 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Л Л Л Л Л Л</div>
-            <div className="letterLine">л л л л л л</div>
-            <div className="letterLine">Л л Л л Л л</div>
+            <div className="letterLine">Л Л Л</div>
+            <div className="letterLine">л л л</div>
+            <div className="letterLine">Л л Л</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-l.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Л</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -9056,20 +8546,14 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Л пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Л.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -9084,7 +8568,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -9096,16 +8580,10 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">Л</span>
@@ -9135,32 +8613,26 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/l-joins/l-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ЛА, ЛО, ЛУ, ЛИ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">А</span>
@@ -9190,11 +8662,11 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/l-joins/l-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: АЛ, ОЛ, УЛ, ИЛ.
+              
             </p>
           </section>
 
@@ -9205,7 +8677,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -9213,10 +8685,10 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Скажи, какая буква первая.
+              
             </p>
           </section>
 
@@ -9236,26 +8708,20 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови слово. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -9264,10 +8730,10 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentReadWord.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -9278,13 +8744,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -9295,21 +8755,14 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово а-ку-ла</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
-
+         
           <section className="drawingCard">
             <canvas
               ref={canvasRef}
@@ -9323,7 +8776,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -9334,7 +8787,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
                 setStep(11)
               }}
             >
-              Дальше
+              ▶
             </button>
           </div>
         </>
@@ -9343,10 +8796,10 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Кисло или сладко?</h1>
             <p className="lessonText">
-              Посмотри на картинку и выбери правильный вариант.
+              
             </p>
           </section>
 
@@ -9396,7 +8849,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
 
           {tasteAnswer === currentTasteTask.correct && (
             <button className="primaryButton" onClick={nextTasteTask}>
-              {tasteIndex < tasteTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+              {tasteIndex < tasteTasks.length - 1 ? '▶ ' : '▶'}
             </button>
           )}
         </>
@@ -9405,11 +8858,12 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
       {step === 12 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Послушай комикс</h1>
-            <p className="lessonText">
-              Сначала посмотри на картинки. Потом послушай аудио.
-            </p>
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/l-comic/story.mp3')}
+            >
+              🔊 комикс
+            </button>
           </section>
 
           <section className="comicListenCard">
@@ -9421,12 +8875,7 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/l-comic/story.mp3')}
-            >
-              ▶ Послушать комикс
-            </button>
+            
           </section>
 
           <button
@@ -9438,89 +8887,100 @@ function LetterLLesson({ onBack, onComplete }: LessonProps) {
               setStep(13)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
-      {step === 13 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Соедини предложение с картинкой</h1>
-            <p className="lessonText">
-              Сначала нажми на предложение. Потом нажми на нужную картинку.
-            </p>
-          </section>
+{step === 13 && (
+  <>
+    <section className="matchCard">
+      <div className="sentenceBank">
+        {sentenceTasks.map((sentence) => {
+          const isMatched = Object.values(matchedPanels).includes(sentence.text)
+          const isSelected = selectedSentenceId === sentence.id
 
-          <section className="matchCard">
-            <div className="sentenceBank">
-              {sentenceTasks.map((sentence) => {
-                const isMatched = Object.values(matchedPanels).includes(sentence.text)
-                const isSelected = selectedSentenceId === sentence.id
-
-                return (
-                  <button
-                    key={sentence.id}
-                    className={
-                      isMatched
-                        ? 'sentenceOption sentenceMatched'
-                        : isSelected
-                          ? 'sentenceOption sentenceSelected'
-                          : 'sentenceOption'
-                    }
-                    onClick={() => !isMatched && handleSentenceSelect(sentence.id)}
-                    disabled={isMatched}
-                  >
-                    {sentence.text}
-                  </button>
-                )
-              })}
-            </div>
-
-            <div className="comicMatchGrid">
-              {comicPanels.map((panel) => (
-                <button
-                  key={panel.id}
-                  className={
-                    matchedPanels[panel.id]
-                      ? 'comicMatchButton comicMatchDone'
-                      : 'comicMatchButton'
-                  }
-                  onClick={() => handlePanelClick(panel.id)}
-                >
-                  <img src={panel.image} alt={panel.alt} className="comicMatchImage" />
-                  {matchedPanels[panel.id] && (
-                    <div className="comicMatchCaption">{matchedPanels[panel.id]}</div>
-                  )}
-                </button>
-              ))}
-            </div>
-
-            {matchFeedback && <p className="matchFeedback">{matchFeedback}</p>}
-          </section>
-
-          {allMatched && (
-            <button className="primaryButton" onClick={() => setStep(14)}>
-              Завершить урок
+          return (
+            <button
+              key={sentence.id}
+              type="button"
+              className={
+                isMatched
+                  ? 'sentenceOption sentenceMatched'
+                  : isSelected
+                    ? 'sentenceOption sentenceSelected'
+                    : 'sentenceOption'
+              }
+              onClick={() => {
+                if (!isMatched) {
+                  handleSentenceSelect(sentence.id)
+                }
+              }}
+              disabled={isMatched}
+            >
+              {sentence.text}
             </button>
-          )}
-        </>
+          )
+        })}
+      </div>
+
+      <div
+        className="comicMatchGrid"
+        style={{ gridTemplateColumns: '1fr' }}
+      >
+        {comicPanels.map((panel) => (
+          <button
+            key={panel.id}
+            type="button"
+            className={
+              matchedPanels[panel.id]
+                ? 'comicMatchButton comicMatchDone'
+                : 'comicMatchButton'
+            }
+            onClick={() => handlePanelClick(panel.id)}
+            disabled={Boolean(matchedPanels[panel.id])}
+          >
+            <img
+              src={panel.image}
+              alt={panel.alt}
+              className="comicMatchImage"
+            />
+
+            {matchedPanels[panel.id] && (
+              <div className="comicMatchCaption">
+                {matchedPanels[panel.id]}
+              </div>
+            )}
+          </button>
+        ))}
+      </div>
+
+      {matchFeedback && (
+        <p className="matchFeedback">{matchFeedback}</p>
       )}
+    </section>
+
+    {allMatched && (
+      <button
+        type="button"
+        className="primaryButton"
+        onClick={() => setStep(14)}
+      >
+        ▶
+      </button>
+    )}
+  </>
+)}
 
       {step === 14 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Л, прочитал её, написал слово, выбрал правильные
-              ответы и выполнил задание с комиксом.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -9914,7 +9374,7 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
       {step === 1 && (
         <>
           <section className="letterIntro">
-            <p className="eyebrow dark">Урок 14</p>
+            <p className="eyebrow dark"></p>
 
             <div className="redLetters">
               <span className="bigRedLetter">П</span>
@@ -9943,42 +9403,30 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">П П П П П П</div>
-            <div className="letterLine">п п п п п п</div>
-            <div className="letterLine">П п П п П п</div>
+            <div className="letterLine">П П П</div>
+            <div className="letterLine">п п п</div>
+            <div className="letterLine">П п П</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-p.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву П</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -9989,20 +9437,14 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву П пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву П.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -10017,7 +9459,7 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -10029,16 +9471,10 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">П</span>
@@ -10074,32 +9510,26 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/p-joins/p-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ПА, ПО, ПУ, ПИ, ПЫ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">А</span>
@@ -10135,11 +9565,11 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/p-joins/p-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: АП, ОП, УП, ИП, ЫП.
+             
             </p>
           </section>
 
@@ -10150,7 +9580,7 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -10158,10 +9588,10 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Скажи, какая буква первая.
+              
             </p>
           </section>
 
@@ -10181,26 +9611,20 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови слово. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -10209,10 +9633,10 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentReadWord.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -10223,13 +9647,7 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом напиши слово сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -10240,20 +9658,14 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(10)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово по-су-да</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -10268,7 +9680,7 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -10280,7 +9692,7 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
                 setStep(11)
               }}
             >
-              Дальше
+              ▶
             </button>
           </div>
         </>
@@ -10289,11 +9701,12 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Посмотри и послушай</h1>
-            <p className="lessonText">
-              Птичка может быть над коробкой, под коробкой и в коробке.
-            </p>
+             <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/p-grammar/prepositions.mp3')}
+            >
+              🔊 объяснение
+            </button>
           </section>
 
           <section className="storyCard">
@@ -10323,29 +9736,18 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
               </div>
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/p-grammar/prepositions.mp3')}
-            >
-              ▶ Послушать объяснение
-            </button>
+           
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Соедини предложение с картинкой</h1>
-            <p className="lessonText">
-              Сначала нажми на предложение. Потом нажми на нужную картинку.
-            </p>
-          </section>
+          
 
           <section className="matchCard">
             <div className="sentenceBank">
@@ -10408,7 +9810,7 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
                 setStep(13)
               }}
             >
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -10417,10 +9819,10 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Выбери: в, над или под</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">в, над или под</h1>
             <p className="lessonText">
-              Посмотри на картинку, прочитай предложение и выбери правильное слово.
+              
             </p>
           </section>
 
@@ -10486,8 +9888,8 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
           {choiceAnswer === currentChoice.correct && (
             <button className="primaryButton" onClick={nextChoiceTask}>
               {choiceIndex < choiceTasks.length - 1
-                ? 'Следующее предложение'
-                : 'Завершить урок'}
+                ? '▶'
+                : '▶'}
             </button>
           )}
         </>
@@ -10497,15 +9899,11 @@ function LetterPLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву П, прочитал её, написал слово и потренировался
-              со словами в, над и под.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -10985,42 +10383,29 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
-
+          
           <section className="readingCard">
-            <div className="letterLine">Р Р Р Р Р Р</div>
-            <div className="letterLine">р р р р р р</div>
-            <div className="letterLine">Р р Р р Р р</div>
+            <div className="letterLine">Р Р Р</div>
+            <div className="letterLine">р р р</div>
+            <div className="letterLine">Р р Р</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-r.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Р</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -11031,20 +10416,14 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            П▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Р пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Р.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -11059,7 +10438,7 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button className="primaryButton smallPrimary" onClick={() => setStep(5)}>
@@ -11071,16 +10450,9 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">Р</span>
@@ -11116,32 +10488,26 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/r-joins/r-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: РА, РО, РУ, РИ, РЫ.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine multiLineJoinText">
               <span className="joinPurple">А</span>
@@ -11177,11 +10543,11 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/r-joins/r-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: АР, ОР, УР, ИР, ЫР.
+              
             </p>
           </section>
 
@@ -11192,7 +10558,7 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -11200,10 +10566,10 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Скажи, какая буква первая.
+              
             </p>
           </section>
 
@@ -11223,26 +10589,20 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови слово. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
-            {pictureIndex < pictureTasks.length - 1 ? 'Следующая картинка' : 'Дальше'}
+            {pictureIndex < pictureTasks.length - 1 ? '▶' : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -11251,10 +10611,10 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentReadWord.audio)}
             >
-              ▶ Послушать слово
+             🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -11265,13 +10625,7 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово гор-ка</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и напиши слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -11286,14 +10640,14 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
               className="primaryButton smallPrimary"
               onClick={() => setStep(10)}
             >
-              Дальше
+              ▶
             </button>
           </div>
         </>
@@ -11302,11 +10656,12 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
       {step === 10 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Посмотри и послушай</h1>
-            <p className="lessonText">
-              Птичка может быть над коробкой, под коробкой, в коробке и около коробки.
-            </p>
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/r-grammar/prepositions.mp3')}
+            >
+              🔊 объяснение
+            </button>
           </section>
 
           <section className="storyCard">
@@ -11351,29 +10706,18 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
               </div>
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/r-grammar/prepositions.mp3')}
-            >
-              ▶ Послушать объяснение
-            </button>
+           
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Соедини предложение с картинкой</h1>
-            <p className="lessonText">
-              Сначала нажми на предложение. Потом нажми на нужную картинку.
-            </p>
-          </section>
+          
 
           <section className="matchCard">
             <div className="sentenceBank">
@@ -11432,90 +10776,80 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
           {allMatched && (
             <button className="primaryButton" onClick={() => setStep(12)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
       )}
 
       {step === 12 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Послушай рассказ</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Сначала послушай аудио.
-            </p>
-          </section>
+  <>
+    <section className="taskHeader">
+      <button
+        type="button"
+        className="audioButton secondaryAudio"
+        onClick={() => playAudio('/audio/r-story/story.mp3')}
+      >
+        🔊 рассказ
+      </button>
+    </section>
 
-          <section className="storyCard">
-            <div
-              className="comicListenGrid"
-              style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' }}
-            >
-              <div className="comicListenItem">
-                <img
-                  src="/images/r-story/dogs-okolo-doma.png"
-                  alt="Две собаки около дома"
-                  className="comicListenImage"
-                />
-              </div>
+    <section className="storyCard">
+      <div
+        className="comicListenGrid"
+        style={{ gridTemplateColumns: '1fr' }}
+      >
+        <div className="comicListenItem">
+          <img
+            src="/images/r-story/dogs-okolo-doma.png"
+            alt="Две собаки около дома"
+            className="comicListenImage"
+          />
+        </div>
 
-              <div className="comicListenItem">
-                <img
-                  src="/images/r-story/dogs-okolo-doma-grom.png"
-                  alt="Две собаки около дома, гром"
-                  className="comicListenImage"
-                />
-              </div>
+        <div className="comicListenItem">
+          <img
+            src="/images/r-story/dogs-okolo-doma-grom.png"
+            alt="Две собаки около дома, гром"
+            className="comicListenImage"
+          />
+        </div>
 
-              <div className="comicListenItem">
-                <img
-                  src="/images/r-story/dogs-pod-domom-dozhd.png"
-                  alt="Две собаки под домом, дождь"
-                  className="comicListenImage"
-                />
-              </div>
+        <div className="comicListenItem">
+          <img
+            src="/images/r-story/dogs-pod-domom-dozhd.png"
+            alt="Две собаки под домом, дождь"
+            className="comicListenImage"
+          />
+        </div>
 
-              <div className="comicListenItem">
-                <img
-                  src="/images/r-story/dogs-okolo-doma-raduga.png"
-                  alt="Две собаки около дома, радуга"
-                  className="comicListenImage"
-                />
-              </div>
-            </div>
+        <div className="comicListenItem">
+          <img
+            src="/images/r-story/dogs-okolo-doma-raduga.png"
+            alt="Две собаки около дома, радуга"
+            className="comicListenImage"
+          />
+        </div>
+      </div>
+    </section>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/r-story/story.mp3')}
-            >
-              ▶ Послушать рассказ
-            </button>
-          </section>
-
-          <button
-            className="primaryButton"
-            onClick={() => {
-              setStoryChoiceIndex(0)
-              setStoryChoiceAnswer(null)
-              setStep(13)
-            }}
-          >
-            Дальше
-          </button>
-        </>
-      )}
+    <button
+      type="button"
+      className="primaryButton"
+      onClick={() => {
+        setStoryChoiceIndex(0)
+        setStoryChoiceAnswer(null)
+        setStep(13)
+      }}
+    >
+      ▶
+    </button>
+  </>
+)}
 
       {step === 13 && (
   <>
-    <section className="taskHeader">
-      <p className="eyebrow dark">Задание 11</p>
-      <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-      <p className="lessonText">
-        Прочитай предложение и выбери правильную картинку.
-      </p>
-    </section>
+    
 
     <section className="matchCard">
       <div className="readSingleWordCard">
@@ -11526,7 +10860,7 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
 
       <div
         className="comicMatchGrid"
-        style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' }}
+        style={{ gridTemplateColumns: '1fr' }}
       >
         {currentStoryChoice.options.map((option) => (
           <button
@@ -11561,8 +10895,8 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
     {storyChoiceAnswer === currentStoryChoice.correct && (
       <button className="primaryButton" onClick={nextStoryChoiceTask}>
         {storyChoiceIndex < storyChoices.length - 1
-          ? 'Следующее предложение'
-          : 'Завершить урок'}
+          ? '▶ '
+          : '▶'}
       </button>
     )}
   </>
@@ -11571,15 +10905,11 @@ function LetterRLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Р, прочитал её, написал слово и потренировался
-              со словами над, под, в и около.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -11976,13 +11306,7 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Посмотри, как писать мягкий знак</h1>
-            <p className="lessonText">
-              Мягкий знак не бывает заглавным. Посмотри на образец.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -11993,20 +11317,14 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Послушай подсказку</h1>
-            <p className="lessonText">
-              Мягкий знак делает предыдущую букву мягкой.
-            </p>
-          </section>
+          
 
           <section className="softExplainCard">
             <div className="softSignBig">ь</div>
@@ -12015,25 +11333,19 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/soft-sign/softens-previous.mp3')}
             >
-              ▶ Послушать подсказку
+              🔊 подсказку
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Сравни: без мягкого знака и с ним</h1>
-            <p className="lessonText">
-              Прочитай два столбика. Слушай, как меняется звук.
-            </p>
-          </section>
+         
 
           <section className="softCompareCard">
             <div className="softCompareGrid">
@@ -12058,25 +11370,19 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/soft-sign-joins/soft-row-1.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(5)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Сравни ещё раз</h1>
-            <p className="lessonText">
-              Прочитай два столбика. Сравни звук без мягкого знака и с ним.
-            </p>
-          </section>
+         
 
           <section className="softCompareCard">
             <div className="softCompareGrid">
@@ -12099,7 +11405,7 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/soft-sign-joins/soft-row-2.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -12110,20 +11416,14 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               setStep(6)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Прочитай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -12132,10 +11432,10 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentReadWord.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
-            <p className="wordReadHint">Теперь прочитай это слово сам.</p>
+            <p className="wordReadHint"></p>
           </section>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -12147,10 +11447,10 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">Выбери картинку</h1>
             <p className="lessonText">
-              Прочитай слово и выбери правильную картинку.
+             
             </p>
           </section>
 
@@ -12197,10 +11497,10 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Есть мягкий знак или нет?</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">Есть Ь?</h1>
             <p className="lessonText">
-              Послушай слово. Потом выбери: есть в слове мягкий знак или нет.
+              
             </p>
           </section>
 
@@ -12209,7 +11509,7 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton"
               onClick={() => playAudio(currentListen.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
             <div className="softSignOptionButtons">
@@ -12261,13 +11561,7 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Новый герой</p>
-            <h1 className="taskTitle">Знакомься: Бонька</h1>
-            <p className="lessonText">
-              Это собака Бонька. Она будет появляться в новых заданиях.
-            </p>
-          </section>
+          
 
           <section className="storyCard">
             <img
@@ -12282,7 +11576,7 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/bonka/bonka-intro.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -12293,20 +11587,14 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               setStep(10)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри и послушай</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Потом послушай аудио.
-            </p>
-          </section>
+          
 
           <section className="storyCard">
             <img
@@ -12319,83 +11607,81 @@ function LetterSoftSignLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentBonkaListen.audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={nextBonkaListenTask}>
             {bonkaListenIndex < bonkaListenTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 11 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом выбери правильную картинку.
-            </p>
-          </section>
+  <>
+    <section className="readingChoiceCard">
+      <div className="readingChoiceSentence">
+        {currentBonkaChoice.sentence}
+      </div>
 
-          <section className="readingChoiceCard">
-            <div className="readingChoiceSentence">
-              {currentBonkaChoice.sentence}
-            </div>
+      <div
+        className="readingChoiceButtons"
+        style={{ gridTemplateColumns: '1fr' }}
+      >
+        {currentBonkaChoice.options.map((option) => (
+          <button
+            key={option.id}
+            type="button"
+            className={
+              bonkaChoiceAnswer === option.id
+                ? option.id === currentBonkaChoice.correctId
+                  ? 'readingChoiceButton readingChoiceCorrect'
+                  : 'readingChoiceButton readingChoiceWrong'
+                : 'readingChoiceButton'
+            }
+            onClick={() => setBonkaChoiceAnswer(option.id)}
+          >
+            <img
+              src={option.image}
+              alt=""
+            />
+          </button>
+        ))}
+      </div>
 
-            <div className="readingChoiceButtons">
-              {currentBonkaChoice.options.map((option) => (
-                <button
-                  key={option.id}
-                  className={
-                    bonkaChoiceAnswer === option.id
-                      ? option.id === currentBonkaChoice.correctId
-                        ? 'readingChoiceButton readingChoiceCorrect'
-                        : 'readingChoiceButton readingChoiceWrong'
-                      : 'readingChoiceButton'
-                  }
-                  onClick={() => setBonkaChoiceAnswer(option.id)}
-                >
-                  <img src={option.image} alt="" />
-                </button>
-              ))}
-            </div>
-
-            {bonkaChoiceAnswer === currentBonkaChoice.correctId && (
-              <p className="correctFeedback">Верно!</p>
-            )}
-
-            {bonkaChoiceAnswer !== null &&
-              bonkaChoiceAnswer !== currentBonkaChoice.correctId && (
-                <p className="wrongFeedback">Попробуй ещё раз.</p>
-              )}
-          </section>
-
-          {bonkaChoiceAnswer === currentBonkaChoice.correctId && (
-            <button className="primaryButton" onClick={nextBonkaChoiceTask}>
-              {bonkaChoiceIndex < bonkaChoiceTasks.length - 1
-                ? 'Следующее предложение'
-                : 'Завершить урок'}
-            </button>
-          )}
-        </>
+      {bonkaChoiceAnswer === currentBonkaChoice.correctId && (
+        <p className="correctFeedback">Верно!</p>
       )}
+
+      {bonkaChoiceAnswer !== null &&
+        bonkaChoiceAnswer !== currentBonkaChoice.correctId && (
+          <p className="wrongFeedback">Попробуй ещё раз.</p>
+        )}
+    </section>
+
+    {bonkaChoiceAnswer === currentBonkaChoice.correctId && (
+      <button
+        type="button"
+        className="primaryButton"
+        onClick={nextBonkaChoiceTask}
+      >
+        ▶
+      </button>
+    )}
+  </>
+)}
 
       {step === 12 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты узнал мягкий знак, прочитал слова с ним и познакомился с Бонькой.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -12812,43 +12098,30 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+         
 
           <section className="readingCard">
-            <div className="letterLine">Б Б Б Б Б Б</div>
-            <div className="letterLine">б б б б б б</div>
-            <div className="letterLine">Б б Б б Б б</div>
+            <div className="letterLine">Б Б Б</div>
+            <div className="letterLine">б б б</div>
+            <div className="letterLine">Б б Б</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-b.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Б</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-b.gif"
@@ -12858,20 +12131,14 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Б пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Б.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -12886,7 +12153,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -12901,16 +12168,10 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай, как читает учитель. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Б-А</span>
@@ -12930,32 +12191,26 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/b-joins/b-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам. Соединяй звуки плавно.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Б</span>
@@ -12975,11 +12230,11 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/b-joins/b-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+             
             </p>
           </section>
 
@@ -12990,7 +12245,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -12998,10 +12253,10 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -13021,28 +12276,22 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -13052,7 +12301,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+           🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -13065,13 +12314,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово БОБР</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и попробуй написать слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -13086,7 +12329,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -13097,7 +12340,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
                 setStep(11)
               }}
             >
-              Готово
+              ▶
             </button>
           </div>
         </>
@@ -13106,11 +12349,12 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай рассказ</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Сначала послушай аудио.
-            </p>
+            <button
+            className="audioButton secondaryAudio"
+            onClick={() => playAudio('/audio/b-story/story.mp3')}
+          >
+            🔊 рассказ
+          </button>
           </section>
 
           <section className="readingCard">
@@ -13132,12 +12376,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
             </div>
           </section>
 
-          <button
-            className="audioButton secondaryAudio"
-            onClick={() => playAudio('/audio/b-story/story.mp3')}
-          >
-            ▶ Послушать рассказ
-          </button>
+          
 
           <button
             className="primaryButton"
@@ -13147,20 +12386,14 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
               setStep(12)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай предложение и выбери правильную картинку.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="rStoryChoiceSentence">
@@ -13172,7 +12405,7 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+                gridTemplateColumns: '1fr',
                 gap: '16px',
               }}
             >
@@ -13223,8 +12456,8 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
           {storyChoiceAnswer === currentStoryChoice.correct && (
             <button className="primaryButton" onClick={nextStoryChoiceTask}>
               {storyChoiceIndex < storyChoices.length - 1
-                ? 'Следующее предложение'
-                : 'Завершить урок'}
+                ? '▶ '
+                : '▶ '}
             </button>
           )}
         </>
@@ -13234,15 +12467,11 @@ function LetterBLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Б, прочитал её, написал слово и выбрал
-              картинки к предложениям.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -13762,18 +12991,12 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Н Н Н Н Н Н</div>
-            <div className="letterLine">н н н н н н</div>
-            <div className="letterLine">Н н Н н Н н</div>
+            <div className="letterLine">Н Н Н</div>
+            <div className="letterLine">н н н</div>
+            <div className="letterLine">Н н Н</div>
           </section>
 
           <button
@@ -13782,30 +13005,21 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               playAudio('/audio/letters/letter-n.mp3')
             }
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button
             className="primaryButton"
             onClick={() => setStep(3)}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">
-              Посмотри, как писать букву Н
-            </h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-n.gif"
@@ -13818,23 +13032,14 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
             className="primaryButton"
             onClick={() => setStep(4)}
           >
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">
-              Напиши букву Н пальцем
-            </h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую
-              букву Н.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -13853,7 +13058,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               className="secondaryButton"
               onClick={clearCanvas}
             >
-              Очистить
+              ×
             </button>
 
             <button
@@ -13868,19 +13073,9 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">
-              Читай буквы вместе
-            </h1>
-            <p className="lessonText">
-              Сначала послушай, как читает учитель. Потом прочитай
-              сам.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Н-А</span>
@@ -13902,11 +13097,11 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
                 playAudio('/audio/n-joins/n-row-1.mp3')
               }
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам. Соединяй звуки плавно.
+              
             </p>
           </section>
 
@@ -13914,25 +13109,16 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
             className="primaryButton"
             onClick={() => setStep(6)}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">
-              Читай буквы вместе
-            </h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Н</span>
@@ -13954,11 +13140,11 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
                 playAudio('/audio/n-joins/n-row-2.mp3')
               }
             >
-              ▶ Послушать строку 2
+             🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
@@ -13969,7 +13155,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -13977,11 +13163,10 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква
-              первая?
+              
             </p>
           </section>
 
@@ -14003,7 +13188,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
@@ -14013,21 +13198,15 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
             onClick={nextPictureTask}
           >
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">
@@ -14041,7 +13220,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               playAudio(currentReadWord.audio)
             }
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button
@@ -14057,18 +13236,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-
-            <h1 className="taskTitle">
-              Напиши слово {currentWriteWord.word}
-            </h1>
-
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и попробуй написать
-              слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -14087,7 +13255,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               className="secondaryButton"
               onClick={clearCanvas}
             >
-              Очистить
+              ×
             </button>
 
             <button
@@ -14103,46 +13271,43 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
       )}
 
       {step === 11 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Он или она?</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Учитель объяснит, когда мы
-              говорим «он», а когда — «она».
-            </p>
-          </section>
+  <>
+    <section className="taskHeader">
+      <p className="eyebrow dark"></p>
+      <h1 className="taskTitle">Он или она?</h1>
+      <p className="lessonText"></p>
+    </section>
 
-          <section className="sampleCard">
-            <img
-              src="/images/n-gender/on-ona-info.png"
-              alt="Он и она"
-              className="sampleImage"
-            />
-          </section>
+    <section className="sampleCard">
+      <img
+        src="/images/n-gender/on-ona-info.png"
+        alt="Он и она"
+        className="sampleImage wideSampleImage"
+      />
+    </section>
 
-          <button
-            className="primaryButton"
-            onClick={() => {
-              setGenderIndex(0)
-              setGenderAnswer(null)
-              setStep(12)
-            }}
-          >
-            Дальше
-          </button>
-        </>
-      )}
+    <button
+      className="primaryButton"
+      onClick={() => {
+        setGenderIndex(0)
+        setGenderAnswer(null)
+        setStep(12)
+      }}
+    >
+      ▶
+    </button>
+  </>
+)}
 
       {step === 12 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">
-              Выбери: он или она
+              он или она
             </h1>
             <p className="lessonText">
-              Посмотри на картинку и выбери правильное слово.
+              
             </p>
           </section>
 
@@ -14207,8 +13372,8 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               onClick={nextGenderTask}
             >
               {genderIndex < genderTasks.length - 1
-                ? 'Следующая картинка'
-                : 'Дальше'}
+                ? '▶ '
+                : '▶'}
             </button>
           )}
         </>
@@ -14217,29 +13382,26 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">На и над</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Потом послушай объяснение.
-            </p>
-          </section>
-
-          <section className="sampleCard">
-            <img
-              src="/images/n-na-nad/na-nad-info.png"
-              alt="Разница между словами НА и НАД"
-              className="sampleImage"
-            />
-          </section>
-
-          <button
+           <button
             className="audioButton secondaryAudio"
             onClick={() =>
               playAudio('/audio/n-na-nad/na-nad-info.mp3')
             }
           >
-            ▶ Послушать
+            🔊
           </button>
+          </section>
+
+          <section className="sampleImage wideSampleImage">
+            <img
+              src="/images/n-na-nad/na-nad-info.png"
+              alt="Разница между словами НА и НАД"
+              className="sampleImage wideSampleImage"
+            />
+          </section>
+
+          
+      
 
           <button
             className="primaryButton"
@@ -14249,7 +13411,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               setStep(14)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -14257,12 +13419,12 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
       {step === 14 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">
-              Выбери: на или над
+              на или над
             </h1>
             <p className="lessonText">
-              Посмотри на картинку и выбери правильное слово.
+              
             </p>
           </section>
 
@@ -14321,8 +13483,8 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               onClick={nextPositionTask}
             >
               {positionIndex < positionTasks.length - 1
-                ? 'Следующая картинка'
-                : 'Дальше'}
+                ? '▶ '
+                : '▶'}
             </button>
           )}
         </>
@@ -14330,15 +13492,7 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 15 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">
-              Прочитай и выбери картинку
-            </h1>
-            <p className="lessonText">
-              Прочитай предложение и выбери правильную картинку.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="rStoryChoiceSentence">
@@ -14400,8 +13554,8 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
               onClick={nextSentenceTask}
             >
               {sentenceIndex < sentenceTasks.length - 1
-                ? 'Следующее предложение'
-                : 'Завершить урок'}
+                ? '▶ '
+                : '▶ '}
             </button>
           )}
         </>
@@ -14412,19 +13566,14 @@ function LetterNLesson({ onBack, onComplete }: LessonProps) {
           <section className="successCard">
             <div className="successIcon">✓</div>
 
-            <h1 className="taskTitle">Молодец!</h1>
-
-            <p className="lessonText">
-              Ты послушал букву Н, прочитал её, написал слова и
-              выбрал правильные картинки.
-            </p>
+            
           </section>
 
           <button
             className="primaryButton"
             onClick={onComplete}
           >
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -14983,42 +14132,30 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">В В В В В В</div>
-            <div className="letterLine">в в в в в в</div>
-            <div className="letterLine">В в В в В в</div>
+            <div className="letterLine">В В В</div>
+            <div className="letterLine">в в в</div>
+            <div className="letterLine">В в В</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-v.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву В</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -15029,20 +14166,14 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву В пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву В.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -15057,7 +14188,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -15072,16 +14203,10 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">В-А</span>
@@ -15101,32 +14226,26 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/v-joins/v-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам. Соединяй звуки плавно.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-В</span>
@@ -15146,32 +14265,26 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/v-joins/v-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+             🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай мягко</h1>
-            <p className="lessonText">
-              Послушай разницу. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">ВИ</span>
@@ -15183,11 +14296,11 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/v-joins/v-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ВИ, ВЬ-И.
+              
             </p>
           </section>
 
@@ -15198,7 +14311,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -15206,10 +14319,10 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Слышишь букву В?
+              
             </p>
           </section>
 
@@ -15229,28 +14342,22 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Слышишь букву В?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -15260,7 +14367,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -15273,13 +14380,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Посмотри, как писать слово</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать слово сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -15292,20 +14393,14 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Напиши слово {writeWord.word}</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и попробуй написать слово.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -15320,7 +14415,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -15338,13 +14433,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай и повтори</h1>
-            <p className="lessonText">
-              Сначала послушай. Потом повтори громко.
-            </p>
-          </section>
+          
 
           <section className="vRepeatCard">
             <div className="vRepeatText">{currentRepeatTask.text}</div>
@@ -15353,7 +14442,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentRepeatTask.audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
 
             <p className="vRepeatHint">
@@ -15363,91 +14452,87 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
 
           <button className="primaryButton" onClick={nextRepeatTask}>
             {repeatIndex < repeatTasks.length - 1
-              ? 'Следующая строка'
-              : 'Дальше'}
+              ? '▶ '
+              : '▶'}
           </button>
         </>
       )}
 
-      {step === 13 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай предложение. Можешь послушать подсказку.
-            </p>
-          </section>
+{step === 13 && (
+  <>
+    <section className="readSingleWordCard">
+      <div className="rStoryChoiceSentence">
+        {currentStoryTask.sentence}
+      </div>
+    </section>
 
-          <section className="readSingleWordCard">
-            <div className="rStoryChoiceSentence">
-              {currentStoryTask.sentence}
-            </div>
-          </section>
+    <button
+      type="button"
+      className="audioButton secondaryAudio"
+      onClick={() => playAudio(currentStoryTask.audio)}
+    >
+      🔊 подсказка
+    </button>
 
-          <button
-            className="audioButton secondaryAudio"
-            onClick={() => playAudio(currentStoryTask.audio)}
-          >
-            ▶ Подсказка
-          </button>
+    <section className="readingCard">
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: '16px',
+        }}
+      >
+        {currentStoryTask.options.map((option) => {
+          const isSelected = storyAnswer === option.id
+          const isCorrect = option.id === currentStoryTask.correct
 
-          <section className="readingCard">
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-                gap: '16px',
-              }}
+          return (
+            <button
+              key={option.id}
+              type="button"
+              onClick={() => setStoryAnswer(option.id)}
+              style={getImageChoiceStyle(isSelected, isCorrect)}
             >
-              {currentStoryTask.options.map((option) => {
-                const isSelected = storyAnswer === option.id
-                const isCorrect = option.id === currentStoryTask.correct
-
-                return (
-                  <button
-                    key={option.id}
-                    type="button"
-                    onClick={() => setStoryAnswer(option.id)}
-                    style={getImageChoiceStyle(isSelected, isCorrect)}
-                  >
-                    <img
-                      src={option.image}
-                      alt={option.alt}
-                      className="pictureTaskImage"
-                    />
-                  </button>
-                )
-              })}
-            </div>
-          </section>
-
-          {storyAnswer === currentStoryTask.correct && (
-            <p className="lessonText">Верно!</p>
-          )}
-
-          {storyAnswer !== null &&
-            storyAnswer !== currentStoryTask.correct && (
-              <p className="lessonText">Попробуй ещё раз.</p>
-            )}
-
-          {storyAnswer === currentStoryTask.correct && (
-            <button className="primaryButton" onClick={nextStoryTask}>
-              {storyIndex < storyTasks.length - 1
-                ? 'Следующее предложение'
-                : 'Дальше'}
+              <img
+                src={option.image}
+                alt={option.alt}
+                className="pictureTaskImage"
+              />
             </button>
-          )}
-        </>
+          )
+        })}
+      </div>
+    </section>
+
+    {storyAnswer === currentStoryTask.correct && (
+      <p className="lessonText">Верно!</p>
+    )}
+
+    {storyAnswer !== null &&
+      storyAnswer !== currentStoryTask.correct && (
+        <p className="lessonText">Попробуй ещё раз.</p>
       )}
+
+    {storyAnswer === currentStoryTask.correct && (
+      <button
+        type="button"
+        className="primaryButton"
+        onClick={nextStoryTask}
+      >
+        ▶
+      </button>
+    )}
+  </>
+)}
+
 
       {step === 14 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Послушай и выбери слог</h1>
             <p className="lessonText">
-              Послушай слово. Выбери, какой слог пропущен.
+              
             </p>
           </section>
 
@@ -15456,7 +14541,7 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentListenTask.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
             <div className="vSyllableWord">
@@ -15517,15 +14602,11 @@ function LetterVLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву В, прочитал её, написал слово, повторил слоги
-              и выбрал правильные картинки.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -15938,43 +15019,30 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Й Й Й Й Й Й</div>
-            <div className="letterLine">й й й й й й</div>
-            <div className="letterLine">Й й Й й Й й</div>
+            <div className="letterLine">Й Й Й</div>
+            <div className="letterLine">й й й</div>
+            <div className="letterLine">Й й Й</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-y.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Й</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+         
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-y.gif"
@@ -15984,20 +15052,14 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Й пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Й.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -16012,7 +15074,7 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -16027,16 +15089,10 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Й</span>
@@ -16056,16 +15112,16 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/y-joins/y-row-1.mp3')}
             >
-              ▶ Послушать строку
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -16073,19 +15129,11 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
       {step === 6 && (
         <>
           <section className="yExplanationCard">
-            <div className="yExplanationLetter">Й</div>
-
-            <h1 className="taskTitle">Буква Й в начале слова</h1>
-
-            <p className="lessonText">
-              Послушай подсказку учителя.
-            </p>
-
             <button
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/y-explanations/rare-first.mp3')}
             >
-              ▶ Послушать
+              🔊 подсказка
             </button>
           </section>
 
@@ -16096,7 +15144,7 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -16104,10 +15152,10 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -16134,8 +15182,8 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
 
           <button className="primaryButton" onClick={nextFirstWord}>
             {firstWordIndex < firstWords.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
@@ -16145,17 +15193,17 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
           <section className="yExplanationCard">
             <div className="yExplanationLetter">Й</div>
 
-            <h1 className="taskTitle">Буква Й в середине слова</h1>
+            <h1 className="taskTitle"></h1>
 
             <p className="lessonText">
-              Послушай подсказку учителя.
+              
             </p>
 
             <button
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/y-explanations/middle.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -16166,20 +15214,14 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               setStep(9)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Прочитай слово на доске.
-            </p>
-          </section>
+          
 
           <section className="yWordBoardCard">
             <img
@@ -16196,7 +15238,7 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentMiddleWord.audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -16211,19 +15253,11 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
       {step === 10 && (
         <>
           <section className="yExplanationCard">
-            <div className="yExplanationLetter">Й</div>
-
-            <h1 className="taskTitle">Буква Й в конце слова</h1>
-
-            <p className="lessonText">
-              Послушай подсказку учителя.
-            </p>
-
-            <button
+             <button
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/y-explanations/end.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -16234,20 +15268,14 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               setStep(11)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Прочитай слово на доске.
-            </p>
-          </section>
+         
 
           <section className="yWordBoardCard">
             <img
@@ -16264,7 +15292,7 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentEndWord.audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -16287,7 +15315,7 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/y-explanations/on-ono.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -16299,21 +15327,14 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
               setStep(13)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай фразу и выбери правильную картинку.
-            </p>
-          </section>
-
+         
           <section className="readSingleWordCard">
             <div className="rStoryChoiceSentence">
               {currentColorTask.phrase}
@@ -16356,8 +15377,8 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
           {colorAnswer === currentColorTask.correct && (
             <button className="primaryButton" onClick={nextColorTask}>
               {colorIndex < colorTasks.length - 1
-                ? 'Следующая фраза'
-                : 'Завершить урок'}
+                ? '▶'
+                : '▶'}
             </button>
           )}
         </>
@@ -16367,15 +15388,11 @@ function LetterYLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Й, прочитал слова с буквой Й и выбрал
-              правильные картинки.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -16744,42 +15761,30 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">З З З З З З</div>
-            <div className="letterLine">з з з з з з</div>
-            <div className="letterLine">З з З з З з</div>
+            <div className="letterLine">З З З</div>
+            <div className="letterLine">з з з</div>
+            <div className="letterLine">З з З</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-z.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву З</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -16790,20 +15795,14 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву З пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву З.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -16818,7 +15817,7 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -16833,16 +15832,10 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">З-А</span>
@@ -16862,32 +15855,26 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/z-joins/z-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам. Соединяй звуки плавно.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+        
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-З</span>
@@ -16907,32 +15894,26 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/z-joins/z-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай мягко</h1>
-            <p className="lessonText">
-              Послушай разницу. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">ЗИ</span>
@@ -16944,11 +15925,11 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/z-joins/z-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: ЗИ, ЗЬ-И.
+              
             </p>
           </section>
 
@@ -16959,7 +15940,7 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -16967,10 +15948,10 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+             
             </p>
           </section>
 
@@ -16990,28 +15971,22 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+        
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -17021,7 +15996,7 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -17035,11 +16010,12 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
       {step === 10 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Послушай рассказ</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Послушай предложения.
-            </p>
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/z-story/story.mp3')}
+            >
+              🔊 рассказ
+            </button>
           </section>
 
           <section className="zStoryListenCard">
@@ -17049,12 +16025,7 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
               className="zStoryListenImage"
             />
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/z-story/story.mp3')}
-            >
-              ▶ Послушать рассказ
-            </button>
+            
           </section>
 
           <button
@@ -17065,20 +16036,14 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
               setStep(11)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай предложение и выбери правильную картинку.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="rStoryChoiceSentence">
@@ -17122,8 +16087,8 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
           {storyAnswer === currentStoryTask.correct && (
             <button className="primaryButton" onClick={nextStoryTask}>
               {storyIndex < storyTasks.length - 1
-                ? 'Следующее предложение'
-                : 'Завершить урок'}
+                ? '▶'
+                : '▶'}
             </button>
           )}
         </>
@@ -17133,15 +16098,11 @@ function LetterZLesson({ onBack, onComplete }: LessonProps) {
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву З, прочитал её, прочитал слова и выбрал
-              правильные картинки.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -17585,42 +16546,30 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Я Я Я Я Я Я</div>
-            <div className="letterLine">я я я я я я</div>
-            <div className="letterLine">Я я Я я Я я</div>
+            <div className="letterLine">Я Я Я</div>
+            <div className="letterLine">я я я</div>
+            <div className="letterLine">Я я Я</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-ya.mp3')}
           >
-            ▶ Послушать букву
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Я</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -17631,20 +16580,14 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+           ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Я пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Я.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -17659,7 +16602,7 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -17674,16 +16617,10 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">М-Я</span>
@@ -17705,32 +16642,26 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ya-joins/ya-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам. Соединяй звуки плавно.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Я-М</span>
@@ -17752,11 +16683,11 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ya-joins/ya-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
@@ -17767,7 +16698,7 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -17775,10 +16706,10 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+             
             </p>
           </section>
 
@@ -17798,28 +16729,22 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+               
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextFirstWord}>
             {firstWordIndex < firstWords.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Прочитай слово на доске. Потом послушай аудио.
-            </p>
-          </section>
+         
 
           <section className="yaWordBoardCard">
             <div className="yaBoard">
@@ -17830,7 +16755,7 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentReadWord.audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -17853,7 +16778,7 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ya-explanations/kakaya.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
@@ -17865,20 +16790,14 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               setStep(10)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Прочитай и выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай фразу и выбери правильную картинку.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="rStoryChoiceSentence">
@@ -17922,52 +16841,47 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
           {colorAnswer === currentColorTask.correct && (
             <button className="primaryButton" onClick={nextColorTask}>
               {colorIndex < colorTasks.length - 1
-                ? 'Следующая фраза'
-                : 'Дальше'}
+                ? '▶ '
+                : '▶'}
             </button>
           )}
         </>
       )}
 
       {step === 11 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Познакомься с Ульяной</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Послушай подсказку.
-            </p>
-          </section>
+  <>
+    <section className="taskHeader">
+      <button
+        className="audioButton secondaryAudio"
+        onClick={() => playAudio('/audio/ya-story/ulyana-intro.mp3')}
+      >
+        🔊
+      </button>
+    </section>
 
-          <section className="yaUlyanaIntroCard">
-            <img
-              src="/images/ya-story/ulyana.png"
-              alt="Ульяна"
-              className="yaUlyanaImage"
-            />
+    <section className="yaUlyanaIntroCard">
+      <img
+        src="/images/ya-story/ulyana.png"
+        alt="Ульяна"
+        className="yaUlyanaImage"
+      />
+    </section>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/ya-story/ulyana-intro.mp3')}
-            >
-              ▶ Послушать
-            </button>
-          </section>
-
-          <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
-          </button>
-        </>
-      )}
+    <button className="primaryButton" onClick={() => setStep(12)}>
+      ▶
+    </button>
+  </>
+)}
 
       {step === 12 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай историю про Ульяну.
-            </p>
+             <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/ya-story/story.mp3')}
+            >
+              🔊 историю
+            </button>
           </section>
 
           <section className="yaStoryListenCard">
@@ -17982,12 +16896,7 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/ya-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+           
           </section>
 
           <button
@@ -17997,54 +16906,43 @@ function LetterYaLesson({ onBack, onComplete }: { onBack: () => void; onComplete
               setStep(13)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 13 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай историю</h1>
-            <p className="lessonText">
-              Прочитай отрывок и посмотри на картинку.
-            </p>
-          </section>
+  <>
+    <section className="hStoryFragmentCard">
+      <div className="hStorySentence">
+        {currentStoryTask.sentence}
+      </div>
 
-          <section className="yaStoryFragmentCard">
-            <div className="yaStorySentence">
-              {currentStoryTask.sentence}
-            </div>
+      <img
+        src={currentStoryTask.image}
+        alt={currentStoryTask.alt}
+        className="hStoryFragmentImage"
+      />
+    </section>
 
-            <img
-              src={currentStoryTask.image}
-              alt={currentStoryTask.alt}
-              className="yaStoryFragmentImage"
-            />
-          </section>
-
-          <button className="primaryButton" onClick={nextStoryTask}>
-            {storyIndex < storyTasks.length - 1
-              ? 'Следующий отрывок'
-              : 'Завершить урок'}
-          </button>
-        </>
-      )}
+    <button
+      className="primaryButton"
+      onClick={nextStoryTask}
+    >
+      ▶
+    </button>
+  </>
+)}
 
       {step === 14 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Я, прочитал слова с буквой Я и историю про
-              Ульяну.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+           ▶
           </button>
         </>
       )}
@@ -18533,42 +17431,30 @@ function LetterTsLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Ц Ц Ц Ц Ц Ц</div>
-            <div className="letterLine">ц ц ц ц ц ц</div>
-            <div className="letterLine">Ц ц Ц ц Ц ц</div>
+            <div className="letterLine">Ц Ц Ц</div>
+            <div className="letterLine">ц ц ц</div>
+            <div className="letterLine">Ц ц Ц</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-ts.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ц</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+         
 
           <section className="sampleCard">
             <img
@@ -18579,20 +17465,14 @@ function LetterTsLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ц пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ц.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -18607,7 +17487,7 @@ function LetterTsLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -18622,16 +17502,10 @@ function LetterTsLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ц-А</span>
@@ -18651,32 +17525,26 @@ function LetterTsLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ts-joins/ts-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+             
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+        
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Ц</span>
@@ -18698,32 +17566,26 @@ function LetterTsLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ts-joins/ts-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+             
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай внимательно</h1>
-            <p className="lessonText">
-              Послушай разницу. Потом прочитай сам.
-            </p>
-          </section>
+        
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ц-Ы</span>
@@ -18735,11 +17597,11 @@ function LetterTsLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ts-joins/ts-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай сам: Ц-Ы, Ц-И.
+             
             </p>
           </section>
 
@@ -18750,7 +17612,7 @@ function LetterTsLesson({
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -18758,10 +17620,10 @@ function LetterTsLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -18781,28 +17643,22 @@ function LetterTsLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+               
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -18812,7 +17668,7 @@ function LetterTsLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -18826,11 +17682,12 @@ function LetterTsLesson({
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай рассказ.
-            </p>
+             <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/ts-story/story.mp3')}
+            >
+              🔊 историю
+            </button>
           </section>
 
           <section className="tsStoryOverviewCard">
@@ -18848,29 +17705,18 @@ function LetterTsLesson({
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/ts-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+           
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-            <p className="lessonText">
-              Прочитай текст и посмотри на картинку.
-            </p>
-          </section>
+          
 
           <section className="tsStoryFragmentCard">
             <div className="tsStorySentence">{storyPanels[0].text}</div>
@@ -18883,21 +17729,15 @@ function LetterTsLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Найди на картинке</h1>
-            <p className="lessonText">
-              Сначала нажми на слово. Потом нажми на нужное место на картинке.
-            </p>
-          </section>
-
+          
+          
           <section className="tsHotspotCard">
             <div className="tsHotspotSentenceList">
               {hotspotSentences.map((sentence) => {
@@ -18948,7 +17788,7 @@ function LetterTsLesson({
 
           {allHotspotsMatched && (
             <button className="primaryButton" onClick={() => setStep(14)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -18956,13 +17796,7 @@ function LetterTsLesson({
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-            <p className="lessonText">
-              Прочитай текст и посмотри на картинку.
-            </p>
-          </section>
+         
 
           <section className="tsStoryFragmentCard">
             <div className="tsStorySentence">{storyPanels[1].text}</div>
@@ -18975,7 +17809,7 @@ function LetterTsLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -18983,7 +17817,7 @@ function LetterTsLesson({
       {step === 15 && (
         <>
           <section className="tsMoodCard">
-            <p className="eyebrow dark">Задание 11</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Как Бонька?</h1>
 
             <div className="tsMoodOptions">
@@ -19018,7 +17852,7 @@ function LetterTsLesson({
 
           {moodOneAnswer === 'interested' && (
             <button className="primaryButton" onClick={() => setStep(16)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -19026,13 +17860,7 @@ function LetterTsLesson({
 
       {step === 16 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-            <p className="lessonText">
-              Прочитай текст и посмотри на картинку.
-            </p>
-          </section>
+          
 
           <section className="tsStoryFragmentCard">
             <div className="tsStorySentence">{storyPanels[2].text}</div>
@@ -19045,21 +17873,14 @@ function LetterTsLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(17)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 17 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 13</p>
-            <h1 className="taskTitle">Соедини еду и животных</h1>
-            <p className="lessonText">
-              Сначала нажми на животное или ребёнка. Потом нажми на подходящую еду.
-            </p>
-          </section>
-
+          
           <section className="tsFoodMatchCard">
             <div className="tsFoodColumns">
               <div className="tsFoodColumn">
@@ -19126,7 +17947,7 @@ function LetterTsLesson({
 
           {allFoodMatched && (
             <button className="primaryButton" onClick={() => setStep(18)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -19134,13 +17955,7 @@ function LetterTsLesson({
 
       {step === 18 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 14</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-            <p className="lessonText">
-              Прочитай текст и посмотри на картинку.
-            </p>
-          </section>
+         
 
           <section className="tsStoryFragmentCard">
             <div className="tsStorySentence">{storyPanels[3].text}</div>
@@ -19153,7 +17968,7 @@ function LetterTsLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(19)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -19161,7 +17976,7 @@ function LetterTsLesson({
       {step === 19 && (
         <>
           <section className="tsMoodCard">
-            <p className="eyebrow dark">Задание 15</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Как Бонька?</h1>
 
             <div className="tsMoodOptions">
@@ -19196,7 +18011,7 @@ function LetterTsLesson({
 
           {moodTwoAnswer === 'sad' && (
             <button className="primaryButton" onClick={() => setStep(20)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -19204,13 +18019,7 @@ function LetterTsLesson({
 
       {step === 20 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 16</p>
-            <h1 className="taskTitle">Прочитай конец истории</h1>
-            <p className="lessonText">
-              Прочитай текст и посмотри на картинку.
-            </p>
-          </section>
+          
 
           <section className="tsStoryFragmentCard">
             <div className="tsStorySentence">{storyPanels[4].text}</div>
@@ -19223,7 +18032,7 @@ function LetterTsLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(21)}>
-            Завершить урок
+            ▶
           </button>
         </>
       )}
@@ -19232,14 +18041,11 @@ function LetterTsLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ц, прочитал слова, познакомился с историей и выполнил задания.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -19821,43 +18627,30 @@ function LetterYeLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Е Е Е Е Е Е</div>
-            <div className="letterLine">е е е е е е</div>
-            <div className="letterLine">Е е Е е Е е</div>
+            <div className="letterLine">Е Е Е</div>
+            <div className="letterLine">е е е</div>
+            <div className="letterLine">Е е Е</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-ye.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Е</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-ye.gif"
@@ -19867,20 +18660,14 @@ function LetterYeLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Е пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Е.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -19895,7 +18682,7 @@ function LetterYeLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -19910,16 +18697,10 @@ function LetterYeLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">М-Е</span>
@@ -19941,28 +18722,22 @@ function LetterYeLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ye-joins/ye-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Е-М</span>
@@ -19984,7 +18759,7 @@ function LetterYeLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ye-joins/ye-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
           </section>
 
@@ -19995,7 +18770,7 @@ function LetterYeLesson({
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -20003,10 +18778,10 @@ function LetterYeLesson({
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -20026,28 +18801,22 @@ function LetterYeLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -20057,7 +18826,7 @@ function LetterYeLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -20071,10 +18840,10 @@ function LetterYeLesson({
       {step === 9 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Найди место на картинке</h1>
             <p className="lessonText">
-              Прочитай предложение. Потом нажми на правильный кружок на картинке.
+              
             </p>
           </section>
 
@@ -20115,8 +18884,8 @@ function LetterYeLesson({
           {houseAnswer === currentHouseTask.correct && (
             <button className="primaryButton" onClick={nextHouseTask}>
               {houseIndex < houseTasks.length - 1
-                ? 'Следующее предложение'
-                : 'Дальше'}
+                ? '▶'
+                : '▶'}
             </button>
           )}
         </>
@@ -20125,11 +18894,12 @@ function LetterYeLesson({
       {step === 10 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай рассказ.
-            </p>
+           <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/ye-story/story.mp3')}
+            >
+              🔊 историю
+            </button>
           </section>
 
           <section className="yeStoryOverviewCard">
@@ -20147,26 +18917,18 @@ function LetterYeLesson({
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/ye-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+            
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-          </section>
+         
 
           <section className="yeStoryFragmentCard">
             <div className="yeStorySentence">{storyPanels[0].text}</div>
@@ -20179,20 +18941,14 @@ function LetterYeLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Соедини слово и картинку</h1>
-            <p className="lessonText">
-              Сначала нажми на слово. Потом нажми на правильную картинку.
-            </p>
-          </section>
+          
 
           <section className="yeMatchCard">
             <div className="yeTreeWordRow">
@@ -20248,7 +19004,7 @@ function LetterYeLesson({
 
           {allTreesMatched && (
             <button className="primaryButton" onClick={() => setStep(13)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -20256,10 +19012,7 @@ function LetterYeLesson({
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-          </section>
+          
 
           <section className="yeStoryFragmentCard">
             <div className="yeStorySentence">{storyPanels[1].text}</div>
@@ -20272,17 +19025,14 @@ function LetterYeLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(14)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-          </section>
+          
 
           <section className="yeStoryFragmentCard">
             <div className="yeStorySentence">{storyPanels[2].text}</div>
@@ -20295,20 +19045,14 @@ function LetterYeLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 15 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 13</p>
-            <h1 className="taskTitle">Соедини действие и картинку</h1>
-            <p className="lessonText">
-              Сначала нажми на картинку. Потом нажми на правильное слово.
-            </p>
-          </section>
+         
 
           <section className="yeActionMatchCard">
             <div className="yeActionColumns">
@@ -20366,7 +19110,7 @@ function LetterYeLesson({
 
           {allActionsMatched && (
             <button className="primaryButton" onClick={() => setStep(16)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -20374,11 +19118,7 @@ function LetterYeLesson({
 
       {step === 16 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 14</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-          </section>
-
+          
           <section className="yeStoryFragmentCard">
             <div className="yeStorySentence">{storyPanels[3].text}</div>
 
@@ -20390,7 +19130,7 @@ function LetterYeLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(17)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -20398,11 +19138,10 @@ function LetterYeLesson({
       {step === 17 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 15</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Кто есть на картинке?</h1>
             <p className="lessonText">
-              Поставь галочку, если герой есть на картинке. Поставь крестик,
-              если его нет.
+              
             </p>
           </section>
 
@@ -20461,7 +19200,7 @@ function LetterYeLesson({
 
           {characterFeedback === 'Верно!' && (
             <button className="primaryButton" onClick={() => setStep(18)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -20469,10 +19208,7 @@ function LetterYeLesson({
 
       {step === 18 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 16</p>
-            <h1 className="taskTitle">Прочитай конец истории</h1>
-          </section>
+         
 
           <section className="yeStoryFragmentCard">
             <div className="yeStorySentence">{storyPanels[4].text}</div>
@@ -20485,7 +19221,7 @@ function LetterYeLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(19)}>
-            Завершить урок
+            ▶
           </button>
         </>
       )}
@@ -20494,15 +19230,11 @@ function LetterYeLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Е, прочитал слова и историю про Боньку и
-              Ульяну.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -20525,11 +19257,6 @@ function LetterYoLesson({
   const [toyIndex, setToyIndex] = useState(0)
   const [toyAnswer, setToyAnswer] = useState<string | null>(null)
 
-  const [selectedSortItemId, setSelectedSortItemId] = useState<string | null>(
-    null,
-  )
-  const [sortedItems, setSortedItems] = useState<Record<string, string>>({})
-  const [sortFeedback, setSortFeedback] = useState('')
 
   const [hardSoftIndex, setHardSoftIndex] = useState(0)
   const [hardSoftAnswer, setHardSoftAnswer] = useState<string | null>(null)
@@ -20670,57 +19397,6 @@ function LetterYoLesson({
     },
   ]
 
-  const sortItems = [
-    {
-      id: 'hazelnut',
-      label: 'ЛЕС-НОЙ О-РЕХ',
-      image: '/images/yo-sort/hazelnut.png',
-      correct: 'nuts',
-    },
-    {
-      id: 'raspberry',
-      label: 'МА-ЛИ-НА',
-      image: '/images/yo-sort/raspberry.png',
-      correct: 'berries',
-    },
-    {
-      id: 'strawberry',
-      label: 'КЛУБ-НИ-КА',
-      image: '/images/yo-sort/strawberry.png',
-      correct: 'berries',
-    },
-    {
-      id: 'cherry',
-      label: 'ВИШ-НЯ',
-      image: '/images/yo-sort/cherry.png',
-      correct: 'berries',
-    },
-    {
-      id: 'walnut',
-      label: 'ГРЕЦ-КИЙ О-РЕХ',
-      image: '/images/yo-sort/walnut.png',
-      correct: 'nuts',
-    },
-    {
-      id: 'peanut',
-      label: 'А-РА-ХИС',
-      image: '/images/yo-sort/peanut.png',
-      correct: 'nuts',
-    },
-  ]
-
-  const baskets = [
-    {
-      id: 'nuts',
-      label: 'ОРЕХИ',
-      image: '/images/yo-sort/basket-nuts.png',
-    },
-    {
-      id: 'berries',
-      label: 'ЯГОДЫ',
-      image: '/images/yo-sort/basket-berries.png',
-    },
-  ]
 
   const hardSoftTasks = [
     {
@@ -20761,7 +19437,6 @@ function LetterYoLesson({
   const currentToyTask = toyTasks[toyIndex]
   const currentHardSoftTask = hardSoftTasks[hardSoftIndex]
 
-  const allSortItemsDone = Object.keys(sortedItems).length === sortItems.length
 
   const playAudio = (audioPath: string) => {
     const audio = new Audio(audioPath)
@@ -20929,42 +19604,13 @@ function LetterYoLesson({
     }
   }
 
-  const handleSortItemSelect = (itemId: string) => {
-    if (sortedItems[itemId]) return
-
-    setSelectedSortItemId(itemId)
-    setSortFeedback('')
-  }
-
-  const handleBasketClick = (basketId: string) => {
-    if (!selectedSortItemId) {
-      setSortFeedback('Сначала выбери картинку.')
-      return
-    }
-
-    const item = sortItems.find((sortItem) => sortItem.id === selectedSortItemId)
-
-    if (!item) return
-
-    if (item.correct === basketId) {
-      setSortedItems((prev) => ({
-        ...prev,
-        [item.id]: basketId,
-      }))
-
-      setSelectedSortItemId(null)
-      setSortFeedback('Верно!')
-    } else {
-      setSortFeedback('Попробуй ещё раз.')
-    }
-  }
 
   const nextHardSoftTask = () => {
     if (hardSoftIndex < hardSoftTasks.length - 1) {
       setHardSoftIndex((prev) => prev + 1)
       setHardSoftAnswer(null)
     } else {
-      setStep(20)
+      setStep(18)
     }
   }
 
@@ -21037,42 +19683,30 @@ function LetterYoLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+         
 
           <section className="readingCard">
-            <div className="letterLine">Ё Ё Ё Ё Ё Ё</div>
-            <div className="letterLine">ё ё ё ё ё ё</div>
-            <div className="letterLine">Ё ё Ё ё Ё ё</div>
+            <div className="letterLine">Ё Ё Ё</div>
+            <div className="letterLine">ё ё ё</div>
+            <div className="letterLine">Ё ё Ё</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-yo.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ё</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -21083,21 +19717,14 @@ function LetterYoLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ё пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ё.
-            </p>
-          </section>
-
+          
           <section className="drawingCard">
             <canvas
               ref={canvasRef}
@@ -21111,7 +19738,7 @@ function LetterYoLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -21126,16 +19753,10 @@ function LetterYoLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">М-Ё</span>
@@ -21157,28 +19778,22 @@ function LetterYoLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yo-joins/yo-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ё-М</span>
@@ -21200,28 +19815,22 @@ function LetterYoLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yo-joins/yo-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Сравни Е и Ё</h1>
-            <p className="lessonText">
-              Послушай разницу. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Т-Е</span>
@@ -21245,7 +19854,7 @@ function LetterYoLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yo-joins/yo-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
           </section>
 
@@ -21256,7 +19865,7 @@ function LetterYoLesson({
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -21264,10 +19873,10 @@ function LetterYoLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -21287,28 +19896,22 @@ function LetterYoLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -21318,7 +19921,7 @@ function LetterYoLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -21332,10 +19935,10 @@ function LetterYoLesson({
       {step === 10 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Е или Ё?</h1>
             <p className="lessonText">
-              Послушай слово и выбери, какая буква спряталась.
+              
             </p>
           </section>
 
@@ -21344,7 +19947,7 @@ function LetterYoLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentListenTask.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
             <div className="yoLetterChoiceRow">
@@ -21388,10 +19991,10 @@ function LetterYoLesson({
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Его или её?</h1>
             <p className="lessonText">
-              Посмотри на картинку. Потом послушай подсказку.
+              
             </p>
           </section>
 
@@ -21408,7 +20011,7 @@ function LetterYoLesson({
                 playAudio('/audio/yo-pronouns/his-her-explanation.mp3')
               }
             >
-              ▶ Послушать подсказку
+              🔊 подсказку
             </button>
           </section>
 
@@ -21420,7 +20023,7 @@ function LetterYoLesson({
               setStep(12)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -21428,10 +20031,10 @@ function LetterYoLesson({
       {step === 12 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Выбери: его или её</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">его или её</h1>
             <p className="lessonText">
-              Посмотри на игрушку и выбери правильное слово.
+              
             </p>
           </section>
 
@@ -21478,8 +20081,8 @@ function LetterYoLesson({
           {toyAnswer === currentToyTask.correct && (
             <button className="primaryButton" onClick={nextToyTask}>
               {toyIndex < toyTasks.length - 1
-                ? 'Следующая игрушка'
-                : 'Дальше'}
+                ? '▶ '
+                : '▶'}
             </button>
           )}
         </>
@@ -21488,11 +20091,12 @@ function LetterYoLesson({
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай рассказ.
-            </p>
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/yo-story/story.mp3')}
+            >
+              🔊 историю
+            </button>
           </section>
 
           <section className="yoStoryOverviewCard">
@@ -21510,26 +20114,18 @@ function LetterYoLesson({
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/yo-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+           
           </section>
 
           <button className="primaryButton" onClick={() => setStep(14)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-          </section>
+          
 
           <section className="yoStoryFragmentCard">
             <div className="yoStorySentence">{storyPanels[0].text}</div>
@@ -21542,95 +20138,15 @@ function LetterYoLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
+
       {step === 15 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">Разложи по корзинкам</h1>
-            <p className="lessonText">
-              Сначала нажми на картинку. Потом нажми на правильную корзинку.
-            </p>
-          </section>
-
-          <section className="yoSortCard">
-            <div className="yoBasketGrid">
-              {baskets.map((basket) => (
-                <button
-                  key={basket.id}
-                  type="button"
-                  className="yoBasketButton"
-                  onClick={() => handleBasketClick(basket.id)}
-                >
-                  <img
-                    src={basket.image}
-                    alt={basket.label}
-                    className="yoBasketImage"
-                  />
-
-                  <div className="yoBasketLabel">{basket.label}</div>
-
-                  <div className="yoBasketItems">
-                    {sortItems
-                      .filter((item) => sortedItems[item.id] === basket.id)
-                      .map((item) => (
-                        <span key={item.id} className="yoBasketItemName">
-                          {item.label}
-                        </span>
-                      ))}
-                  </div>
-                </button>
-              ))}
-            </div>
-
-            <div className="yoSortItemsGrid">
-              {sortItems
-                .filter((item) => !sortedItems[item.id])
-                .map((item) => {
-                  const isSelected = selectedSortItemId === item.id
-
-                  return (
-                    <button
-                      key={item.id}
-                      type="button"
-                      className={`yoSortItemButton ${
-                        isSelected ? 'selected' : ''
-                      }`}
-                      onClick={() => handleSortItemSelect(item.id)}
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.label}
-                        className="yoSortItemImage"
-                      />
-
-                      <span className="yoSortItemLabel">{item.label}</span>
-                    </button>
-                  )
-                })}
-            </div>
-
-            {sortFeedback && <p className="lessonText">{sortFeedback}</p>}
-          </section>
-
-          {allSortItemsDone && (
-            <button className="primaryButton" onClick={() => setStep(16)}>
-              Дальше
-            </button>
-          )}
-        </>
-      )}
-
-      {step === 16 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 13</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-          </section>
+         
 
           <section className="yoStoryFragmentCard">
             <div className="yoStorySentence">{storyPanels[1].text}</div>
@@ -21642,18 +20158,15 @@ function LetterYoLesson({
             />
           </section>
 
-          <button className="primaryButton" onClick={() => setStep(17)}>
-            Дальше
+          <button className="primaryButton" onClick={() => setStep(16)}>
+            ▶
           </button>
         </>
       )}
 
-      {step === 17 && (
+      {step === 16 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 14</p>
-            <h1 className="taskTitle">Прочитай отрывок</h1>
-          </section>
+         
 
           <section className="yoStoryFragmentCard">
             <div className="yoStorySentence">{storyPanels[2].text}</div>
@@ -21670,21 +20183,21 @@ function LetterYoLesson({
             onClick={() => {
               setHardSoftIndex(0)
               setHardSoftAnswer(null)
-              setStep(18)
+              setStep(17)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
-      {step === 18 && (
+      {step === 17 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 15</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Мягкое или твёрдое?</h1>
             <p className="lessonText">
-              Посмотри на картинку и выбери правильное слово.
+             
             </p>
           </section>
 
@@ -21732,19 +20245,16 @@ function LetterYoLesson({
           {hardSoftAnswer === currentHardSoftTask.correct && (
             <button className="primaryButton" onClick={nextHardSoftTask}>
               {hardSoftIndex < hardSoftTasks.length - 1
-                ? 'Следующая картинка'
-                : 'Дальше'}
+                ? '▶'
+                : '▶'}
             </button>
           )}
         </>
       )}
 
-      {step === 20 && (
+      {step === 18 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 16</p>
-            <h1 className="taskTitle">Прочитай конец истории</h1>
-          </section>
+         
 
           <section className="yoStoryFragmentCard">
             <div className="yoStorySentence">{storyPanels[3].text}</div>
@@ -21756,25 +20266,21 @@ function LetterYoLesson({
             />
           </section>
 
-          <button className="primaryButton" onClick={() => setStep(21)}>
-            Завершить урок
+          <button className="primaryButton" onClick={() => setStep(19)}>
+            ▶
           </button>
         </>
       )}
 
-      {step === 21 && (
+      {step === 19 && (
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ё, прочитал слова и историю про Боньку и
-              Ульяну.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -22093,18 +20599,12 @@ function LetterHLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Х Х Х Х Х Х</div>
-            <div className="letterLine">х х х х х х</div>
-            <div className="letterLine">Х х Х х Х х</div>
+            <div className="letterLine">Х Х Х</div>
+            <div className="letterLine">х х х</div>
+            <div className="letterLine">Х х Х</div>
           </section>
 
           <button
@@ -22115,20 +20615,14 @@ function LetterHLesson({
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Х</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -22139,20 +20633,14 @@ function LetterHLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Х пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Х.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -22167,7 +20655,7 @@ function LetterHLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -22182,16 +20670,10 @@ function LetterHLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Х-А</span>
@@ -22211,32 +20693,26 @@ function LetterHLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/h-joins/h-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+        
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Х</span>
@@ -22258,11 +20734,11 @@ function LetterHLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/h-joins/h-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+             
             </p>
           </section>
 
@@ -22273,7 +20749,7 @@ function LetterHLesson({
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -22281,10 +20757,10 @@ function LetterHLesson({
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -22304,28 +20780,22 @@ function LetterHLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+               
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -22335,7 +20805,7 @@ function LetterHLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -22348,13 +20818,7 @@ function LetterHLesson({
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+         
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -22373,25 +20837,19 @@ function LetterHLesson({
                 playAudio('/audio/h-story/01-ulyana-risuet-bonka-smotrit.mp3')
               }
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(10)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -22408,12 +20866,12 @@ function LetterHLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/h-story/02-hobot-i-uho.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -22421,10 +20879,10 @@ function LetterHLesson({
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Кто это?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+             
             </p>
           </section>
 
@@ -22468,7 +20926,7 @@ function LetterHLesson({
 
           {animalAnswerOne === 'elephant' && (
             <button className="primaryButton" onClick={() => setStep(12)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -22476,13 +20934,7 @@ function LetterHLesson({
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -22499,12 +20951,12 @@ function LetterHLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/h-story/03-dlinnyy-hvost.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -22512,10 +20964,10 @@ function LetterHLesson({
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">А кто это?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -22559,7 +21011,7 @@ function LetterHLesson({
 
           {animalAnswerTwo === 'peacock' && (
             <button className="primaryButton" onClick={() => setStep(14)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -22567,13 +21019,7 @@ function LetterHLesson({
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -22592,25 +21038,19 @@ function LetterHLesson({
                 playAudio('/audio/h-story/04-bonka-hochet-homyaka.mp3')
               }
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 15 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 13</p>
-            <h1 className="taskTitle">Что нарисовать?</h1>
-            <p className="lessonText">
-              Выбери, что нужно нарисовать для хомяка.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="rStoryChoiceSentence">ЧТО НА-РИ-СО-ВА-ТЬ?</div>
@@ -22662,15 +21102,11 @@ function LetterHLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Х, прочитал слова и помог Боньке понять,
-              кого он хотел нарисовать.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -23017,42 +21453,30 @@ function LetterChLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Ч Ч Ч Ч Ч Ч</div>
-            <div className="letterLine">ч ч ч ч ч ч</div>
-            <div className="letterLine">Ч ч Ч ч Ч ч</div>
+            <div className="letterLine">Ч Ч Ч</div>
+            <div className="letterLine">ч ч ч</div>
+            <div className="letterLine">Ч ч Ч</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-ch.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ч</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -23063,20 +21487,14 @@ function LetterChLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ч пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ч.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -23091,7 +21509,7 @@ function LetterChLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -23106,16 +21524,10 @@ function LetterChLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ч-А</span>
@@ -23129,32 +21541,26 @@ function LetterChLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ch-joins/ch-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ч-И</span>
@@ -23168,32 +21574,26 @@ function LetterChLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ch-joins/ch-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+             🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай третью строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Ч</span>
@@ -23215,11 +21615,11 @@ function LetterChLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ch-joins/ch-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
@@ -23230,7 +21630,7 @@ function LetterChLesson({
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -23238,10 +21638,10 @@ function LetterChLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -23261,28 +21661,22 @@ function LetterChLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -23292,7 +21686,7 @@ function LetterChLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -23305,21 +21699,13 @@ function LetterChLesson({
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Разложи слова</h1>
-            <p className="lessonText">
-              Слова, которые обозначают предметы поменьше или помилее,
-              отправь в корзинку ЧОК.
-            </p>
-          </section>
-
+          
           <section className="chSortCard">
             <button
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/ch-sort/chok-explanation.mp3')}
             >
-              ▶ Послушать подсказку
+              🔊 подсказка
             </button>
 
             <div className="chBasketGrid">
@@ -23386,7 +21772,7 @@ function LetterChLesson({
 
           {allSorted && (
             <button className="primaryButton" onClick={() => setStep(11)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -23395,11 +21781,12 @@ function LetterChLesson({
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай рассказ.
-            </p>
+            <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/ch-story/story.mp3')}
+            >
+              🔊 историю
+            </button>
           </section>
 
           <section className="hChoiceCard">
@@ -23416,29 +21803,18 @@ function LetterChLesson({
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/ch-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+            
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[0].text}</div>
@@ -23451,7 +21827,7 @@ function LetterChLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -23459,10 +21835,10 @@ function LetterChLesson({
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ГДЕ ГУ-ЛЯ-ЛИ У-ЛЬ-Я-НА И БО-НЬ-КА?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -23505,7 +21881,7 @@ function LetterChLesson({
 
           {placeAnswer === 'village' && (
             <button className="primaryButton" onClick={() => setStep(14)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -23513,14 +21889,7 @@ function LetterChLesson({
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение.
-            </p>
-          </section>
-
+         
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[1].text}</div>
 
@@ -23532,7 +21901,7 @@ function LetterChLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -23540,10 +21909,10 @@ function LetterChLesson({
       {step === 15 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ЧТО ОНИ У-ВИ-ДЕ-ЛИ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -23586,7 +21955,7 @@ function LetterChLesson({
 
           {lightsAnswer === 'lights' && (
             <button className="primaryButton" onClick={() => setStep(16)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -23594,13 +21963,7 @@ function LetterChLesson({
 
       {step === 16 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[2].text}</div>
@@ -23613,7 +21976,7 @@ function LetterChLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(17)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -23621,10 +21984,10 @@ function LetterChLesson({
       {step === 17 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ЧТО ОНИ ЧУ-ВСТ-ВО-ВА-ЛИ?</h1>
             <p className="lessonText">
-              Выбери правильный смайлик.
+              
             </p>
           </section>
 
@@ -23657,7 +22020,7 @@ function LetterChLesson({
 
           {feelingAnswer === 'surprised' && (
             <button className="primaryButton" onClick={() => setStep(18)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -23665,13 +22028,7 @@ function LetterChLesson({
 
       {step === 18 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[3].text}</div>
@@ -23684,7 +22041,7 @@ function LetterChLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(19)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -23692,10 +22049,10 @@ function LetterChLesson({
       {step === 19 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">КТО СИ-ДИТ В ТРА-ВЕ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -23738,7 +22095,7 @@ function LetterChLesson({
 
           {grassAnswer === 'firefly' && (
             <button className="primaryButton" onClick={() => setStep(20)}>
-              Завершить урок
+              ▶
             </button>
           )}
         </>
@@ -23748,14 +22105,11 @@ function LetterChLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ч, прочитал слова и историю про светлячков.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -24137,43 +22491,30 @@ function LetterYuLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Ю Ю Ю Ю Ю Ю</div>
-            <div className="letterLine">ю ю ю ю ю ю</div>
-            <div className="letterLine">Ю ю Ю ю Ю ю</div>
+            <div className="letterLine">Ю Ю Ю</div>
+            <div className="letterLine">ю ю ю</div>
+            <div className="letterLine">Ю ю Ю</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-yu.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ю</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-yu.gif"
@@ -24183,20 +22524,14 @@ function LetterYuLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+           ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ю пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ю.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -24211,7 +22546,7 @@ function LetterYuLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -24226,16 +22561,10 @@ function LetterYuLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">М-Ю</span>
@@ -24257,32 +22586,26 @@ function LetterYuLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yu-joins/yu-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+             🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ю-М</span>
@@ -24304,32 +22627,25 @@ function LetterYuLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yu-joins/yu-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай пары</h1>
-            <p className="lessonText">
-              Сравни пары. Прочитай сначала без мягкого знака, потом с мягким знаком.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">ТЮ</span>
@@ -24353,11 +22669,11 @@ function LetterYuLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/yu-joins/yu-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эти пары сам.
+              
             </p>
           </section>
 
@@ -24368,7 +22684,7 @@ function LetterYuLesson({
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -24376,10 +22692,10 @@ function LetterYuLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              П
             </p>
           </section>
 
@@ -24399,28 +22715,22 @@ function LetterYuLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -24430,7 +22740,7 @@ function LetterYuLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -24444,10 +22754,10 @@ function LetterYuLesson({
       {step === 10 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Выбери Я или ОНИ</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">Я или ОНИ</h1>
             <p className="lessonText">
-              Прочитай слово и выбери, кто выполняет действие.
+              
             </p>
           </section>
 
@@ -24498,13 +22808,7 @@ function LetterYuLesson({
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyFragments[0].text}</div>
@@ -24519,25 +22823,19 @@ function LetterYuLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyFragments[0].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyFragments[1].text}</div>
@@ -24552,25 +22850,19 @@ function LetterYuLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyFragments[1].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+         
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyFragments[2].text}</div>
@@ -24585,25 +22877,19 @@ function LetterYuLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyFragments[2].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(14)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyFragments[3].text}</div>
@@ -24618,12 +22904,12 @@ function LetterYuLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyFragments[3].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -24631,10 +22917,10 @@ function LetterYuLesson({
       {step === 15 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">... МО-ЮТ ПО-СУ-ДУ</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -24674,7 +22960,7 @@ function LetterYuLesson({
 
           {dishesAnswer === 'ulyana-bonka' && (
             <button className="primaryButton" onClick={() => setStep(16)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -24683,10 +22969,10 @@ function LetterYuLesson({
       {step === 16 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">... ВЫ-ТИ-РА-ЮТ ПЫЛЬ</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -24726,7 +23012,7 @@ function LetterYuLesson({
 
           {dustAnswer === 'papa-brother' && (
             <button className="primaryButton" onClick={() => setStep(17)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -24735,10 +23021,10 @@ function LetterYuLesson({
       {step === 17 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">... СТИ-РА-ЮТ БЕ-ЛЬ-Ё</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -24778,7 +23064,7 @@ function LetterYuLesson({
 
           {laundryAnswer === 'mama-grandma' && (
             <button className="primaryButton" onClick={() => setStep(18)}>
-              Завершить урок
+              ▶
             </button>
           )}
         </>
@@ -24788,15 +23074,11 @@ function LetterYuLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ю, прочитал слова и помог понять,
-              кто что делает дома.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -25218,7 +23500,7 @@ function LetterZhLesson({
             <h1 className="lessonTitle"></h1>
 
             <p className="lessonText">
-              Сначала послушай, как учитель читает букву.
+              
             </p>
 
             <button
@@ -25237,43 +23519,29 @@ function LetterZhLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
-
+          
           <section className="readingCard">
-            <div className="letterLine">Ж Ж Ж Ж Ж Ж</div>
-            <div className="letterLine">ж ж ж ж ж ж</div>
-            <div className="letterLine">Ж ж Ж ж Ж ж</div>
+            <div className="letterLine">Ж Ж Ж</div>
+            <div className="letterLine">ж ж ж</div>
+            <div className="letterLine">Ж ж Ж</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-zh.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ж</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+         
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-zh.gif"
@@ -25283,20 +23551,14 @@ function LetterZhLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ж пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ж.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -25311,7 +23573,7 @@ function LetterZhLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -25326,16 +23588,10 @@ function LetterZhLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ж-А</span>
@@ -25353,32 +23609,26 @@ function LetterZhLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/zh-joins/zh-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Ж</span>
@@ -25392,32 +23642,25 @@ function LetterZhLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/zh-joins/zh-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай пары</h1>
-            <p className="lessonText">
-              Сравни пары. Прочитай каждую строку.
-            </p>
-          </section>
-
+          
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ж-О</span>
@@ -25441,11 +23684,11 @@ function LetterZhLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/zh-joins/zh-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+             🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эти пары сам.
+              
             </p>
           </section>
 
@@ -25456,7 +23699,7 @@ function LetterZhLesson({
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -25464,10 +23707,10 @@ function LetterZhLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -25487,28 +23730,22 @@ function LetterZhLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -25518,7 +23755,7 @@ function LetterZhLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -25531,13 +23768,7 @@ function LetterZhLesson({
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Выбери картинку</h1>
-            <p className="lessonText">
-              Прочитай слово и выбери правильную картинку.
-            </p>
-          </section>
+        
 
           <section className="readSingleWordCard">
             <div className="rStoryChoiceSentence">{currentMeaningTask.word}</div>
@@ -25591,11 +23822,12 @@ function LetterZhLesson({
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай рассказ.
-            </p>
+           <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/zh-story/story.mp3')}
+            >
+             🔊 историю
+            </button>
           </section>
 
           <section className="hChoiceCard">
@@ -25612,28 +23844,18 @@ function LetterZhLesson({
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/zh-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+            
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">Прочитай предложение.</p>
-          </section>
-
+         
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
               У У-ЛЬ-Я-НЫ И БО-НЬ-КИ ТКА-НЬ И НОЖ-НИ-ЦЫ.
@@ -25647,7 +23869,7 @@ function LetterZhLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -25655,10 +23877,10 @@ function LetterZhLesson({
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ЧТО У У-ЛЬ-Я-НЫ И БО-НЬ-КИ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -25696,7 +23918,7 @@ function LetterZhLesson({
 
           {toolsAnswer === 'scissors' && (
             <button className="primaryButton" onClick={() => setStep(14)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -25704,11 +23926,7 @@ function LetterZhLesson({
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">Прочитай предложение.</p>
-          </section>
+         
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -25723,7 +23941,7 @@ function LetterZhLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -25731,10 +23949,10 @@ function LetterZhLesson({
       {step === 15 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">КА-КО-Й КОС-ТЮМ ОНИ ДЕ-ЛА-ЮТ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+             
             </p>
           </section>
 
@@ -25772,7 +23990,7 @@ function LetterZhLesson({
 
           {costumeAnswer === 'firebird' && (
             <button className="primaryButton" onClick={() => setStep(16)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -25780,11 +23998,7 @@ function LetterZhLesson({
 
       {step === 16 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">Прочитай предложение.</p>
-          </section>
+         
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -25799,7 +24013,7 @@ function LetterZhLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(17)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -25807,10 +24021,10 @@ function LetterZhLesson({
       {step === 17 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">КА-КО-ГО ЦВЕ-ТА ХВО-СТ?</h1>
             <p className="lessonText">
-              Выбери правильный цвет.
+              
             </p>
           </section>
 
@@ -25856,7 +24070,7 @@ function LetterZhLesson({
 
           {colorAnswer === 'yellow' && (
             <button className="primaryButton" onClick={() => setStep(18)}>
-              Завершить урок
+              ▶
             </button>
           )}
         </>
@@ -25866,15 +24080,11 @@ function LetterZhLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ж, прочитал слова и помог Ульяне и Боньке
-              сделать костюм жар-птицы.
-            </p>
+           
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -26272,42 +24482,30 @@ function LetterFLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Ф Ф Ф Ф Ф Ф</div>
-            <div className="letterLine">ф ф ф ф ф ф</div>
-            <div className="letterLine">Ф ф Ф ф Ф ф</div>
+            <div className="letterLine">Ф Ф Ф</div>
+            <div className="letterLine">ф ф ф</div>
+            <div className="letterLine">Ф ф Ф</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-f.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ф</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+         
 
           <section className="sampleCard">
             <img
@@ -26318,20 +24516,14 @@ function LetterFLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ф пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ф.
-            </p>
-          </section>
+         
 
           <section className="drawingCard">
             <canvas
@@ -26346,7 +24538,7 @@ function LetterFLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -26361,16 +24553,10 @@ function LetterFLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ф-А</span>
@@ -26392,32 +24578,26 @@ function LetterFLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/f-joins/f-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Ф</span>
@@ -26439,11 +24619,11 @@ function LetterFLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/f-joins/f-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
@@ -26454,7 +24634,7 @@ function LetterFLesson({
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -26462,10 +24642,10 @@ function LetterFLesson({
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+             
             </p>
           </section>
 
@@ -26485,28 +24665,22 @@ function LetterFLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -26516,7 +24690,7 @@ function LetterFLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊 слово
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -26527,79 +24701,76 @@ function LetterFLesson({
         </>
       )}
 
-      {step === 9 && (
-        <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Соедини слово и картинку</h1>
-            <p className="lessonText">
-              Сначала выбери слово, потом подходящую картинку.
-            </p>
-          </section>
-
-          <section className="fMatchCard">
-            <div className="fMatchGrid">
-              <div className="fMatchColumn">
-                {matchWords.map((word) => (
-                  <button
-                    key={word.id}
-                    type="button"
-                    className={
-                      selectedMatchWordId === word.id
-                        ? 'fMatchWord selected'
-                        : matchedPairs[word.id]
-                          ? 'fMatchWord done'
-                          : 'fMatchWord'
-                    }
-                    onClick={() => handleMatchWordClick(word.id)}
-                  >
-                    {word.label}
-                  </button>
-                ))}
-              </div>
-
-              <div className="fMatchColumn">
-                {matchImages.map((image) => {
-                  const isUsed = Object.values(matchedPairs).includes(image.id)
-
-                  return (
-                    <button
-                      key={image.id}
-                      type="button"
-                      className={isUsed ? 'fMatchImageButton done' : 'fMatchImageButton'}
-                      onClick={() => handleMatchImageClick(image.id)}
-                    >
-                      <img
-                        src={image.image}
-                        alt={image.alt}
-                        className="fMatchImage"
-                      />
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          </section>
-
-          {matchFeedback && <p className="lessonText">{matchFeedback}</p>}
-
-          {allMatched && (
-            <button className="primaryButton" onClick={() => setStep(10)}>
-              Дальше
+    {step === 9 && (
+  <div className="fMatchStep">
+    <section className="fMatchCard">
+      <div className="fMatchGrid">
+        <div className="fMatchColumn">
+          {matchWords.map((word) => (
+            <button
+              key={word.id}
+              type="button"
+              className={
+                selectedMatchWordId === word.id
+                  ? 'fMatchWord selected'
+                  : matchedPairs[word.id]
+                    ? 'fMatchWord done'
+                    : 'fMatchWord'
+              }
+              onClick={() => handleMatchWordClick(word.id)}
+            >
+              {word.label}
             </button>
-          )}
-        </>
+          ))}
+        </div>
+
+        <div className="fMatchColumn">
+          {matchImages.map((image) => {
+            const isUsed = Object.values(matchedPairs).includes(image.id)
+
+            return (
+              <button
+                key={image.id}
+                type="button"
+                className={
+                  isUsed
+                    ? 'fMatchImageButton done'
+                    : 'fMatchImageButton'
+                }
+                onClick={() => handleMatchImageClick(image.id)}
+              >
+                <img
+                  src={image.image}
+                  alt={image.alt}
+                  className="fMatchImage"
+                />
+              </button>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+
+    <div className="fMatchBottom">
+      {matchFeedback && (
+        <p className="fMatchFeedback">{matchFeedback}</p>
       )}
+
+      {allMatched && (
+        <button
+          className="primaryButton fMatchNextButton"
+          onClick={() => setStep(10)}
+        >
+          ▶
+        </button>
+      )}
+    </div>
+  </div>
+)}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+         
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -26616,12 +24787,12 @@ function LetterFLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/f-story/01-flowers-forest.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -26629,10 +24800,10 @@ function LetterFLesson({
       {step === 11 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">КА-КИ-Е ЦВЕ-ТЫ ОНИ СО-БИ-РА-ЮТ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -26670,7 +24841,7 @@ function LetterFLesson({
 
           {flowersAnswer === 'violets' && (
             <button className="primaryButton" onClick={() => setStep(12)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -26678,13 +24849,7 @@ function LetterFLesson({
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -26701,12 +24866,12 @@ function LetterFLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/f-story/02-figure-flying.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -26714,10 +24879,10 @@ function LetterFLesson({
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ЧТО ФИ-ГУ-РА ДЕ-ЛА-ЕТ?</h1>
             <p className="lessonText">
-              Выбери правильное слово.
+            
             </p>
           </section>
 
@@ -26760,7 +24925,7 @@ function LetterFLesson({
 
           {figureActionAnswer === 'fly' && (
             <button className="primaryButton" onClick={() => setStep(14)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -26768,13 +24933,7 @@ function LetterFLesson({
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -26791,12 +24950,12 @@ function LetterFLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/f-story/03-filin-violet.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -26804,10 +24963,10 @@ function LetterFLesson({
       {step === 15 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">КТО ЛЕ-ТЕЛ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+             
             </p>
           </section>
 
@@ -26845,7 +25004,7 @@ function LetterFLesson({
 
           {whoFlewAnswer === 'filin' && (
             <button className="primaryButton" onClick={() => setStep(16)}>
-              Завершить урок
+              ▶
             </button>
           )}
         </>
@@ -26855,15 +25014,11 @@ function LetterFLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ф, прочитал слова, соединил картинки
-              и помог узнать, кто пролетел над Ульяной и Бонькой.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -27230,43 +25385,30 @@ function LetterShLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Ш Ш Ш Ш Ш Ш</div>
-            <div className="letterLine">ш ш ш ш ш ш</div>
-            <div className="letterLine">Ш ш Ш ш Ш ш</div>
+            <div className="letterLine">Ш Ш Ш</div>
+            <div className="letterLine">ш ш ш</div>
+            <div className="letterLine">Ш ш Ш</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-sh.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Ш</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
-
+          
           <section className="sampleCard">
             <img
               src="/gifs/write/letter-sh.gif"
@@ -27276,20 +25418,14 @@ function LetterShLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Ш пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Ш.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -27304,7 +25440,7 @@ function LetterShLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -27319,16 +25455,10 @@ function LetterShLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ш-А</span>
@@ -27346,32 +25476,25 @@ function LetterShLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sh-joins/sh-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
-
+         
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Ш</span>
@@ -27393,32 +25516,26 @@ function LetterShLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sh-joins/sh-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(7)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 7 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай пары</h1>
-            <p className="lessonText">
-              Сравни пары. Прочитай каждую строку.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 3</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Ш-О</span>
@@ -27430,11 +25547,11 @@ function LetterShLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sh-joins/sh-row-3.mp3')}
             >
-              ▶ Послушать строку 3
+             🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+             
             </p>
           </section>
 
@@ -27445,7 +25562,7 @@ function LetterShLesson({
               setStep(8)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -27453,10 +25570,10 @@ function LetterShLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+             
             </p>
           </section>
 
@@ -27476,28 +25593,22 @@ function LetterShLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -27507,7 +25618,7 @@ function LetterShLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -27520,20 +25631,14 @@ function LetterShLesson({
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Отгадай загадку</h1>
-            <p className="lessonText">
-              Послушай загадку и выбери слово.
-            </p>
-          </section>
+          
 
           <section className="shRiddleCard">
             <button
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentRiddle.audio)}
             >
-              ▶ Послушать загадку
+              🔊 загадка
             </button>
 
             <div className="shRiddleOptions">
@@ -27568,7 +25673,7 @@ function LetterShLesson({
             <button className="primaryButton" onClick={nextRiddle}>
               {riddleIndex < riddleTasks.length - 1
                 ? 'Следующая загадка'
-                : 'Дальше'}
+                : '▶'}
             </button>
           )}
         </>
@@ -27576,13 +25681,7 @@ function LetterShLesson({
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -27593,7 +25692,7 @@ function LetterShLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sh-story/01-cooking-dinner.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
 
             <img
@@ -27604,20 +25703,14 @@ function LetterShLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+         
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -27628,7 +25721,7 @@ function LetterShLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sh-story/02-potato-sizzles.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
 
             <img
@@ -27639,7 +25732,7 @@ function LetterShLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -27647,10 +25740,10 @@ function LetterShLesson({
       {step === 13 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ЧТО ГО-ТО-ВИТ У-ЛЬ-Я-НА?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+             
             </p>
           </section>
 
@@ -27688,7 +25781,7 @@ function LetterShLesson({
 
           {dinnerAnswer === 'potato' && (
             <button className="primaryButton" onClick={() => setStep(14)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -27696,13 +25789,7 @@ function LetterShLesson({
 
       {step === 14 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+         
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -27713,7 +25800,7 @@ function LetterShLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sh-story/03-found-sweets.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
 
             <img
@@ -27724,7 +25811,7 @@ function LetterShLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(15)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -27732,10 +25819,10 @@ function LetterShLesson({
       {step === 15 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ЧТО НА-ШЁЛ БО-НЬ-КА?</h1>
             <p className="lessonText">
-              Выбери два правильных ответа.
+              
             </p>
           </section>
 
@@ -27774,7 +25861,7 @@ function LetterShLesson({
 
           {foundCorrectAnswers && (
             <button className="primaryButton" onClick={() => setStep(16)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -27782,14 +25869,7 @@ function LetterShLesson({
 
       {step === 16 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
-
+          
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
               БО-НЬ-КА И У-ЛЬ-Я-НА КУ-ША-ЮТ И ИГ-РА-ЮТ В ШАХ-МА-ТЫ.
@@ -27799,7 +25879,7 @@ function LetterShLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sh-story/04-eating-chess.mp3')}
             >
-              ▶ Послушать
+              🔊
             </button>
 
             <img
@@ -27810,7 +25890,7 @@ function LetterShLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(17)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -27818,10 +25898,10 @@ function LetterShLesson({
       {step === 17 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ВО ЧТО ОНИ ИГ-РА-ЮТ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -27859,7 +25939,7 @@ function LetterShLesson({
 
           {gameAnswer === 'chess' && (
             <button className="primaryButton" onClick={() => setStep(18)}>
-              Завершить урок
+              ▶
             </button>
           )}
         </>
@@ -27869,15 +25949,11 @@ function LetterShLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Ш, прочитал слова, отгадал загадки
-              и помог Ульяне с Бонькой приготовить ужин.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -28246,42 +26322,30 @@ function LetterSchLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай буквы</h1>
-            <p className="lessonText">
-              Прочитай каждую строчку. Показывай на букву пальцем.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Щ Щ Щ Щ Щ Щ</div>
-            <div className="letterLine">щ щ щ щ щ щ</div>
-            <div className="letterLine">Щ щ Щ щ Щ щ</div>
+            <div className="letterLine">Щ Щ Щ</div>
+            <div className="letterLine">щ щ щ</div>
+            <div className="letterLine">Щ щ Щ</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-sch.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать букву Щ</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать букву сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -28292,20 +26356,14 @@ function LetterSchLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши букву Щ пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большую букву Щ.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -28320,7 +26378,7 @@ function LetterSchLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -28335,16 +26393,10 @@ function LetterSchLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай первую строку. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 1</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">Щ-А</span>
@@ -28366,32 +26418,26 @@ function LetterSchLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sch-joins/sch-row-1.mp3')}
             >
-              ▶ Послушать строку 1
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(6)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Читай буквы вместе</h1>
-            <p className="lessonText">
-              Сначала послушай вторую строку. Потом прочитай сам.
-            </p>
-          </section>
+          
 
           <section className="joinReadingCard">
-            <p className="joinRowTitle">Строка 2</p>
+            <p className="joinRowTitle"></p>
 
             <div className="joinTextLine">
               <span className="joinPurple">А-Щ</span>
@@ -28413,11 +26459,11 @@ function LetterSchLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sch-joins/sch-row-2.mp3')}
             >
-              ▶ Послушать строку 2
+              🔊
             </button>
 
             <p className="joinInstruction">
-              Теперь прочитай эту строку сам.
+              
             </p>
           </section>
 
@@ -28428,7 +26474,7 @@ function LetterSchLesson({
               setStep(7)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -28436,10 +26482,10 @@ function LetterSchLesson({
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Назови слово</h1>
             <p className="lessonText">
-              Посмотри на картинку. Назови слово. Какая буква первая?
+              
             </p>
           </section>
 
@@ -28459,28 +26505,22 @@ function LetterSchLesson({
 
             <div className="pictureQuestion">
               <p className="pictureQuestionText">
-                Назови. Какая буква первая?
+                
               </p>
             </div>
           </section>
 
           <button className="primaryButton" onClick={nextPictureTask}>
             {pictureIndex < pictureTasks.length - 1
-              ? 'Следующая картинка'
-              : 'Дальше'}
+              ? '▶'
+              : '▶'}
           </button>
         </>
       )}
 
       {step === 8 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Сначала послушай слово. Потом прочитай сам.
-            </p>
-          </section>
+         
 
           <section className="readSingleWordCard">
             <div className="readSingleWord">{currentReadWord.word}</div>
@@ -28490,7 +26530,7 @@ function LetterSchLesson({
             className="audioButton secondaryAudio"
             onClick={() => playAudio(currentReadWord.audio)}
           >
-            ▶ Послушать слово
+            🔊
           </button>
 
           <button className="primaryButton" onClick={nextReadWord}>
@@ -28503,20 +26543,14 @@ function LetterSchLesson({
 
       {step === 9 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
-            <h1 className="taskTitle">Разложи слова по корзинкам</h1>
-            <p className="lessonText">
-              Слова, которые обозначают предметы побольше, отправь в корзинку ЩИ.
-            </p>
-          </section>
+          
 
           <section className="schSortCard">
             <button
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/sch-sort/schi-explanation.mp3')}
             >
-              ▶ Послушать подсказку
+             🔊 подсказка
             </button>
 
             <div className="schBasketGrid">
@@ -28583,7 +26617,7 @@ function LetterSchLesson({
 
           {allSorted && (
             <button className="primaryButton" onClick={() => setStep(10)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -28592,11 +26626,12 @@ function LetterSchLesson({
       {step === 10 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай рассказ.
-            </p>
+             <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/sch-story/story.mp3')}
+            >
+              🔊 историю
+            </button>
           </section>
 
           <section className="hChoiceCard">
@@ -28613,27 +26648,18 @@ function LetterSchLesson({
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/sch-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+           
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">Прочитай предложение.</p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -28648,7 +26674,7 @@ function LetterSchLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -28656,10 +26682,10 @@ function LetterSchLesson({
       {step === 12 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">ЧТО ПРИ-НЁС ПА-ПА?</h1>
             <p className="lessonText">
-              Прочитай слова и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -28692,7 +26718,7 @@ function LetterSchLesson({
 
           {boxAnswer === 'cardboard-box' && (
             <button className="primaryButton" onClick={() => setStep(13)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -28700,11 +26726,7 @@ function LetterSchLesson({
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">Прочитай предложение.</p>
-          </section>
+        
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -28719,7 +26741,7 @@ function LetterSchLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(14)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -28727,10 +26749,10 @@ function LetterSchLesson({
       {step === 14 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">КА-КОЙ ХВОС-ТИ-ЩЕ?</h1>
             <p className="lessonText">
-              Посмотри на картинки и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -28774,7 +26796,7 @@ function LetterSchLesson({
 
           {tailAnswer === 'long' && (
             <button className="primaryButton" onClick={() => setStep(15)}>
-              Дальше
+              ▶
             </button>
           )}
         </>
@@ -28782,11 +26804,7 @@ function LetterSchLesson({
 
       {step === 15 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">Прочитай предложение.</p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">
@@ -28801,7 +26819,7 @@ function LetterSchLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(16)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
@@ -28809,10 +26827,10 @@ function LetterSchLesson({
       {step === 16 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Вопрос</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">КТО В КО-РОБ-КЕ?</h1>
             <p className="lessonText">
-              Прочитай слова и выбери правильный ответ.
+              
             </p>
           </section>
 
@@ -28845,7 +26863,7 @@ function LetterSchLesson({
 
           {creatureAnswer === 'lizard' && (
             <button className="primaryButton" onClick={() => setStep(17)}>
-              Завершить урок
+             ▶
             </button>
           )}
         </>
@@ -28855,15 +26873,11 @@ function LetterSchLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты послушал букву Щ, прочитал слова и историю про щенка Боньку
-              и ящерицу.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
@@ -29301,42 +27315,30 @@ function LetterHardSignLesson({
 
       {step === 2 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 1</p>
-            <h1 className="taskTitle">Читай знак</h1>
-            <p className="lessonText">
-              Посмотри на твёрдый знак. Он пишется, но сам звука не обозначает.
-            </p>
-          </section>
+          
 
           <section className="readingCard">
-            <div className="letterLine">Ъ Ъ Ъ Ъ Ъ Ъ</div>
-            <div className="letterLine">ъ ъ ъ ъ ъ ъ</div>
-            <div className="letterLine">Ъ ъ Ъ ъ Ъ ъ</div>
+            <div className="letterLine">Ъ Ъ Ъ</div>
+            <div className="letterLine">ъ ъ ъ</div>
+            <div className="letterLine">Ъ ъ Ъ</div>
           </section>
 
           <button
             className="audioButton secondaryAudio"
             onClick={() => playAudio('/audio/letters/letter-hard-sign.mp3')}
           >
-            ▶ Послушать ещё раз
+            🔊
           </button>
 
           <button className="primaryButton" onClick={() => setStep(3)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 3 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 2</p>
-            <h1 className="taskTitle">Посмотри, как писать Ъ</h1>
-            <p className="lessonText">
-              Посмотри на образец. Потом попробуй написать знак сам.
-            </p>
-          </section>
+          
 
           <section className="sampleCard">
             <img
@@ -29347,20 +27349,14 @@ function LetterHardSignLesson({
           </section>
 
           <button className="primaryButton" onClick={() => setStep(4)}>
-            Попробовать написать
+            ▶
           </button>
         </>
       )}
 
       {step === 4 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 3</p>
-            <h1 className="taskTitle">Напиши Ъ пальцем</h1>
-            <p className="lessonText">
-              Веди пальцем или мышкой по экрану и рисуй большой твёрдый знак.
-            </p>
-          </section>
+          
 
           <section className="drawingCard">
             <canvas
@@ -29375,7 +27371,7 @@ function LetterHardSignLesson({
 
           <div className="canvasButtons">
             <button className="secondaryButton" onClick={clearCanvas}>
-              Очистить
+              ×
             </button>
 
             <button
@@ -29390,13 +27386,7 @@ function LetterHardSignLesson({
 
       {step === 5 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 4</p>
-            <h1 className="taskTitle">Твёрдый знак звука не обозначает</h1>
-            <p className="lessonText">
-              Посмотри: твёрдый знак есть, но своего звука у него нет.
-            </p>
-          </section>
+          
 
           <section className="hardSignNoSoundCard">
             <div className="hardSignCrossed">
@@ -29407,7 +27397,7 @@ function LetterHardSignLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio('/audio/hard-sign/no-sound.mp3')}
             >
-              ▶ Послушать подсказку
+              🔊 подсказка
             </button>
           </section>
 
@@ -29418,20 +27408,14 @@ function LetterHardSignLesson({
               setStep(6)
             }}
           >
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 6 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 5</p>
-            <h1 className="taskTitle">Читай слово</h1>
-            <p className="lessonText">
-              Посмотри на картинку. Прочитай слово. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="pictureTaskCard">
             <button
@@ -29463,10 +27447,10 @@ function LetterHardSignLesson({
       {step === 7 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 6</p>
-            <h1 className="taskTitle">Есть Ъ или нет?</h1>
+            <p className="eyebrow dark"></p>
+            <h1 className="taskTitle">Есть Ъ?</h1>
             <p className="lessonText">
-              Послушай слово и выбери: есть там твёрдый знак или нет.
+              
             </p>
           </section>
 
@@ -29475,7 +27459,7 @@ function LetterHardSignLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(currentAudioGuess.audio)}
             >
-              ▶ Послушать слово
+              🔊
             </button>
 
             <div className="hardSignGuessButtons">
@@ -29521,10 +27505,10 @@ function LetterHardSignLesson({
       {step === 8 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 7</p>
+            <p className="eyebrow dark"></p>
             <h1 className="taskTitle">Выбери картинку</h1>
             <p className="lessonText">
-              Прочитай слово и выбери подходящую картинку.
+              
             </p>
           </section>
 
@@ -29580,11 +27564,12 @@ function LetterHardSignLesson({
       {step === 9 && (
         <>
           <section className="taskHeader">
-            <p className="eyebrow dark">Задание 8</p>
-            <h1 className="taskTitle">Послушай историю</h1>
-            <p className="lessonText">
-              Посмотри на картинки. Послушай рассказ.
-            </p>
+           <button
+              className="audioButton secondaryAudio"
+              onClick={() => playAudio('/audio/hard-sign-story/story.mp3')}
+            >
+              🔊 историю
+            </button>
           </section>
 
           <section className="hChoiceCard">
@@ -29601,30 +27586,18 @@ function LetterHardSignLesson({
               ))}
             </div>
 
-            <button
-              className="audioButton secondaryAudio"
-              onClick={() => playAudio('/audio/hard-sign-story/story.mp3')}
-            >
-              ▶ Послушать историю
-            </button>
+            
           </section>
 
           <button className="primaryButton" onClick={() => setStep(10)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 10 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 9</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
-
+          
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[0].text}</div>
 
@@ -29638,26 +27611,19 @@ function LetterHardSignLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyPanels[0].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(11)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 11 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 10</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
-
+          
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[1].text}</div>
 
@@ -29671,25 +27637,19 @@ function LetterHardSignLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyPanels[1].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(12)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 12 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 11</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[2].text}</div>
@@ -29704,25 +27664,19 @@ function LetterHardSignLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyPanels[2].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(13)}>
-            Дальше
+            ▶
           </button>
         </>
       )}
 
       {step === 13 && (
         <>
-          <section className="taskHeader">
-            <p className="eyebrow dark">Задание 12</p>
-            <h1 className="taskTitle">Прочитай текст</h1>
-            <p className="lessonText">
-              Прочитай предложение. Потом послушай подсказку.
-            </p>
-          </section>
+          
 
           <section className="hStoryFragmentCard">
             <div className="hStorySentence">{storyPanels[3].text}</div>
@@ -29737,12 +27691,12 @@ function LetterHardSignLesson({
               className="audioButton secondaryAudio"
               onClick={() => playAudio(storyPanels[3].audio)}
             >
-              ▶ Послушать
+              🔊
             </button>
           </section>
 
           <button className="primaryButton" onClick={() => setStep(14)}>
-            Завершить урок
+            ▶
           </button>
         </>
       )}
@@ -29751,18 +27705,54 @@ function LetterHardSignLesson({
         <>
           <section className="successCard">
             <div className="successIcon">✓</div>
-            <h1 className="taskTitle">Молодец!</h1>
-            <p className="lessonText">
-              Ты узнал, что твёрдый знак звука не обозначает, но помогает
-              читать слова правильно.
-            </p>
+            
           </section>
 
           <button className="primaryButton" onClick={onComplete}>
-            Вернуться к урокам
+            ▶
           </button>
         </>
       )}
+    </main>
+  )
+}
+
+function ContactsLesson({ onBack }: { onBack: () => void }) {
+  return (
+    <main className="contactsLessonPage">
+      <button
+        type="button"
+        className="contactsBackButton"
+        onClick={onBack}
+      >
+        ← Назад к урокам
+      </button>
+
+      <section className="contactsLessonCard">
+        <div className="contactsLessonNumber">34</div>
+
+        <div className="contactsLessonIcon" aria-hidden="true">
+          ✉️
+        </div>
+
+        <h1 className="contactsLessonTitle">
+          Контакты
+        </h1>
+
+        <p className="contactsLessonText">
+          Чтобы записаться на индивидуальные уроки к автору,
+          напишите в Telegram
+        </p>
+
+        <a
+          className="contactsTelegramLink"
+          href="https://t.me/kadlubusha"
+          target="_blank"
+          rel="noreferrer"
+        >
+          @kadlubusha
+        </a>
+      </section>
     </main>
   )
 }
@@ -29811,7 +27801,7 @@ function DefaultLesson({
               <div className="taskNumber">{index + 1}</div>
               <div>
                 <h3>{task}</h3>
-                <p>Прочитай задание и выполни его вместе с учителем.</p>
+                <p></p>
               </div>
             </div>
           ))}
@@ -30010,6 +28000,16 @@ if (selectedLesson?.id === 33) {
   return <LetterHardSignLesson onBack={() => setSelectedLesson(null)} onComplete={completeSelectedLesson} />
 }
 
+if (selectedLesson?.id === 34) {
+  return (
+    <ContactsLesson
+      onBack={() => setSelectedLesson(null)}
+    />
+  )
+}
+
+
+
 
 
   if (selectedLesson) {
@@ -30029,6 +28029,7 @@ if (selectedLesson?.id === 33) {
           <h1>Русский алфавит</h1>
           <p className="heroText">
             Выбери первую букву
+            Иди по порядку
           </p>
         </div>
 
